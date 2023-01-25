@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+main()
+{
+ int i,j,num;
+ printf("Enter number of rows\n");
+ scanf("%d",&amp;num);
+ for(i=1;i&lt;=num;i++)
+ {
+
+  for(j=1;j&lt;=i;j++)
+  {
+   printf("*");
+
+  }
+
+ printf("\n");
+ }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter number of rows<br>
+6<br>
+*<br>
+**<br>
+***<br>
+****<br>
+*****<br>
+******<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    <ol>
+        <li>The program starts with initializing
+            <ul style="list-style-type: square;">
+                <li><b>num</b> → To store <b>number of rows to be printed</b></li>
+                <li><b>i,j&nbsp;</b>→ <b>Temporary</b> variable.Where <b>i</b>&nbsp;is used for <b>rows </b>and <b>j </b>for <b>columns</b></li>
+            </ul>
+        </li>
+        <li>
+
+<pre class="program prettyprint">printf("Enter number of rows\n");
+ scanf("%d",&amp;num);</pre>
+            Taking <b>number of rows</b> from user</li>
+        <li>Main Logic goes here:
+
+<pre class="program prettyprint">for(i=1;i&lt;=num;i++)
+ {
+  for(j=1;j&lt;=i;j++)
+  {
+   printf("*");
+
+  }
+
+ printf("\n");
+ }</pre>
+
+        </li>
+        <li>As&nbsp;<b>i</b>=<b>1</b>.Lets take <b>num=3 so we are going to print 3 rows</b>
+            <ul style="list-style-type: disc;">
+                <li><b>Iteration 1</b>: As i=1 and i&lt;=num →&nbsp;1&lt;=3 which is true so iteration continues<ul style="list-style-type: disc;">
+                    <li><b>Sub Iterations:-</b>
+                        <ul style="list-style-type: circle;">
+                            <li><pre class="program prettyprint">for(j=1;j&lt;=i;j++)
+  {
+   printf("*");
+
+  }</pre>
+                            </li>
+                            <li><b>Sub Iteration 1:-j=1 and j&lt;=i </b>→ 1&lt;=1 which is true so sub iteration1 continues and prints '<b>*</b>' for 1 time
+                            </li>
+                            <li><b>Sub Iteration 2:- j=2 and </b><b>j&lt;=i </b>→ 2&lt;=1 which is false so 2nd loop terminates for 1st iteration of 1st loop
+                            </li>
+                            <li>So till now '<b>*</b>' in the first row and first column is printed as shown in below screen shot
+                            </li>
+                            <li><img class="img-responsive" src="symbolpattern1sc2_0.JPG"><br/>
+                            </li>
+                            <li>Now '<b>i</b>' will be incremented by 1 and now <b>i=2.</b></li>
+                            <li><b> printf("\n");-------&gt;Will print next line so now the cursor will be in 2nd row
+                            </b></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><b>Iteration 2</b>: As i=2 and i&lt;=num → 2&lt;=3 which is true so iteration continues.Now we are in 2nd row<ul style="list-style-type: disc;">
+                    <li><b>Sub Iterations:-</b>
+                        <ul style="list-style-type: circle;">
+                            <li><pre class="program prettyprint">for(j=1;j&lt;=i;j++)
+  {
+   printf("*");
+
+  }</pre>
+                            </li>
+                            <li><b>Sub Iteration 1:j=1 and j&lt;=i </b>→ 1&lt;=2 which is true so sub iteration1 continues and prints '<b>*</b>' for 1st time in the next row which is 2nd row and column 1
+                            </li>
+                            <li><b>Sub Iteration 2:j=2 and </b><b>j&lt;=i </b>→ 2&lt;=2 which is true so sub iteration2 continues and prints '<b>*</b>' for 2nd time in the 2nd row and column 2
+                            </li>
+                            <li><b>Sub Iteration 3:j=3 and&nbsp;</b><b>j&lt;=i&nbsp;</b>→ 3&lt;=2 which is flase so 2nd loop terminates for Iteration 2.</li>
+                            <li>So till now 2 rows are printed as shown
+                            </li>
+                            <li><img class="img-responsive" src="symbolpattern1_sc2_1.jpg"><br/>
+                            </li>
+                            <li>Now '<b>i</b>' will be incremented by 1 and now&nbsp;<b>i=3.</b></li>
+                            <li><b>printf("\n");-------&gt;Will print next line so now the cursor will be in 3rd row
+                            </b></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><b>Iteration 3</b>: As i=3 and i&lt;=num → 3&lt;=3 which is true so iteration continues.Now we are in 3rd row<ul style="list-style-type: disc;">
+                    <li><b>Sub Iterations:-</b>
+                        <ul style="list-style-type: circle;">
+                            <li><pre class="program prettyprint">for(j=1;j&lt;=i;j++)
+  {
+   printf("*");
+
+  }</pre>
+                            </li>
+                            <li><b>Sub Iteration 1:j=1 and j&lt;=i </b>→ 1&lt;=2 which is true so sub iteration1 continues and prints '<b>*</b>' for 1st time in the next row which is 3rd row and column 1
+                            </li>
+                            <li><b>Sub Iteration 2:j=2 and </b><b>j&lt;=i </b>→ 2&lt;=2 which is true so sub iteration2 continues and prints '<b>*</b>' for 2nd time in the 3rd row and column 2
+                            </li>
+                            <li><b>Sub Iteration 3:j=2 and&nbsp;</b><b>j&lt;=i&nbsp;</b>→ 2&lt;=2 which is true so sub iteration3 continues and prints '<b>*</b>' for 3rd time in the 3rd row and column 3</li>
+                            <li><b>Sub Iteration 4:j=3 and&nbsp;</b><b>j&lt;=i&nbsp;</b>→ 3&lt;=2 which is flase 2nd loop terminates for Iteration 3.</li>
+                            <li>So till now 3 rows are printed as shown
+                            </li>
+                            <li><img class="img-responsive" src="symbolpattern1sc2_2.jpg"><br/>
+                            </li>
+                            <li>Now '<b>i</b>' will be incremented by 1 and now&nbsp;<b>i=4.</b></li>
+                            <li><b> printf("\n");-------&gt;Will print next line so now the cursor will be in 4th row
+                            </b></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><b>Iteration 4</b>: As i=4 and i&lt;=num → 4&lt;=3 which is false so 1st loop will terminate and come out of loops.</li>
+                <li>So our final out put for num=3 is given below</li>
+                <li><img class="img-responsive" src="symbolpattern 1_sc_2.JPG"><br/>
+                </li>
+            </ul>
+        </li>
+    </ol><br><br>
+</div>
+</body>
+
+</html>
+

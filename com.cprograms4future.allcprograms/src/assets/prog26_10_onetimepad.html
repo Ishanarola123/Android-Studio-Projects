@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+
+            <div class="col-xs-3 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;ctype.h&gt;
+main()
+{
+ //All the text which ever entered is converted to upper and without spaces
+ int i,j,len1,len2,numstr[100],numkey[100],numcipher[100];
+ char str[100],key[100],cipher[100];
+ printf("Enter a string text to encrypt\n");
+ gets(str);
+ for(i=0,j=0;i&lt;strlen(str);i++)
+ {
+  if(str[i]!=' ')
+  {
+   str[j]=toupper(str[i]);
+   j++;
+  }
+ }
+ str[j]='\0';
+ //obtaining numerical plain text ex A-0,B-1,C-2
+    for(i=0;i&lt;strlen(str);i++)
+    {
+     numstr[i]=str[i]-'A';
+    }
+    printf("Enter key string of random text\n");
+    gets(key);
+ for(i=0,j=0;i&lt;strlen(key);i++)
+ {
+  if(key[i]!=' ')
+  {
+   key[j]=toupper(key[i]);
+   j++;
+  }
+ }
+ key[j]='\0';
+ //obtaining numerical one time pad(OTP) or key
+    for(i=0;i&lt;strlen(key);i++)
+    {
+     numkey[i]=key[i]-'A';
+    }
+
+    for(i=0;i&lt;strlen(str);i++)
+    {
+     numcipher[i]=numstr[i]+numkey[i];
+    }
+    //To loop the number within 25 i.e if addition of numstr and numkey is 27 then numcipher should be 1
+    for(i=0;i&lt;strlen(str);i++)
+    {
+     if(numcipher[i]&gt;25)
+     {
+      numcipher[i]=numcipher[i]-26;
+     }
+    }
+    printf("One Time Pad Cipher text is\n");
+    for(i=0;i&lt;strlen(str);i++)
+    {
+      printf("%c",(numcipher[i]+'A'));
+    }
+    printf("\n");
+
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+      Enter a string text to encrypt<br>
+Meet me Outside<br>
+Enter key string of random text<br>
+bdufghweiufgwdlknflndklfnlk<br>
+One Time Pad Cipher text is<br>
+NHYYSLKYBMNJA<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    <img src="onetimepad.gif" class="img-responsive">
+    //Coming Soon..<br><br>
+</div>
+<div class="col-xs-12" style="text-align:center">
+    <span>What is One Time Pad Cipher?<br>https://en.wikipedia.org/wiki/One-time_pad</span>
+</div>
+</body>
+
+</html>
+

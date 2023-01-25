@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;math.h>
+main()
+{
+  int num,i,j,temp1,temp2,sum=0;;
+  printf("Enter a number to know all armstrong number between them\n");
+  scanf("%d",&num);
+  printf("Armstrong numbers are:\n");
+  for(i=1;i&lt;=num;i++)
+  {
+    sum=0;
+    temp1=i;
+    temp2=i;
+    while(temp1>0)
+    {
+      j=temp1%10;
+      sum+=pow(j,3);
+      temp1=temp1/10;
+    }
+    if(sum==temp2)
+    {
+      printf("%d\n",sum);
+    }
+  }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a number to know all armstrong number between them<br>1000<br>Armstrong numbers are:<br>1<br>153<br>370<br>371<br>407<br></span><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing :<ul style=list-style-type:square><li><b>i → </b>used as a variable<li><b>j</b> → used variable<li><b>temp1 </b>→ to store value of number fetching from 'i' for <b>future reference</b>.<li><b>temp2 </b>→ to store value of number fetching from 'i' for <b>future reference</b>.<li><b>num </b>→ To store user input<li><b>sum </b>→ To store the <b>final output</b> initialized with zero</ul><li><pre>printf("Enter a number to know all armstrong
+        number between them\n");
+scanf("%d",&num);</pre>Used to <b>take input from user</b> say (num=1000)<li><pre>for(i=1;i&lt;=num;i++)
+{
+sum=0;
+temp1=i;
+temp2=i;</pre>To <b>traverse</b> for <b>1 to num(1000</b> from example) to obtain all armstrong numbers one by one by checking every number from 1 to 1000(num).<ul style=list-style-type:square><li><b>temp1,temp2</b> stores the value of '<b>i</b>' which will <b>generate number</b> to check whether they are <b>armstrong</b> or <b>not</b>.If the <b>i value is '1'</b> as it is <b>armstrong</b> then 1 will be printed.Same as 370 and 371 else it won't print.</ul><li><pre>while(temp1>0)
+{
+j=temp1%10;
+sum+=pow(j,3);
+temp1=temp1/10;
+}
+if(sum==temp2)
+{
+printf("%d\n",sum);
+}</pre>This is the main logic written inside for loop<ul style=list-style-type:square><li><b>Iteration 1 of forloop</b>: <b>i=1;temp1=i →temp1=1;temp2=i →temp2=1;</b><ul style=list-style-type:disc><li><b>Iteration 1 of while loop as temp1>0 so the loop executes</b><ul style=list-style-type:circle><li><b>j=temp1%10</b> → 1%10 → 1<li><b>sum=sum+pow(j,3) →</b> 0+1^3 →<b>sum=1</b><li><b>temp1=temp1/10</b> →1/10 →0 →<b>temp1=0</b><li><b>final values</b> after 1st iteration of while loop <b>i=1,temp2=1,j=1,sum=1,temp1=0</b></ul><li><b>Iteration 2 of while loop</b>:-Now <b>temp1 is not >0 so the loop terminates</b><li>Now <b>compiler checks sum==temp2 or not</b> where temp2 stores the original value of number which we wanted to check for armstrong number. As <b>sum=1,temp2=1</b>.Condition proves to be <b>true</b> so the 1 is printed</ul><li><b>Iteration 2 of forloop</b>: <b>i=2;temp1=i →temp1=2;temp2=i →temp2=2;</b><ul style=list-style-type:disc><li><b>Iteration 1 of while loop as temp1>0 so the loop executes</b><ul style=list-style-type:circle><li><b>j=temp1%10</b> → 2%10 → 2<li><b>sum=sum+pow(j,3)</b> → 0+2^3 →<b>sum=8</b><li><b>temp1=temp1/10</b> →2/10 →0 →<b>temp1=0</b><li><b>final </b>values after<b> 1st iteration of while loop i=2,temp2=2,j=2,sum=8,temp1=0</b></ul><li><b>Iteration 2 of while loop</b>:-Now <b>temp1</b> is <b>not</b> ><b>0</b> so the loop <b>terminates</b><li>Now compiler checks <b>sum==temp2</b> . As <b>sum=8,temp2=2</b>.<b>Condition</b> proves to be <b>false</b> so if condition is <b>not executed</b> and then moves to <b>next</b> <b>step</b>.</ul><li><b>Step</b> 2 which is<b> iteration 2 of forloop</b> will not print <b>3,4,5,6,...152</b> as they are <b>not</b> <b>armstrong</b> numbers.<li>The <b>above</b> will go on <b>until</b> <b>next</b> <b>Armstrong</b> is detected which is <b>153</b>.Lets see how it will print 153 as armstrong number.<li><b>Iteration 153 of forloop</b>:<b> i=153;temp1=i →temp1=153;temp2=i →temp2=153;</b><ul style=list-style-type:disc><li><b>Iteration 1 of while loop</b> as temp1>0 so the loop executes<ul style=list-style-type:circle><li><b>j=temp1%10</b> → 153%10 → 3<li><b>sum=sum+pow(j,3)</b> → 0+3^3 →sum=27<li><b>temp1=temp1/10</b> →153/10 →15 →temp1=15<li><b>final</b> values after <b>1st</b> iteration of <b>while</b> loop <b>i=153,temp2=153,j=3,sum=27,temp1=15</b></ul><li><b>Iteration 2 of while loop</b>:-15>0 which is true and while loop is executed<ul style=list-style-type:circle><li><b>j=temp1%10</b> → 15%10 → 5<li><b>sum=sum+pow(j,3)</b> → 27+5^3 →<b>sum</b>=27+125 →<b>152</b><li><b>temp1=temp1/10</b> →15/10 →1 →<b>temp1=1</b><li>final values after 1st iteration of while loop <b>i=153,temp2=153,j=5,sum=152,temp1=1</b></ul><li><b>Iteration 3 of while loop</b>:-1>0 which is true and while loop is executed<ul style=list-style-type:circle><li><b>j=temp1%10</b> → 1%10 → 1<li><b>sum=sum+pow(j,3)</b> → 152+1^3 →<b>sum</b>=152+1→<b>153</b><li><b>temp1=temp1/10</b> →1/10 →0 →<b>temp1</b>=<b>0</b><li>final values after 1st iteration of while loop <b>i=153,temp2=153,j=1,sum=153,temp1=0</b></ul><li><b>Iteration 4 of while loop</b>:-0>0 which is not true so while loop is terminated<li>Now compiler checks <b>sum</b>==<b>temp2</b> or not. As <b>sum=153,temp2=153</b>.Condition proves to be <b>true</b> so the 153 is <b>printed</b></ul><li>The same way as above continues till 1000 and prints all the armstrong numbers which are remaining 370,371,407.</ul></ol></div>

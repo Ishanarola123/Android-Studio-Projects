@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="0dp" android:paddingBottom="0dp" android:layout_width="-1" android:layout_height="-2" android:paddingStart="873922unknown unit:0x21" android:paddingEnd="873922unknown unit:0x21">
+	<LinearLayout android:gravity="0x11" android:orientation="0" android:id="false" android:layout_width="-1" android:layout_height="-1" android:baselineAligned="false">
+		<miuix.androidbasewidget.widget.ProgressBar android:id="resourceId:0x102000d" android:layout_width="-2" android:layout_height="-2" android:max="10000" android:layout_marginEnd="218562unknown unit:0x21" style="{2:2130969289}" />
+		<TextView android:textSize="16sp" android:layout_gravity="0x10" android:id="false" android:layout_width="-1" android:layout_height="-2" style="{2:16842816}" />
+	</LinearLayout>
+</FrameLayout>

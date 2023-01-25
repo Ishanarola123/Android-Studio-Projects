@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:layout_width="-1" android:layout_height="-1">
+	<TextureView android:id="false" android:layout_width="-1" android:layout_height="-1" />
+	<RelativeLayout android:id="false" android:layout_width="-1" android:layout_height="-1">
+		<View android:background="80000" android:layout_width="-1" android:layout_height="-2" android:layout_alignTop="false" />
+		<com.xiaomi.scanner.ui.ShutterButton android:layout_gravity="0x51" android:id="false" android:focusable="true" android:clickable="true" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginTop="30dp" android:layout_marginBottom="24dp" android:src="res/drawable/bg_camera_shutter_button.xml" android:scaleType="1" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="Shutter" />
+		<TextView android:textSize="349634unknown unit:0x22" android:textColor="ff000" android:gravity="0x11" android:id="false" android:background="res/drawable-xxhdpi-v4/ic_camera_shutter_button_normal.png" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:text="Lock translation" android:maxLines="2" android:layout_alignTop="false" android:layout_alignBottom="false" android:contentDescription="Lock translation" android:layout_alignStart="false" android:layout_alignEnd="false" />
+		<FrameLayout android:layout_width="-1" android:layout_height="-1" android:layout_alignTop="false" android:layout_alignBottom="false" android:layout_toEndOf="false">
+			<com.xiaomi.scanner.ui.TouchStateImage android:layout_gravity="0x11" android:id="false" android:padding="437125unknown unit:0x21" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/ic_image_picker_normal.png" android:contentDescription="Choose picture" />
+		</FrameLayout>
+		<com.xiaomi.scanner.ui.BottomModuleRecycleView android:id="false" android:paddingTop="10dp" android:layout_width="-1" android:layout_height="-2" android:layout_above="false" />
+		<FrameLayout android:id="false" android:layout_width="-1" android:layout_height="-1" android:layout_above="false" />
+		<CheckBox android:id="false" android:background="res/drawable-xxhdpi-v4/flash_pic.png" android:visibility="2" android:layout_width="24dp" android:layout_height="35dp" android:layout_marginBottom="15dp" android:checked="false" android:button="resourceId:0x0" android:layout_above="false" android:layout_centerHorizontal="true" />
+		<RelativeLayout android:id="false" android:layout_width="-1" android:layout_height="-2">
+			<com.xiaomi.scanner.ui.FlashButton android:layout_gravity="0x800003" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_alignParentStart="true" />
+			<com.xiaomi.scanner.ui.TouchStateImage android:layout_gravity="0x800005" android:id="false" android:padding="14dp" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/top_more.png" android:scaleType="1" android:contentDescription="Settings" android:layout_alignParentEnd="true" />
+			<TextView android:textSize="415170unknown unit:0x22" android:textColor="ffffffff" android:gravity="0x1" android:id="false" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="16dp" android:layout_toLeftOf="false" android:layout_toRightOf="false" android:layout_centerHorizontal="true" />
+		</RelativeLayout>
+	</RelativeLayout>
+	<com.xiaomi.scanner.ui.FullScreenPanelRoot android:id="false" android:background="resourceId:0x106000c" android:visibility="2" android:layout_width="-1" android:layout_height="-1" />
+	<View android:layout_gravity="0x50" android:id="false" android:background="80000" android:visibility="2" android:layout_width="-1" android:layout_height="-2" />
+</FrameLayout>

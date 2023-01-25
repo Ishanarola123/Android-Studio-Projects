@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;stdlib.h&gt;
+#include&lt;ctype.h&gt;
+main()
+{
+ int i,j,poly[26],x,k;
+ char str[1000];
+ printf("Enter a sentence\n");
+ gets(str);
+i=0;
+ while(str[i]!='\0')
+ {
+  if((str[i]&gt;=0&amp;&amp;str[i]&lt;=31)||(str[i]&gt;=33&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127))
+  {
+   printf("Enter only alphabets and space\n");
+   exit(0);
+  }
+  i++;
+ }
+ x=0;
+ k=11;
+ //Assigning Polybius Square numbers to alphabets
+
+for(i=0;i&lt;=25;i++)
+{
+ if(i&lt;=8)
+ {
+      if(i%5==0&amp;&amp;i!=0)
+   {
+  k+=5;
+  poly[x]=k++;
+
+    }
+   else{
+  poly[x]=k++;
+
+      }
+ }
+ if(i&gt;=10)
+ {
+      if(i%5==0&amp;&amp;i!=0)
+   {
+
+  poly[x]=k++;
+   k+=5;
+
+    }
+   else{
+  poly[x]=k++;
+
+      }
+ }
+ if(i==9)
+ {
+  poly[x]=24;
+ }
+
+
+  x++;
+}
+i=0;
+printf("Encrypted Code using Polybius Square Cipher \n");
+while(str[i]!='\0')
+  {
+ if(!((str[i]&gt;=0&amp;&amp;str[i]&lt;=31)||(str[i]&gt;=33&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+ {
+   if(str[i]&gt;='A'&amp;&amp;str[i]&lt;='Z')
+   {
+    printf("%d ",poly[str[i]-'A']);
+   }
+     if(str[i]&gt;='a'&amp;&amp;str[i]&lt;='z')
+     {
+      printf("%d ",poly[str[i]-'a']);
+     }
+
+ }
+
+    if(str[i]==' ')
+    {
+      printf("%c",str[i]);
+    }
+
+   i++;
+  }
+  printf("\n");
+
+}
+</pre>
+    </div>
+    <span class="headings">Output I:</span><br/>
+    <span>
+        Enter a sentence<br>
+ABCDefghijklmnoPQRSTUVwxyz<br>
+Encrypted Code using Polybius Square Cipher<br>
+11 12 13 14 15 21 22 23 24 24 25 31 32 33 34 35 41 42 43 44 45 51 52 53 54 55<br>
+    </span>
+    <span class="headings">Output II:</span><br/>
+    <span>
+Enter a sentence<br>
+Hey Alert They are planning to attack us<br>
+Encrypted Code using Polybius Square Cipher<br>
+23 15 54  11 31 15 42 44  44 23 15 54  11 42 15  35 31 11 33 33 24 33 22  44 34  11 44 44 11 13 25  45 43<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    <img src="polybius_exp.JPG" class="img-responsive"><br>
+    Means A-11, F-21,N-33 and so on.
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

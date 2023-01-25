@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+int i,count=0;
+char c,str[100];
+printf("Enter a sentence\n");
+gets(str);
+printf("Enter a character to know it's repetance in sentence\n");
+scanf("%c",&c);
+
+for(i=0;i&lt;strlen(str);i++)
+{
+    if(str[i]==c)
+    {
+        count++;
+    }
+}
+printf("Letter %c repeated %d times\n",c,count);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a sentence<br>hello world<br>Enter a character to know it's repetance in sentence<br>l<br>Letter l repeated 3 times<br></span><span class=headings>Explanation:</span><br><ol><li>This program starts with initializing :<ul style=list-style-type:square><li><b>str[100] </b>→ To store <b>string with length of 100 </b>which means it can store<b> 100 letters</b><li><b>i</b> →Used as<b> helping variable</b><li><b>count</b>→ To store <b>number of  times a letter is repeated in a given string </b>and is initilized to<b> 0.</b><li><b>c </b>→Used<b> to store required letter</b></ul><li><pre>printf("Enter a sentence\n");
+gets(str);</pre>Takes string from user.<li><pre>printf("Enter a character to know it's repetance in sentence\n");
+scanf("%c",&c);</pre>Takes a letter from user for which we want to know number of times it repeated<li><pre>for(i=0;i&lt;strlen(str);i++)
+{
+    if(str[i]==c)
+    {
+        count++;
+    }
+}</pre>Same as previous programs the <b>forloop</b> traverse from <b>0 to length of string </b>and <b>compares </b>each <b>character from the string</b><i>(say <b>"hello world"</b> from blow output) </i><b></b>with the given <b>letter </b>and the <b>count </b>is <b>incremented </b>by <b>1</b> <b>each time </b>it matches with the <b>given letter</b>(<i>say '<b>l'</b> from the below output</i>).</ol></div>

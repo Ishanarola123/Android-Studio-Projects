@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+  int num,i,count=0;
+  printf("Enter a number to check whether it is prime or not\n");
+  scanf("%d",&num);
+  for(i=1;i&lt;=num;i++)
+  {
+    if(num%i==0)
+    {
+      count++;
+    }
+  }
+  if(count==2)
+  {
+    printf("The given number %d is Prime Number\n",num);
+  }
+  else
+  {
+    printf("The given number %d is not Prime Number\n because The number is divisible by\n",num);
+    for(i=1;i&lt;=num;i++)
+    {
+      if(num%i==0)
+      {
+        printf("%d\n",i);
+      }
+    }
+  }
+}
+</pre>
+</div>
+    <span class=headings>Output:</span><br>
+    <span>
+        Enter a number to check whether it is prime or not<br>
+27<br>
+The given number 27 is not Prime Number<br>
+ because The number is divisible by<br>
+1<br>
+3<br>
+9<br>
+27<br>
+    </span>
+
+    <span class=headings>Explanation:</span><br>
+
+    <b> The prime number should be divisible by 1 and itself.This is the main concept of this program.</b>
+    <br>
+    <ol>
+        <li>The program starts with initializing
+            <ul style=list-style-type:square>
+                <li><b>num</b> → To store <b>number</b></li>
+                <li><b>i </b>→ <b>Temporary</b> variable</li>
+                <li><b>count </b>→ To store <b>number</b> of <b>divisors</b></li>
+            </ul>
+        </li>
+        <li>
+            <blockquote>
+<pre>printf("Enter a number to check whether it is prime or not\n");
+scanf("%d",&num);</pre>
+            </blockquote>
+            To take <b>number</b> from <b>user</b></li>
+        <li>
+            <blockquote>
+<pre>for(i=1;i&lt;=num;i++)
+{
+if(num%i==0)
+{
+count++;
+}
+}</pre>
+            </blockquote>
+            Let us assume <b>num</b>=<b>253</b>.
+            The loop will <b>traverse</b> from<b> i=1 to 253</b>
+            In each iteration the number <b>num=253</b> is divided by i.For example
+            <ul style=list-style-type:square>
+                <li><b>Iteration 1</b>:<b>i=1,i less than 253</b>
+                    <ul style=list-style-type:disc>
+                        <li>In if<b> num%i==0 → 253%1==0 which is true</b></li>
+                        <li>Then <b>count increments</b> by 1.So<b> count=1;</b></li>
+                    </ul>
+                </li>
+                <li><b>Iteration 2:i=2,i</b> <b>less than 253</b>
+                    <ul style=list-style-type:disc>
+                        <li>In if num%i==0 → 253%2==0 which is false</li>
+                        <li>As the condition is false the <b>count remains same</b> so count is still<b> count=1</b></li>
+                    </ul>
+                </li>
+                <li><b>Iteration 3:i=3,i less than 253</b>
+                    <ul style=list-style-type:disc>
+                        <li>In if <b>num%i==0 → 253%3==0 which is false</b></li>
+                        <li>As the condition is <b>false</b> the <b>count remains</b> <b>same</b> so count is still <b>count=1</b></li>
+                    </ul>
+                </li>
+                <li>Like this it goes on till<b> iteration 11</b></li>
+                <li>...........</li>
+                <li><b>Iteration 11:i=11,i less than 253</b>
+                    <ul style=list-style-type:disc>
+                        <li>In if num%i==0 → 253%11==0 which is true</li>
+                        <li>Then count increments by 1.So count=2;</li>
+                    </ul>
+                </li>
+                <li>Like this for <b>every divisor</b> of <b>number</b>(<b>253</b>) the <b>count</b> will get <b>incremented</b> and in this case of number(<b>253</b>) <b>there are 4 divisors (they are:1,11,13,153) until i=253</b></li>
+                <li>So the <b>count=4</b></li>
+            </ul>
+        </li>
+        <li>
+            <blockquote>
+<pre>if(count==2)
+{
+printf("The given number %d is Prime Number\n",num);
+}
+else
+{
+printf("The given number %d is not Prime Number\n
+        because The number is divisible by\n",num);
+for(i=1;i&lt;=num;i++)
+{
+if(num%i==0)
+{
+printf("%d\n",i);
+}
+}
+}</pre>
+            </blockquote>
+            As for <b>Prime</b> number there will be <b>only</b> <b>2</b> <b>divisors</b> <b>1</b> and the<b> number itself</b>
+
+            If the <b>number</b> is <b>prime</b> number the <b>count</b> will be <b>2</b>(i.e. count=2)
+
+            But in this case where <b>number</b> is <b>253</b> the<b> count=4</b> so the <b>condition</b> will be <b>false</b> and <b>prints</b> that it is <b>not</b> a <b>prime</b> number and <b>display</b> its <b>divisors</b> using the same logic as in case of counting number of divisors except instead of using count to increment we used printf to print values of divisors</li></ol></div>

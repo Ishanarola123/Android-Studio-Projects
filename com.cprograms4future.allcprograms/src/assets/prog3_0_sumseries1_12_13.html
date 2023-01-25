@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+int i,n;
+float sum=0;
+printf("Enter value of n\n");
+scanf("%d",&n);
+
+
+for(i=1;i&lt;=n;i++)
+{
+ sum+=(float)1/i;
+}
+printf("The value of\n");
+for(i=1;i&lt;=n;i++)
+{
+ if(i&lt;n)
+ {
+  printf("1/%d+ ",i);
+ }
+ else
+ {
+  printf("1/%d= ",i);
+ }
+}
+printf("%f\n",sum);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter value of n<br>8<br>The value of<br>1/1+ 1/2+ 1/3+ 1/4+ 1/5+ 1/6+ 1/7+ 1/8= 2.717857<br></span><span class=headings>Explanation:</span><br><pre><b>Formula for this series: sum=1+1/2+1/3+1/4....+1/N</b></pre><br><ol><li>This program starts with initializing :<ul style=list-style-type:square><li><b>n </b>→ To store <b>input from user</b><li><b>i</b> →Used as<b> helping variable</b><li><b>sum </b>→ To store <b>output sum</b></ul><li><pre>printf("Enter value of n\n");
+scanf("%d",&n);
+</pre>Taking<b> input from user</b><li><pre>for(i=1;i&lt;=n;i++)
+{
+ sum+=(float)1/i;
+}</pre>For loop iterates from <b>1 to 'n'(say from example 8). Sum </b>is initialized to<b> zero</b><ul style=list-style-type:square><li><b>Iteration 1</b>:<b>i=1;1&lt;=8</b>(which is <b>true </b>so loop will <b>execute</b>)<ul style=list-style-type:disc><li>sum+=(float)1/i →sum+(1/i)→0+1/1→sum=1<li>(float) is used to <b>type cast<span style=color:red>* </span></b><span style=color:red></span><li><span style=color:red><span style=color:#000></span></span>Final values are<b><span style=color:red> </span></b><span style=color:red><span style=color:#000>sum= 1,i will be incremented to 2 so i=2.</span></span><span style=color:red><br></span></ul><li><b>Iteration 2</b>:<b>i=2;2&lt;=8</b>(which is <b>true </b>so loop will <b>execute</b>)<ul style=list-style-type:disc><li>sum+=(float)1/i →sum+(1/i)→1+(1/2)→sum=1.5<li>Final values are<b><span style=color:red> </span></b><span style=color:red><span style=color:#000>sum= 1.5,i will be incremented to 3 so i=3.</span></span><span style=color:red><br></span></ul><li><b>Iteration 3</b>:<b>i=3;3&lt;=8</b>(which is <b>true </b>so loop will <b>execute</b>)<ul style=list-style-type:disc><li>sum+=(float)1/i →sum+(1/i)→1.5+(1/3)→sum=1.83333<li>Final values are<b><span style=color:red> </span></b><span style=color:red><span style=color:#000>sum= 1.8333,i will be incremented to 4 so i=4. </span></span><span style=color:red><br></span></ul><li>This iteration continues till <b>iteration 8</b> and after that<b> i</b> will become<b> 9</b> which <b>terminates</b> the loop.Finally <b>sum </b>will be <b>2.717857</b></ul><li><pre>for(i=1;i&lt;=n;i++)
+{
+ if(i&lt;n)
+ {
+  printf("1/%d+ ",i);
+ }
+ else
+ {
+  printf("1/%d= ",i);
+ }
+
+}</pre>The <b>previous loop </b>will just obtain the <b>sum </b>and <b>won't print 1/1+1/2+1/3+1/4...+1/8.</b>To Print that the above<b> for loop </b>is used as the above loop<b> iterates 8 times</b> and <b>if i&lt;n then 1/i+ is printed</b> and if <b>i is not less than n</b> which means the <b>final </b>value is printed <b>with 1/i= at the end </b><li>And finally <b>sum </b>is printed.</ol><span style=color:red><b>*Note:-</b></span><b>Type casting </b>is used to convert value of one datatype to another.For example if <b>1/2 is int </b>then output is<b> 0</b> whereas if it is <b>float</b> the <b>output </b>will be<b> 0.5</b><br>While we are calculating<b> 1/i </b>it will give <b>integer </b>output as<b> i is declared as integer(i.e. int i)</b> but in <b>our</b> <b>program </b>it should give <b>float value </b>so to <b>convert output </b>from <b>int to float</b> we use <b>typecasting.</b><br>So when we use <b>(float)1/i,</b> it will generate a <b>float type output</b><br></div>

@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+<span style=color:#000>#include</span>&lt;stdio.h>
+<span style=color:#000>main()</span>
+<span style=color:#000>{</span>
+<span style=color:#000>  int number,factorial=1,i;</span>
+<span style=color:#000>  printf("Enter a number for knowing it's factorial\n");</span>
+<span style=color:#000>  scanf("%d",&number);</span>
+<span style=color:#000>  for(i=1;i&lt;=number;i++)</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>   factorial=factorial*i;</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>  printf("%d!=%d\n",number,factorial);</span>
+<span style=color:#000>}</span>
+</pre></div><span class=headings>Output:</span><br><span>Enter a number for knowing it's factorial<br>5<br>5!=120<br></span><span class=headings>Explanation:</span><br><ol><li><span style=color:#000>Initializes :</span><ul><li><span style=color:#000><b>number</b>-for storing given number</span><li><span style=color:#000><b>factorial</b>-for storing factorial of a number.</span><li><span style=color:#000><b>i</b> for using in loop</span></ul><li><span style=color:#000>Prompting user for input through scanf statement.</span><li><span style=color:#000>The main logic goes here:(factorial=factorial*i)</span><ul><li><span style=color:#000><b>i</b>=1 and i&lt;=number(say 5) which is true then factorial=1*1=1 then i increments by 1</span><li><span style=color:#000>Now <b>i</b>=2 and as i&lt;=5 which is true then <b>factorial</b>=<b>1*2=2</b>.Now i increases by 1</span><li><span style=color:#000>Now<b> i</b>=3 and as i&lt;=5 which is true then <b>factorial</b>=<b>2*3=6</b>.Now i increases by 1</span><li><span style=color:#000>Now<b> i</b>=4 and as i&lt;=5 which is true then <b>factorial</b>=<b>6*4=24</b>.Now i increases by 1</span><li><span style=color:#000>Now <b>i</b>=5 and as i&lt;=5 which is true then <b>factorial</b>=<b>24*5=120</b>.Now i increases by 1</span><li><span style=color:#000>Now <b>i</b>=6 and as I is not less or equal to 5 the loop terminates</span></ul><li><span style=color:#000>There fore it prints the <b>factorial</b> which is 120.</span></ol></div>

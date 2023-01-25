@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:top="5dp" android:bottom="5dp" android:start="12dp" android:end="12dp">
+		<shape android:shape="0">
+			<solid android:color="res/color/miuix_preference_list_item_two_state_bg_color.xml" />
+			<size android:height="1746534unknown unit:0x21" />
+			<padding android:left="873922unknown unit:0x21" android:top="5dp" android:right="873922unknown unit:0x21" android:bottom="5dp" />
+			<corners android:radius="16dp" />
+		</shape>
+	</item>
+</layer-list>

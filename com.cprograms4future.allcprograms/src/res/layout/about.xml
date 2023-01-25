@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="0dp" android:layout_marginBottom="0dp">
+	<TextView android:textColor="ffffff" android:id="false" android:background="68cb9" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="-1" android:layout_height="-2" android:text="About Me" android:layout_alignParentTop="true" />
+	<ScrollView android:layout_width="-2" android:layout_height="-2" android:layout_below="false">
+		<TextView android:id="false" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="30dp" android:layout_width="-1" android:layout_height="-2" android:text="Hi! Thanks for downloading my App.         
+This is Mahidhar Guggilam who developed this app to help novice to learn C Programs at any time
+
+         If you find any issue or any program is missing with some bracket or semicolon or any other issue,please mail at cprograms4future@gmail.com or click on email icon at bottom of screen.
+         I will rectify and upload it ASAP.
+         Not only that if you require any program email to the same mail.
+         If You Liked it Please Share my App and Get Updates by Liking my Facebook Page.
+Link is Available in Menu
+         I will update app for every 50 programs or when it reaches 400 in my website.So keep updating.Enjoy Programming.Good Bye......." />
+	</ScrollView>
+	<Button android:textColor="ffffff" android:id="false" android:background="8739d" android:layout_width="-1" android:layout_height="-2" android:text="Close" android:layout_alignParentBottom="true" />
+</RelativeLayout>

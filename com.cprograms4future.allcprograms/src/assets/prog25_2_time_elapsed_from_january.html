@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;stdlib.h&gt;
+int CheckLeapyear(int year);
+int CheckDateFormat(int day,int month,int year,int leap,int *assignMonth);
+main()
+{
+ int i=0,j,year,day,mnth,k=0,checkYear,assignMonth[12],noOfDays=0,checkFormat;
+ char str[10],split,substr[3][4];
+ printf("Enter Date in dd-mm-yyyy or dd/mm/yyyy format like 01-02-1018\n");
+ gets(str);
+ if(str[2]=='-')
+ {
+  split='-';
+ }
+ else if(str[2]=='/')
+ {
+  split='/';
+ }
+ else
+ {
+  printf("Enter Date Format in dd/mm/yyyy or dd-mm-yyyy if 1 is there enter 01\n");
+  exit(0);
+ }
+ //Splitting entered date into day,month,year
+ while(str[k]!='\0')
+    {
+        j=0;
+        while(str[k]!=split&amp;&amp;str[k]!='\0')
+        {
+            substr[i][j]=str[k];
+            k++;
+            j++;
+        }
+        substr[i][j]='\0';
+        i++;
+        if(str[k]!='\0')
+        {
+            k++;
+        }
+    }
+    day=atoi(substr[0]);
+   mnth=atoi(substr[1]);
+   year=atoi(substr[2]);
+   checkYear=CheckLeapyear(year);
+
+   //Assigning months
+   for(i=1;i&lt;=12;i++)
+   {
+    if(i&lt;8)
+    {
+     if(i%2!=0)
+         {
+     assignMonth[i]=31;
+         }
+    if(i%2==0&amp;&amp;i!=2)
+      {
+     assignMonth[i]=30;
+         }
+
+     }
+     if(i&gt;8)
+     {
+      if(i%2!=0)
+         {
+     assignMonth[i]=30;
+         }
+    if(i%2==0&amp;&amp;i!=2)
+      {
+     assignMonth[i]=31;
+         }
+     }
+
+
+    if(i==2)
+    {
+     if(checkYear==1)
+     {
+      assignMonth[i]=29;
+     }
+     else
+     {
+      assignMonth[i]=28;
+     }
+    }
+    if(i==8)
+    {
+     assignMonth[i]=31;
+    }
+   }
+
+   checkFormat=CheckDateFormat(day,mnth,year,checkYear,assignMonth);
+   if(checkFormat==1)
+   {
+    for(i=1;i&lt;=12;i++)
+   {
+   if(i&lt;mnth)
+   {
+    noOfDays+=assignMonth[i];
+   }
+   if(i==mnth)
+   {
+    noOfDays+=day;
+   }
+   if(i&gt;mnth)
+   {
+    break;
+   }
+   }
+   }
+   else
+   {
+    printf("Enter Valid Date\n");
+    exit(0);
+   }
+
+
+   printf("Number of days since 01-01-%d till %d-%d-%d is %d\n",year,day,mnth,year,noOfDays);
+
+}
+
+int CheckLeapyear(int year)
+{
+  if(year%400==0)
+  {
+    return 1;
+  }
+  else if(year%100==0)
+  {
+    return 0;
+  }
+  else if(year%4==0)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+int CheckDateFormat(int day,int month,int year,int checkyear,int *assignMonth)
+{
+ int i;
+ //Checking day
+   if(day&lt;=assignMonth[month]&amp;&amp;day&gt;=1&amp;&amp;month&lt;=12&amp;&amp;month&gt;=1)
+   {
+    return 1;
+   }
+   else
+   {
+    return 0;
+   }
+}
+</pre>
+    </div>
+    <span class="headings">Output I:</span><br/>
+    <span>
+       Enter Date in dd-mm-yyyy or dd/mm/yyyy format like 01-02-1018<br>
+15-03-2017<br>
+Number of days since 01-01-2017 till 15-3-2017 is 74<br>
+    </span>
+    <span class="headings">Output II:</span><br/>
+    <span>
+       Enter Date in dd-mm-yyyy or dd/mm/yyyy format like 01-02-1018<br>
+30-02-2017<br>
+Enter Valid Date<br>
+    </span>
+    <br><span class="headings">Reason:</span><br>
+    The above is not Valid Date since in February there is no date with 30<br>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+	<LinearLayout android:orientation="0" android:paddingTop="566886unknown unit:0x21" android:paddingBottom="32dp" android:layout_width="-1" android:layout_height="-2">
+		<miuix.pickerwidget.widget.NumberPicker android:id="false" style="resourceId:0x7f1102e0" />
+		<miuix.pickerwidget.widget.NumberPicker android:id="false" android:text="H" style="resourceId:0x7f1102e0" />
+		<miuix.pickerwidget.widget.NumberPicker android:id="false" android:text="M" style="resourceId:0x7f1102e0" />
+	</LinearLayout>
+</LinearLayout>

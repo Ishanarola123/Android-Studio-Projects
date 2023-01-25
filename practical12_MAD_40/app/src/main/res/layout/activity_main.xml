@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="34dp"
+        android:gravity="center"
+        android:background="@drawable/header_bg"
+        android:height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+
+        />
+
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:width="40dp"
+        android:background="@drawable/input_bg"
+        android:breakStrategy="balanced"
+        android:hint="enter number 1:"
+        android:minHeight="48dp"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/black"
+        android:textSize="24dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter number 2:"
+        android:textSize="24dp"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="20dp"
+        android:breakStrategy="balanced"
+        android:textAlignment="textStart"
+        android:id="@+id/input2"
+        android:width="40dp"
+        android:background="@drawable/input_bg"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_bg"
+        android:id="@+id/result"
+
+
+        />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="#4d80e8"
+
+            android:gravity="center"
+            android:text="Add"
+            android:drawableTint="@color/white"
+            android:id="@+id/add"
+
+            />
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="#4d80e8"
+
+            android:gravity="center"
+            android:text="Sub"
+            android:drawableTint="@color/white"
+            android:id="@+id/sub"
+            />
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+
+        >
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="#4d80e8"
+
+            android:gravity="center"
+            android:text="mul"
+            android:drawableTint="@color/white"
+            android:id="@+id/mul"
+
+            />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="#4d80e8"
+
+            android:gravity="center"
+            android:text="div"
+            android:drawableTint="@color/white"
+            android:id="@+id/div"
+            />
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+</LinearLayout>

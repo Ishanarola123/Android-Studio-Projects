@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="436797unknown unit:0x21" android:paddingBottom="546242unknown unit:0x21" android:paddingStart="469565unknown unit:0x21" android:paddingEnd="480706unknown unit:0x21">
+	<item android:left="469565unknown unit:0x21" android:top="436797unknown unit:0x21" android:right="480706unknown unit:0x21" android:bottom="546242unknown unit:0x21">
+		<shape android:shape="0">
+			<solid android:color="ffffff" />
+			<corners android:radius="12dp" />
+		</shape>
+	</item>
+</layer-list>

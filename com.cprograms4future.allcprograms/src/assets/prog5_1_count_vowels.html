@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ char s[100];
+ int i,count=0;
+ printf("Enter a string to know how many vowels are there \n");
+ scanf("%s",&s);
+ for(i=0;s[i]!='\0';i++)
+ {
+   if(s[i]=='A'||s[i]=='a'||s[i]=='e'||s[i]=='E'||s[i]=='I'||s[i]=='i'||s[i]=='O'||s[i]=='o'||s[i]=='U'||s[i]=='u')
+   {
+     count++;
+   }
+ }
+ if(count==0)
+ {
+    printf("No vowels are there \n");
+ }
+ else
+ {
+    printf("Number of vowels in %s is %d\n",s,count);
+ }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a string to know how many vowels are there<br>cprograms4future<br>Number of vowels in cprograms4future is 5<br></span><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing :<pre>char s[100];
+int i,count=0;</pre><ul style=list-style-type:square><li><strong>s[100]</strong> → To store string <strong>input </strong>from user which can have 100 characters i.e. Letters<li><strong>i</strong> → used as <strong>helping</strong> variable<li><strong>count</strong> → To store <strong>count</strong> of <strong>characters</strong> in the input<strong></strong></ul><li><pre>printf("Enter a string to know how many vowels are there \n");
+scanf("%s",&s);</pre>Taking <strong>string</strong> from <strong>user</strong>.While <strong>initializing</strong> we need to <strong>declare</strong> it as <strong>character Array</strong> but while <strong>taking</strong> <strong>input</strong> we can use <strong>%s</strong> to take <strong>string</strong> instead of <strong>%c</strong>.Where <strong>%s</strong> can take <strong>character array</strong>(many characters) as input at a time and <strong>%c</strong> can take <strong>single</strong> <strong>characters</strong> at a time.<li><pre>for(i=0;s[i]!='\0';i++)
+{</pre>The <strong>main</strong> <strong>logic starts</strong> from here.As the <strong>string</strong> given by us is a<strong> character array.</strong>As <strong>array count starts from zero</strong>.The for <strong>loop</strong> <strong>traverse</strong> from <strong>0 to end of string(s[i]!='\0')</strong> where <strong>'\0'</strong> indicates <strong>end</strong> of <strong>string</strong>.So from <strong>given</strong> input <strong>Education</strong>(say) the loop <strong>traverse</strong> from<strong> E to n</strong>.<li><pre>if(s[i]=='A'||s[i]=='a'||s[i]=='e'||s[i]=='E'||s[i]=='I'||s[i]=='i'||s[i]=='O'||s[i]=='o'||s[i]=='U'||s[i]=='u')
+{
+count++;
+}</pre>Now each <strong>character</strong> is checked with the <strong>condition</strong> in '<strong>if'</strong> part and if any <strong>character</strong> matches then the <strong>count</strong> is <strong>incremented</strong> by 1.For Example from <strong>input</strong> <strong>Education</strong>.Initially<strong> count=0.</strong>And<strong> || indicates OR Operation.</strong><ul style=list-style-type:square><li><strong>Iteration 1</strong>: <strong>E</strong> is <strong>checked</strong> with all <strong>characters</strong> in <strong>if</strong> <strong>condition</strong> as it <strong>matches</strong> with <strong>capital</strong> <strong>E</strong> the <strong>count</strong> becomes <strong>count=1</strong>.<li><strong>Iteration 2</strong>: <strong>d</strong> is <strong>checked</strong> with all <strong>characters</strong> in <strong>if</strong> <strong>condition</strong> as it does not <strong>match </strong>with any<strong> character</strong> in<strong> if condition </strong>the <strong>count</strong> remains same so <strong>count=1</strong><li><strong>Iteration 3</strong>: <strong>u</strong> is <strong>checked</strong> with all <strong>characters</strong> in <strong>if</strong> <strong>condition</strong> as it <strong>matches</strong> with <strong>small u</strong> the <strong>count</strong> becomes <strong>count=2</strong>.<li><strong>Similarly</strong> it <strong>continues</strong> with "<strong>cation</strong>" and <strong>count</strong> becomes <strong>5</strong></ul><li><pre>if(count==0)
+{
+printf("No vowels are there \n");
+}
+else
+{
+printf("Number of vowels in %s is %d\n",s,count);
+}</pre>Now it <strong>checks</strong> whether the <strong>count</strong> is <strong>zero</strong> or <strong>not</strong> .If it is <strong>zero</strong> then <strong>printf</strong> in <strong>"if"</strong> <strong>part</strong> is <strong>executed</strong> <strong>otherwise</strong> the <strong>printf</strong> in <strong>else</strong> part which will <strong>print</strong> the <strong>number</strong> of <strong>vowels</strong> in the <strong>given</strong> <strong>string.</strong></ol><br></div>

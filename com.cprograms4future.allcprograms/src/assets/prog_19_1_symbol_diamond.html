@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ int i,j,k,count,number;
+ printf("Enter number of rows\n");
+ scanf("%d",&number);
+ count=number-1;
+ for(i=1;i&lt;=2*(number)-1;i+=2)//first for loop
+ {
+  for(k=1;k&lt;=count;k++)
+  {
+   printf(" ");
+  }
+  count--;
+  for(j=1;j&lt;=i;j++)
+  {
+   printf("*");
+  }
+  printf("\n");
+ }  //end of first for loop
+ count=1;
+ for(i=2*(number)-1;i>=1;i-=2)//second for loop
+ {
+   if(i!=(2*(number)-1))
+   {
+     for(k=1;k&lt;=count;k++)
+     {
+      printf(" ");
+     }
+     count++;
+     for(j=i;j>=1;j--)
+     {
+       printf("*");
+     }
+     printf("\n");
+   }
+ }//end of second for loop
+}
+</pre></div><span class=headings>Output:</span><br><span><pre>
+Enter number of rows
+5
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+        </pre><br></span><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing<ul style=list-style-type:square><li><b>i,j,k</b> → <b>helping</b> variable<li><b>number</b> → to store number of <b>rows</b><li><b>count</b> → to store number of <b>spaces</b></ul><li>There are <b>two for loops</b>. <b>First</b> one is used to print a <b>normal</b> <b>triangle</b> and <b>second</b> is used to print <b>reverse</b> <b>triangle</b><li>Say in the below example we want <b>10</b> rows to be printed.<b>First</b> for loop prints <b>10</b> rows of <b>normal</b> triangle and <b>second</b> will do the <b>same</b> in <b>reverse</b>.<li><b>Coming to 1st for loop</b><ul style=list-style-type:square><li><blockquote><pre>for(i=1;i&lt;=2*(number)-1;i+=2)</pre></blockquote>It will iterate the loop from <b>i=1 to 19</b> with <b>increment of 2</b> each time so that we could use <b>i</b> value for stars to be printed in <b>odd number</b> times(<b>like 1,3,5,7...19</b>).<li><blockquote><pre>for(k=1;k&lt;=count;k++)
+{
+printf(" ");
+}</pre><pre>count--;</pre></blockquote>This loop will print the<b> spaces</b> for each iteration.<li>As if you see in the <b>output</b> below:for <b>1st star</b> it needs <b>9 spaces</b> from the <b>left end</b> and it should go on <b>decreasing for every loop</b> which is why we used <b>count--</b><li><blockquote><pre>for(j=1;j&lt;=i;j++)
+{
+printf("*");
+}
+printf("\n");
+}  //end of first for loop</pre></blockquote>This is used to print <b>stars</b> with <b>i</b> number of times.For example if <b>i = 19</b> in that iteration it will print <b>stars</b> that number of times.It will print stars from<b> 1 to i</b> as the stars go on increasing in<b> upper triangle</b><li>So till now we got upper triangle.</ul><li><b>Coming to 2nd for loop</b><ul style=list-style-type:square><li><blockquote><pre>for(i=2*(number)-1;i>=1;i-=2)//second for loop
+{</pre></blockquote>If you see this this is <b>same as above</b> one <b>but</b> here <b>we need to make it reverse</b> so the loop will iterate from <b>i=19 to 1</b> by <b>decrementing</b> <b>2</b> each time (<b>like 19,17,15...1</b>)<li><blockquote><pre>if(i!=(2*(number)-1))
+{</pre></blockquote>If you observe the <b>output</b> <b>below</b> you will find <b>19 stars</b> at the <b>end of first triangle</b> which is done by <b>first</b> <b>loop</b> but for <b>second</b> <b>loop</b> we <b>should not print 19</b> <b>stars</b> or <b>2(number)-1 th time. </b>So we are <b>skipping</b> that iteration.<li><blockquote><pre>for(k=1;k&lt;=count;k++)
+{
+ printf(" ");
+ }
+count++;</pre></blockquote>We made <b>count=1</b> at the <b>end of first forloop</b>.Beacause in the <b>upper triangle</b> we need <b>spaces</b> which <b>decreases</b> gradually for every loop from left end.But in the <b>lower</b> <b>triangle</b> the <b>spaces</b> should <b>increase</b> for <b>every iteration</b> of second loop.<li><blockquote><pre>for(j=i;j>=1;j- -)
+{
+printf("*");
+}</pre></blockquote>This is used to print <b>stars</b> with <b>i</b> number of times.For example if <b>i = 15</b> in that iteration it will print <b>stars</b> that number of times.Here the <b>stars</b> goes on <b>decreasing</b> as we go <b>lower</b> which is why we are printing the stars from<b> i to 1</b> in each iteration in <b>lower</b> triangle.</ul></ol><br><br></div>

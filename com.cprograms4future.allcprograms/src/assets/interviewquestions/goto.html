@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is "goto" statement?</p>
+        <span class="headings">Answer:</span><br/>
+      This keyword is used when ever you want to jump from one statement to the other where there is a label.For every goto there must be a label from where it starts<br>
+Syntax:<br>
+label:<br>
+……………….;<br>
+statements;<br>
+…………………;<br>
+goto label;<br>
+        <br>
+example:<br>
+         <pre class="program prettyprint">
+#include&lt;stdio.h&gt;
+main()
+{
+  int i,j;
+  for(i=1;i&lt;10;i++)
+  {
+	if(i==5)
+	goto next;
+	else
+	printf(“%d\n”,i);
+  }
+  next:
+  for(j=11;j&lt;=20;j++)
+  {
+	printf(“%d\n”,j);
+  }
+}
+</pre><br>
+    </div>
+</div>
+</body>
+
+</html>
+

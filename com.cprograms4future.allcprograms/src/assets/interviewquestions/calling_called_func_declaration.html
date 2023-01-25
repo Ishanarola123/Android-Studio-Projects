@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is calling function, called function and function declaration?</p>
+        <span class="headings">Answer:</span><br/>
+        <pre class="program prettyprint">#include&lt;stdio.h&gt;
+void sum();//function declaration
+void main()
+{
+    sum(); //calling function
+}
+void sum() //called function
+{
+	int a,b,result;
+	printf(“Enter 2 values:”);
+	scanf(“%d%d”,&amp;a,&amp;b);
+	result=a+b;
+	printf(“Sum of %d and %d is %d”,a,b,result);
+}
+
+Another Program:
+
+#include&lt;stdio.h&gt;
+int sum(int,int);//function declaration
+void main()
+{
+ int a,b,result;
+ printf("Enter 2 values:");
+ scanf("%d%d",&amp;a,&amp;b);
+ result=sum(a,b);//calling function
+ printf("Sum of %d and %d is %d",a,b,result);
+}
+
+int sum(int a,int b)//called function
+{
+ int c;
+ c=a+b;
+ return(c);
+}
+</pre><br>
+    </div>
+</div>
+</body>
+
+</html>
+

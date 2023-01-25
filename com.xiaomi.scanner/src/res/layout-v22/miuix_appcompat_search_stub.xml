@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.blurdrawable.widget.MiBlurBackgroundView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-1" android:layout_height="-2">
+	<FrameLayout android:clickable="false" android:layout_width="-1" android:layout_height="1746534unknown unit:0x21" style="resourceId:0x7f110356">
+		<LinearLayout android:id="resourceId:0x102001e" android:background="{2:2130969211}" android:layout_width="-1" android:layout_height="40dp" android:forceDarkAllowed="false">
+			<ImageView android:layout_gravity="0x10" android:layout_width="-2" android:layout_height="-2" android:src="{2:2130969199}" />
+			<TextView android:gravity="0x800013" android:layout_gravity="0x10" android:id="resourceId:0x1020009" android:layout_width="-1" android:layout_height="-2" android:singleLine="true" android:contentDescription="Search" android:textDirection="5" style="resourceId:0x7f1100ff" />
+		</LinearLayout>
+	</FrameLayout>
+</miuix.blurdrawable.widget.MiBlurBackgroundView>

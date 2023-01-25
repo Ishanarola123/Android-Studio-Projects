@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is typecast?</p>
+        <span class="headings">Answer:</span><br/>
+        Typecasting is for converting the datatype of a variable to another datatype<br>
+        Example: float x=20.567,z=4.56;<br>
+        Now two conditions<br>
+        int y=(int)(x/z);------------------->where x/z=20.567/4.56=4.48<br>
+        so due to typecasting float to int it will remove decimal part so,<br>
+        y=4<br>
+        Now what if we give<br>
+        int y=(int)x/(int)z=----------------->(int)x=20(decimal part of x i.e 20.567 is removed) and (int)z=4<br>
+        So y=20/4=5.<br>
+        Hope you understood the difference.<br>
+    </div>
+</div>
+</body>
+
+</html>
+

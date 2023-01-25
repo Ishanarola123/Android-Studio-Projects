@@ -1,0 +1,16 @@
+Summary for /storage/emulated/0/show-java/sources/com.xiaomi.scanner/jar-files/3.jar
+Decompiled with CFR 0.0
+
+
+com.tencent.mm.opensdk.openapi.BaseWXApiImplV10
+----------------------------
+
+handleIntent(android.content.Intent com.tencent.mm.opensdk.openapi.IWXAPIEventHandler )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: First case is not immediately after switch.
+
+
+com.xiaomi.onetrack.a.ad
+----------------------------
+
+a(java.lang.String )
+  Loose catch block

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="1" android:background="res/drawable/bg_33dp_black.xml" android:padding="20dp" android:layout_width="-1" android:layout_height="-1">
+	<TextView android:textSize="18sp" android:textColor="000" android:gravity="0x11" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="10dp" />
+	<ImageView android:layout_gravity="0x1" android:layout_width="160dp" android:layout_height="160dp" android:layout_marginTop="10dp" android:src="res/drawable-xxhdpi-v4/icon_mi_home.webp" />
+	<TextView android:textSize="16sp" android:textColor="b3000" android:gravity="0x11" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:layout_marginBottom="30dp" />
+	<Button android:textSize="16sp" android:textColor="cc000" android:gravity="0x11" android:id="false" android:background="res/drawable/dialog12_negative_button.xml" android:layout_width="-1" android:layout_height="1667891unknown unit:0x21" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp" android:text="Update" />
+</LinearLayout>

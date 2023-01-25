@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;stdlib.h>
+int main()
+{
+ int i,j,num,power,temp;
+ printf("Enter Number\n");
+ scanf("%d",&num);
+ printf("Enter Power you want to check\n");
+ scanf("%d",&power);
+ temp=num;
+ if(num==0 || num==1)
+ {
+    printf("Enter Number other than zero and 1\n");
+    exit(0);
+ }
+ while(num>1)
+ {
+  if(num%power!=0)
+  {
+   printf("Given Number %d is not power of %d\n",temp,power);
+   exit(0);
+  }
+  num=num/power;
+ }
+ printf("Given Number %d is power of %d\n",temp,power);
+ return(0);
+}
+</pre></div><span class=headings>Output:</span><br><span>Output 1:<br>Enter Number<br>64<br>Enter Power you want to check<br>4<br>Given Number 64 is power of 4<br><br>Output 2:<br>Enter Number<br>126<br>Enter Power you want to check<br>5<br>Given Number 126 is not power of 5<br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>Declare Variables i,j,num,power,temp<li>Lets take num=64 and power be 4<li>Now temp=64(Used for storing temporarily)<li><pre class="prettyprint program">if(num==0 || num==1)
+ {
+    printf("Enter Number other than zero and 1\n");
+    exit(0);
+ }</pre>As num=64 is not 0 or 1 then the if part is not executed <li><pre class="prettyprint program"> while(num>1)
+ {
+  if(num%power!=0)
+  {
+   printf("Given Number %d is not power of %d\n",temp,power);
+   exit(0);
+  }
+  num=num/power;
+ }</pre>As num=64 then it can be taken as 4^3 so when we divide 4^3 for three times one by one and finally when we reached num=1 then WHILE condition will break at this point.If the IF part is not executed till num became 1 then the Given number 64 is power of 4.</ol></div>

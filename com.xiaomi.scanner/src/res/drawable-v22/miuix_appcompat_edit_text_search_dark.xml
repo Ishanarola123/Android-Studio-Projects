@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:gravity="0x10" android:height="546242unknown unit:0x21" android:width="546242unknown unit:0x21" android:drawable="res/drawable/miuix_appcompat_ic_edit_text_search_dark.xml" android:start="13dp" android:end="9dp" />
+</layer-list>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is post and pre increment or decrement?</p>
+        <span class="headings">Answer:</span><br/>
+        int i;<br>
+        <br>
+        i++ is post increment which will increment i by one after occurance of this operator i.e i=i+1<br>
+        i-- is post decrement which will decrement i by one after occurance of this operator i.e i=i-1<br>
+        ++i is pre increment which will increment i by one immediately<br>
+        --i is pre decrement which will decrement i by one immediately<br>
+        <br>
+        Ex:-<br>
+        int i=6;<br>
+        printf("%d\n",i);<br>
+        printf("%d\n",i++);<br>
+        printf("%d\n",i);<br>
+        printf("%d\n",++i);<br>
+        printf("%d\n",i--);<br>
+        printf("%d\n",i);<br>
+        printf("%d\n",--i);<br>
+        <br>
+        Output:<br>
+        6<br>
+        6<br>
+        7<br>
+        8<br>
+        8<br>
+        7<br>
+        6<br>
+        <br>
+        What is happening here<br>
+        when you do<br>
+        i++ then it wont return the incremented value but it will increment the i next time when it appears<br>
+        like<br>
+        i=6<br>
+        c=i++; then c=6 but i=i+1=6<br>
+        Now when c= i; again the value which is incremented at top will show here so c=7;<br>
+    </div>
+</div>
+</body>
+
+</html>
+

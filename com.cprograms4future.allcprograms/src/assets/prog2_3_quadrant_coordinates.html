@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+float x,y;
+printf("Enter (x,y) Co-Ordinates\n");
+scanf("%f %f",&x,&y);
+
+if(x>0&&y>0)
+{
+ printf("Co-Ordianates (%f,%f) lies in First Quadrant\n",x,y);
+}
+if(x&lt;0&&y>0)
+{
+ printf("Co-Ordianates (%f,%f) lies in Second Quadrant\n",x,y);
+}
+if(x&lt;0&&y&lt;0)
+{
+ printf("Co-Ordianates (%f,%f) lies in Third Quadrant\n",x,y);
+}
+if(x>0&&y&lt;0)
+{
+ printf("Co-Ordianates (%f,%f) lies in Fourth Quadrant\n",x,y);
+}
+
+if(x==0&&y==0)
+{
+ printf("Co-Ordianates (%f,%f) lies at the Origin\n",x,y);
+}
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter (x,y) Co-Ordinates<br>3<br>-2<br>Co-Ordianates (3.000000,-2.000000) lies in Fourth Quadrant<br></span><span class=headings>Explanation:</span><br><span>Check Video Explanation online:<br/>http://www.cprograms4future.com/p/program-172to-find-quadrant-of-given-co.html</span><br><br></div>

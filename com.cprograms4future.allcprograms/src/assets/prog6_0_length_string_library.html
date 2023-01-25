@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+ char str[100];
+ int len;
+ printf("Enter a string to know the length\n");
+ gets(str);
+ len=strlen(str);
+ printf("The length of %s is %d\n",str,len);
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter a string to know the length<br>
+helloworld<br>
+The length of helloworld is 10<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+
+    Here we used string.h header for using string library functions such as strlen,strcpy,gets,strcmp etc<b>.</b><br />
+    <ol>
+        <li>This program starts with initializing :
+            <ul style="list-style-type: square;">
+                <li><b>str[100] </b>→ To store <b>string with length of 100 </b>which means it can store<b> 100 letters</b></li>
+                <li><b>len</b>→ To store <b>length of given string</b><b>.</b></li>
+            </ul>
+        </li>
+        <li><pre> printf("Enter a string to know the length\n");
+ gets(str);</pre>
+            To take input from user. <b>Difference </b>between <b>gets(str)</b> ,and taking input using<b> scanf</b> is that,using <b>gets </b>we can enter a string having <b>spaces </b>in between words and takes <b>Enter </b>as end of the string.But <b>scanf </b>wont take '<b>space' </b>as a character.For example if we enter a string '<b>hello world' </b>using <b>:-</b>
+            <ul style="list-style-type: square;">
+                <li><b>scanf</b>- It will take only&nbsp;<b> 'hello'</b></li>
+                <li><b>gets</b>- It will take<b> 'hello world'</b></li>
+            </ul>
+        </li>
+        <li><pre>len=strlen(str);
+ printf("The length of %s is %d\n",str,len);</pre>
+            <b>strlen </b>calculates the <b>length </b>of <b>str </b>and final <b>length </b>value is printed as <b>output</b>.</li>
+        <b>
+        </b></ol>
+</div>
+</body>
+
+</html>
+

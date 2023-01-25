@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+int dec,temp,i,j=1,binary=0;
+printf("Enter a numer to convert to binary number\n");
+scanf("%d",&dec);
+temp=dec;
+while(temp!=0)
+{
+i=temp%2;
+binary=binary+(i*j);
+temp=temp/2;
+j=j*10;
+}
+printf("Binary number of %d is %d\n",dec,binary);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a numer to convert to binary number<br>10<br>Binary number of 10 is 1010<br></span><img class=img-responsive src=prog7_0_binary_decimal.JPG><br><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing :<ul style=list-style-type:square><li><b>dec</b> → To store <b>decimal</b> number<li><b>temp</b> → To store dec <b>temporarily</b><li><b>i,j</b> →used as <b>helping</b> variables<li><b>binary</b> → To store <b>resulted binary</b> value</ul><li><pre>printf("Enter a numer to convert to binary number\n");
+scanf("%d",&dec);
+temp=dec;</pre>Takes <b>input</b> from <b>user</b> and stores in <b>dec</b> which is in <b>turn</b> <b>stored</b> in <b>temp</b> for future reference.Lets take <b>dec</b>=<b>10</b>,so <b>temp</b>=<b>10</b>.<li><pre>while(temp!=0)
+{
+i=temp%2;
+binary=binary+(i*j);
+temp=temp/2;
+j=j*10;
+}</pre>This is the <b>main</b> <b>logic</b> of this <b>program</b>.Lets take <b>dec</b>=<b>10</b><ul style=list-style-type:square><li><b>Iteration</b> <b>1</b>: <b>temp=10</b> and <b>10!=0</b> which is <b>true</b> so the <b>while</b> loop <b>executes</b><ul style=list-style-type:disc><li><b>i=temp%2</b> → 10%2 → <b>i=0</b><li><b>binary=binary+(i*j)</b> → 0+(0*1)→ <b>binary=0</b><li><b>temp</b>=<b>temp/2</b> → 10/2 → <b>temp=5</b><li><b>j=j*10</b> → 1*10 → <b>j=10</b><li><b>Final</b> values are:<b>i=0,binary=0,temp=5,j=10.</b></ul><li><b>Iteration</b> <b>2</b>: <b>temp=5</b> and <b>5!=0</b> which is <b>true</b> so the <b>while</b> loop <b>executes</b><ul style=list-style-type:disc><li><b>i=temp%2</b> → 5%2 →<b> i=1</b><li><b>binary=binary+(i*j)</b> → 0+(1*10)→ <b>binary=10</b><li><b>temp</b>=<b>temp/2</b> → 5/2 → <b>temp=2</b><li><b>j=j*10</b> → 10*10 → <b>j=100</b><li><b>Final</b> values are:<b>i=1,binary=10,temp=2,j=100.</b></ul><li><b>Iteration</b> <b>3</b>: <b>temp=2</b> and <b>2!=0</b> which is <b>true</b> so the <b>while</b> loop <b>executes</b><ul style=list-style-type:disc><li><b>i=temp%2</b> → 2%2 → i=0<li><b>binary=binary+(i*j)</b> → 10+(0*100)→ <b>binary=10</b><li><b>temp</b>=<b>temp/2</b> → 2/2 → <b>temp=1</b><li><b>j=j*10</b> → 100*10 → <b>j=1000</b><li><b>Final</b> values are:<b>i=0,binary=10,temp=1,j=1000.</b></ul><li><b>Iteration</b> <b>4</b>: <b>temp=1</b> and <b>1!=0</b> which is <b>true</b> so the <b>while</b> loop <b>executes</b><ul style=list-style-type:disc><li><b>i=temp%2</b> → 1%2 → i=1<li><b>binary=binary+(i*j)</b> → 10+(1*1000)→ <b>binary=1010</b><li><b>temp</b>=<b>temp/2</b> → 1/2 → <b>temp=0</b><li><b>j=j*10</b> → 1000*10 → <b>j=10000</b><li><b>Final</b> values are:<b>i=1,binary=1010,temp=0,j=10000.</b></ul><li><b>Iteration</b> <b>5</b>: <b>temp=0</b> and <b>0!=0</b> which is <b>false </b>so the <b>while</b> loop <b>terminates</b><li><pre>printf("Binary number of %d is %d\n",dec,binary);</pre><li>Final Out is printed which is binary=1010</ul></ol></div>

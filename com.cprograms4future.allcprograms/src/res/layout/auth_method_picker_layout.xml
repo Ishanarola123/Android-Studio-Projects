@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="0x51" android:orientation="1" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-1">
+	<LinearLayout android:gravity="0x11" android:layout_width="-1" android:layout_height="-1" android:layout_weight="{4:1065353216}">
+		<ImageView android:id="false" android:contentDescription="App logo" style="resourceId:0x7f1200d0" />
+	</LinearLayout>
+	<LinearLayout android:id="false" android:layout_weight="{4:0}" style="resourceId:0x7f1200cf">
+		<Button android:id="false" android:text="Sign in with email" style="resourceId:0x7f1200d3" />
+	</LinearLayout>
+</LinearLayout>

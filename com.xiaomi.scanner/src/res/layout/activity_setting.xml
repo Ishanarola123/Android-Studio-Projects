@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="1" android:layout_width="-1" android:layout_height="-1">
+	<FrameLayout android:id="false" android:background="ffffffff" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:minHeight="48dp" android:paddingStart="24dp">
+		<RelativeLayout android:layout_width="-1" android:layout_height="-2">
+			<TextView android:textSize="480706unknown unit:0x22" android:textColor="ff000" android:layout_gravity="0x800013" android:id="false" android:layout_width="-2" android:layout_height="-2" android:maxWidth="200dp" android:text="Default feature" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+			<ImageView android:layout_gravity="0x800015" android:id="false" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/to_right_enter.png" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+		</RelativeLayout>
+		<Spinner android:gravity="0x800015" android:layout_gravity="0x800015" android:id="false" android:layout_width="-1" android:layout_height="50dp" android:contentDescription="Default feature" android:paddingEnd="1037762unknown unit:0x21" style="resourceId:0x7f110366" />
+	</FrameLayout>
+	<View android:id="false" android:background="26000" android:layout_width="-1" android:layout_height="1px" />
+	<View android:id="false" android:background="26000" android:layout_width="-1" android:layout_height="1px" />
+	<FrameLayout android:id="false" android:background="ffffffff" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:minHeight="48dp" android:contentDescription="About" android:paddingStart="24dp">
+		<TextView android:textSize="480706unknown unit:0x22" android:textColor="ff000" android:layout_gravity="0x800013" android:layout_width="-2" android:layout_height="-2" android:text="Rearrange features" />
+		<ImageView android:layout_gravity="0x800015" android:id="false" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/to_right_enter.png" />
+	</FrameLayout>
+	<FrameLayout android:id="false" android:background="ffffffff" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="251330unknown unit:0x21" android:layout_marginBottom="251330unknown unit:0x21" android:minHeight="48dp" android:contentDescription="Privacy Policy" android:paddingStart="24dp">
+		<TextView android:textSize="480706unknown unit:0x22" android:textColor="ff000" android:layout_gravity="0x800013" android:layout_width="-2" android:layout_height="-2" android:text="Privacy Policy" />
+		<ImageView android:layout_gravity="0x800015" android:id="false" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/to_right_enter.png" />
+	</FrameLayout>
+	<FrameLayout android:id="false" android:background="ffffffff" android:layout_width="-1" android:layout_height="-2" android:minHeight="48dp" android:contentDescription="About" android:paddingStart="24dp">
+		<TextView android:textSize="480706unknown unit:0x22" android:textColor="ff000" android:layout_gravity="0x800013" android:layout_width="-2" android:layout_height="-2" android:text="About" />
+		<ImageView android:layout_gravity="0x800015" android:id="false" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/to_right_enter.png" />
+	</FrameLayout>
+</LinearLayout>

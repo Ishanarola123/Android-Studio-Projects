@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+int i,j=0,len;
+char str1[100],str2[100];
+printf("Enter string 1\n");
+gets(str1);
+printf("Enter string 2 \n");
+gets(str2);
+
+for(i=0;str1[i]!='\0';i++);
+
+str1[i]=' ';
+i++;
+for(j=0;str2[j]!='\0';j++,i++)
+{
+    str1[i]=str2[j];
+}
+str1[i]='\0';
+printf("%s\n",str1);
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter string 1<br>hello<br>Enter string 2<br>world<br>hello world<br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>This program starts with initializing :<ul style=list-style-type:square><li><b>i,j </b>→ used as helping variable<b><br></b><li><b>str1</b> → To store <b>input from user</b><li><b>str2</b> → To store<b> output of program</b><li><b>len </b><b>→ </b>To store <b>length of string</b></ul><li><pre>printf("Enter string 1\n");
+gets(str1);
+printf("Enter string 2 \n");
+gets(str2);</pre>Taking string 1 and 2 from user for concatenation. <li><pre>for(i=0;str1[i]!='\0';i++);</pre>While concatenation we should add the <b>string 2</b> at the end of <b>string 1</b>.So in order to do that we need to go to the end of <b>string 1('\0').</b> As We do not know the string length we need to traverse from<b> 0 to end of the string 1</b>.The above forloop will get us to the end of <b>str1</b> as it won't do any operation except moving from <b>0th character to '\0'(end of string).</b><pre>str1[i]=' ';
+i++;</pre>For example we have str1 as <b>"hello" </b>so the loop will traverse from <b>0 to 4</b> as 4 is length of string. As the loop will end at i=5 so we use this i=5 for removing '\0' and we kept a space instead by <b>str[5]=' ';</b> and then the next string str2 has to be added from i=6 which is why we used <b>i++</b> So str2 will be added to str1 from 6th position. <li><pre><span style=color:red>*-</span>There is another way to avoid traversing by keeping a loop.
+We can use len=strlen(str1) and by using <b>str[len]=' ';and the i=len+1</b> instead of <b>forloop</b>.</pre><li><pre>for(j=0;str2[j]!='\0';j++,i++)
+{
+    str1[i]=str2[j];
+}</pre>here the str2 will be added from str1[6].For example str2 is "world" then it will be stored from str1[6] till str[10]<pre>str1[i]='\0';</pre>To add str[11] as the end of string. <li><pre>printf("%s\n",str1);</pre>Finally to print string 1.And the output will be <b>"hello world"</b></ol></div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is cyclic property of datatype in C?</p>
+        <span class="headings">Answer:</span><br/>
+        <pre>
+            #include&lt;stdio.h&gt;
+            main()
+            {
+            char c=129;
+            char d=-129;
+            printf("c=%d,d=%d\n",c,d);
+
+            }
+        </pre>
+
+        Ouput:-<br>
+        c=-127,d=127</div><br>
+
+    It is because of overflow of storage as "char" variable can store only from -128 to +127.And if it crosses it uses cyclic property.
+    So 129 crosses 127 and it goes to the next numbers clockwise as shown in diagram which is -127 i.e 129-127=2 so it chooses the 2 value after 127<br>
+    Similarly -129 crosses -128 by 1 so it chooses the next value after -128 anti-clockwise which is +127.<br>
+    This how we got output.
+    <img src="file:///android_asset/interviewquestions/cyclic_property_c.gif" class="img-rounded">
+    </div>
+</div>
+</body>
+
+</html>
+

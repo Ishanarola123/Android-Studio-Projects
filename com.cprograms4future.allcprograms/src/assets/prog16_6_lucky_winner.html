@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;time.h&gt;
+ main ()
+ {
+    FILE *file;
+    int a[100],i=0,k=0,j=0,count=0,lucky;
+    char c,str[100][50];
+    srand (time(NULL));
+    file=fopen("file123.txt","r");
+    while(1)
+    {
+     if(file==NULL)
+     {
+      printf("File Not Found\n");
+      exit(0);
+     }
+     else
+     {
+      c=fgetc(file);
+      fflush(stdin);
+      if(c!='\n')
+      {
+       str[k][j]=c;
+       j++;
+      }
+      if(c=='\n')
+      {
+       k++;
+       j=0;
+      }
+      if(c==EOF)
+      {
+       break;
+      }
+      //printf("%c",c);
+     }
+    }
+    fclose(file);
+    printf("Total people in the list=%d\n",k);
+  lucky= rand() % (k);
+  /*
+  k-represents total number of people in the list.
+  and rand()%10 means to generate random numbers from 0-9
+  rand()%10+1 means 1-10
+  so rand() % k is if there are 10 people in the list then k=10
+  so generating random numbers from 0-9 where 0 represents name present at 1st in list and 9 the last
+  So while entering names the name at last should has only one new line ending (i.e one enter and no more new lines)
+  otherwise this program wont work properly
+  */
+    printf("People in the list are\n");
+     for(i=0;i&lt;k;i++)
+    {
+     printf("%s\n",str[i]);
+    }
+    for(i=0;i&lt;k;i++)
+    {
+     if(lucky==i)
+     {
+      printf("\nBut Todays Lucky Winner is\n");
+         printf("%s\n",str[i]);
+     }
+    }
+ }
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        <img class="img-responsive" src="Lucky_Winner_file.gif"><br/>
+        <img class="img-responsive" src="Lucky_ Winner_1.gif"><br/>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

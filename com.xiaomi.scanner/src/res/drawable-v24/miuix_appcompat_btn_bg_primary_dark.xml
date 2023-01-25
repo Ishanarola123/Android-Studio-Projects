@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.smooth.SmoothContainerDrawable xmlns:android="http://schemas.android.com/apk/res/android" android:radius="763494unknown unit:0x21">
+	<child>
+		<shape android:shape="0">
+			<solid android:color="res/color/miuix_appcompat_btn_bg_primary_color_dark.xml" />
+			<size android:height="1530265unknown unit:0x21" />
+		</shape>
+	</child>
+</miuix.smooth.SmoothContainerDrawable>

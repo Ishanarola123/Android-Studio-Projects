@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">spinner</string>
+    <string-array name="language">
+        <item>select language</item>
+        <item>english</item>
+        <item>gujarati</item>
+        <item>marathi</item>
+        <item>hindi</item>
+
+    </string-array>
+</resources>

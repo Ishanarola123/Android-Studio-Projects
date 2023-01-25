@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:height="2852126unknown unit:0x21" android:width="272dp" android:autoMirrored="true" android:viewportWidth="{4:1144750080}" android:viewportHeight="{4:1131413504}">
+	<group android:name="animgroup">
+		<path android:fillColor="res/drawable/$miuix_preference_ic_connecting_translation__0.xml" android:pathData="M0,0h750v240h-750z" android:fillAlpha="{4:1050253722}" />
+	</group>
+</vector>

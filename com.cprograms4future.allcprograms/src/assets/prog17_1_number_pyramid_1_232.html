@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+//       1
+//      232
+//     34543
+//    4567654
+
+#include&lt;stdio.h>
+main()
+{
+int i,j,left,right,k,rightcount,count,rows;
+printf("Enter number of rows\n");
+scanf("%d",&rows);
+count=rows-1;
+left=1;
+right=0;
+
+for(i=1;i&lt;=rows;i++)
+{//start of forloop
+    for(k=1;k&lt;=count;k++)
+    {
+        printf(" ");
+    }
+    for(j=i;j&lt;=left;j++)
+    {
+        printf("%d",j);
+    }
+    left+=2;
+       if(i!=1)
+       {
+               for(j=right;j>=i;j--)
+             {
+            printf("%d",j);
+                 }
+
+       }
+        right+=2;
+       printf("\n");
+       count--;
+}//end of forloop
+}
+</pre></div><span class=headings>Output:</span><br><span><pre>
+Enter number of rows
+5
+    1
+   232
+  34543
+ 4567654
+567898765
+        </pre><br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>The program starts with initializing<ul style=list-style-type:square><li><b>rows</b> → Taken from <b>user</b> to print those<b> many rows</b><li><b>i,j</b><b>,k </b>→ used as <b>variables.</b><li><b>left,right</b><b> </b>→ for printing left and right part of triangle.<li><b>count</b> → To controll spaces</ul><li><pre>printf("Enter number of rows\n");
+scanf("%d",&rows);</pre>Taking number of rows as input from user <li><pre>for(i=1;i&lt;=rows;i++)
+{</pre>For iterating number of <b>row</b> times <li><pre>for(k=1;k&lt;=count;k++)
+    {
+        printf(" ");
+    }</pre>To print spaces left side to achieve shape of pyramid.For example<br><b>__1</b><br><b>_2</b>32<br><b>3</b>4543<br>beside <b>1</b> we have two spaces and beside <b>2</b> we have one space and no space beside <b>3.this is for 3 rows.</b><li><pre>for(j=i;j&lt;=left;j++)
+    {
+        printf("%d",j);
+    }
+    left+=2;</pre>To print left part of triangle.left+=2 is for incrementing the left by 2 times for each iteration. As if you look at the outputin <b>Iteration 1</b>: 1 is printed and in <b>iteration2:</b> 2,3 are printed  and so on<li><pre>if(i!=1)
+       {
+               for(j=right;j>=i;j--)
+             {
+            printf("%d",j);
+                 }
+
+       }
+        right+=2;</pre>To print right part of triangle which is <b>skipped </b>if i==1as we dont want to print any thing to the <b>right </b>side of <b>1</b> in first row.<b>  right+=2</b> is for incrementing right by 2 for each iteration.Unlike <b>left right </b>is initialized to 0 as right side printing will start with even number.<div class=separator style=clear:both;text-align:center><img class=img-responsive src=prog17_1_number_pyramid.jpg><br></div><li><pre>  printf("\n");
+        </pre>To start printing the numbers of pyramid in new line after finishing the iteration<li>count--  is used to decrement the number of spaces to be printed beside the row to achieve the shape of pyramid.If the pyramid is for 4 rows then in 1st row 3 spaces will be printed and in 2nd row 2 spaces will be printed and so on till the end.</ol><br></div>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+    int i=0,j=0,k=0;
+    char str1[100]={0},substr[100][100]={0},c;
+    printf("Enter a sentence\n");
+    gets(str1);
+    printf("Enter a character to split\n");
+    scanf("%c",&amp;c);
+    while(str1[k]!='\0')//for splitting sentence
+    {
+        j=0;
+        while(str1[k]!=c&amp;&amp;str1[k]!='\0')
+        {
+            substr[i][j]=str1[k];
+            k++;
+            j++;
+        }
+        substr[i][j]='\0';
+        i++;
+        if(str1[k]!='\0')
+        {
+            k++;
+        }
+    }
+    int len=i;
+    printf("\nWords after splitting sentence are:\n\n");
+    for(i=0;i&lt;len;i++)
+    {
+        printf("%s\n",substr[i]);
+    }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter a sentence<br>
+cprograms4future@gmail.com<br>
+Enter a character to split<br>
+@<br>
+
+Words after splitting sentence are:<br>
+
+cprograms4future<br>
+gmail.com<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+
+    Here we need to split the entire sentence into parts wherever the character for which we wanted splitting occurs.For example: Lets take a sentence:<br />
+    "<b>This is Planet Earth</b>" is the sentence we have.Now let the character for splitting sentence be space.In the example space occurred after "This","is","Planet","Earth"<br />
+    So there are 4 words which are stored in 4 arrays.As <b>"This"</b> itself will take 1 full 1D array as for example<br />
+    str1="This"<br />
+    str2="is"<br />
+    str3="Planet"<br />
+    str4="Earth"<br />
+    stored in 4 character arrays.As we don't know how many words will be created after splitting we cannot declare those many variables which is why we need to use 2D array to store words<br />
+    So above example can be stored in<br />
+    str[0]="This"<br />
+    str[1]="is"<br />
+    str[2]="Planet"<br />
+    str[3]="Earth"<br />
+    one variable will be enough to store all words.You might ask This is 1D array but where is 2D here?<br />
+    If you see ,each character of string is stored in 1D array(as a string is nothing but a character array). For Example if you take<br />
+    str[1]="This"<br />
+    str[0][0]='T'<br />
+    str[0][1]='h'<br />
+    str[0][2]='i'<br />
+    str[0][3]='s'<br />
+    str[0][4]='\0'----representing end of string <br />
+    This is how they are stored internally but while printing you can print them using "%s",str[0] which will print that entire array as <b>%s</b> indicates to print string till it find '\0' (End of String)<br />
+    <br />
+    <b>Now Lets come to our program:</b><br />
+    <ol>
+        <li>This program starts with initializing :
+            <ul style="list-style-type: square;">
+                <li><b>str1</b>→ To store <b>input from user</b></li>
+                <li><b>substr</b> →<b>To store output</b></li>
+            </ul>
+        </li>
+        <li><pre>printf("Enter a sentence\n");
+    gets(str1);</pre>
+            Taking sentence from user
+        </li>
+        <li><pre>printf("Enter a character to split\n");
+    scanf("%c",&amp;c);</pre>
+            Taking character from user to split sentence&nbsp;</li>
+        <li>//Coming Soon remaining part </li>
+    </ol>
+</div>
+</body>
+
+</html>
+

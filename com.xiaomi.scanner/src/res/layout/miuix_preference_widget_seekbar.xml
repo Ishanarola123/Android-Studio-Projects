@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="0x10" android:orientation="1" android:background="{2:2130969272}" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-2" android:baselineAligned="false">
+	<LinearLayout android:orientation="1" android:paddingTop="13dp" android:paddingBottom="13dp" android:layout_width="-1" android:layout_height="-2">
+		<LinearLayout android:gravity="0x10" android:orientation="0" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-2">
+			<androidx.appcompat.widget.AppCompatImageView android:id="resourceId:0x1020006" android:layout_width="698941unknown unit:0x21" android:layout_height="698941unknown unit:0x21" android:layout_marginEnd="349634unknown unit:0x21" />
+			<TextView android:textAppearance="resourceId:0x7f1100f1" android:id="resourceId:0x1020016" android:layout_width="-2" android:layout_height="-2" />
+		</LinearLayout>
+		<androidx.preference.UnPressableLinearLayout android:gravity="0x10" android:paddingTop="371261unknown unit:0x21" android:paddingBottom="4dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="-1" android:layout_height="-2">
+			<miuix.androidbasewidget.widget.SeekBar android:id="false" android:background="resourceId:0x0" android:layout_width="0dp" android:layout_height="-2" android:layout_weight="{4:1065353216}" android:paddingStart="0dp" android:paddingEnd="0dp" />
+			<TextView android:textAppearance="{2:16843678}" android:ellipsize="4" android:gravity="0x5" android:id="false" android:scrollbars="0x0" android:fadingEdge="0x1000" android:layout_width="0dp" android:layout_height="-2" android:singleLine="true" />
+		</androidx.preference.UnPressableLinearLayout>
+	</LinearLayout>
+</LinearLayout>

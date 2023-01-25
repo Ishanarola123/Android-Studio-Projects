@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ char str[100];
+ int i,len=0;
+ printf("Enter a string to know the length\n");
+ scanf("%s",&str);
+ for(i=0;str[i]!='\0';i++)
+ {
+  len++;
+ }
+ printf("The length of %s is %d\n",str,len);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a string to know the length<br>helloworld<br>The length of helloworld is 10<br></span><span class=headings>Explanation:</span><br><ol><li>This program starts with initializing :<ul style=list-style-type:square><li><b>str[100] </b>→ To store <b>string with length of 100 </b>which means it can store<b> 100 letters</b><li><b>i</b> →Used as<b> helping variable</b><li><b>len</b>→ To store <b>length of given string </b>and is initilized to<b> zero.</b></ul><li><pre>printf("Enter a string to know the length\n");
+ scanf("%s",&str);</pre>takes the string from user<li><pre>for(i=0;str[i]!='\0';i++)
+ {
+  len++;
+ }</pre>When ever you enter a string,compiler will <b>add \0 at the end of the string</b>.This is not visible to us.So if you enter "<b>helloworld</b>" which is interpreted as "<b>helloworld\0</b>" where <b>\0 is single letter</b> <b>indicates </b>the <b>end </b>of the string.<li>Lets take a small example of string <b>"he"</b><ul style=list-style-type:square><li><b>Iteration 1</b>:<b>i=0</b>,and <b>str[0] is 'h'</b> and it is not \0 which means for loop is <b>executed</b><ul style=list-style-type:disc><li>now <b>len </b>will be incremented by 1 so <b>len=1</b><li><b>i </b>will be incremented by<b> 1 </b>and <b>i=1</b></ul><li><b>Iteration 2</b>:<b>i=1</b>,and <b>str[1] is 'e'</b> and it is not \0 which means for loop is <b>executed</b><ul style=list-style-type:disc><li>now <b>len </b>will be incremented by 1 so <b>len=2</b></ul><li><b>Iteration 3</b>:<b>i=2</b>,and <b>str[2] is '\0'</b> so for loop is <b>terminated</b></ul><li><pre>printf("The length of %s is %d\n",str,len);</pre>Finally <b>len </b>is printed.Which is <b>len=2</b></ol><br></div>

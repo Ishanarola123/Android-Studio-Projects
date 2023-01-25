@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+int main()
+{
+ int i,j,poly[26],x,k,num;
+ printf("Enter how many numbers are there?\n");
+ scanf("%d",&amp;num);
+ int numcipher[num];
+ printf("Enter numbers separated by space\n");
+ for(i=0;i&lt;num;i++)
+ {
+  scanf("%d",&amp;numcipher[i]);
+ }
+
+ x=0;
+ k=11;
+ //Assigning Polybius Square numbers to alphabets
+
+for(i=0;i&lt;=25;i++)
+{
+ if(i&lt;=8)
+ {
+      if(i%5==0&amp;&amp;i!=0)
+   {
+  k+=5;
+  poly[k]=x;
+  k++;
+
+    }
+   else{
+   poly[k]=x;
+  k++;
+
+      }
+ }
+ if(i&gt;=10)
+ {
+      if(i%5==0&amp;&amp;i!=0)
+   {
+
+   poly[k]=x;
+  k++;
+   k+=5;
+
+    }
+   else{
+ poly[k]=x;
+  k++;
+
+      }
+ }
+ if(i==9)
+ {
+  poly[24]=8;//taking 'i' instead of 'j'
+ }
+
+
+  x++;
+}
+printf("Decrypted Code using Polybius Square Cipher \n");
+for(i=0;i&lt;num;i++)
+{
+ printf("%c",(poly[numcipher[i]]+65));
+}
+  printf("\n");
+ return 0;
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+       Enter how many numbers are there?<br>
+33<br>
+Enter numbers separated by space<br>
+23 15 54 11 31 15 42 44 44 23 15 54 11 42 15 35 31 11 33 33 24 33 22 44 34 11 44 44 11 13 25 45 43<br>
+Decrypted Code using Polybius Square Cipher<br>
+HEYALERTTHEYAREPLANNINGTOATTACKUS<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    <img src="polybius_exp.JPG" class="img-responsive">
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

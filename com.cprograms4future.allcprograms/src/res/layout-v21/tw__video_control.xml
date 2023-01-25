@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-1" android:layout_height="32dp">
+	<ImageButton android:id="false" android:background="resourceId:0x0" android:paddingTop="4dp" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable/tw__video_pause_btn.xml" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="pause" />
+	<TextView android:textSize="13sp" android:textColor="resourceId:0x106000b" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_toRightOf="false" android:layout_centerVertical="true" />
+	<SeekBar android:id="false" android:background="resourceId:0x0" android:layout_width="-1" android:layout_height="-1" android:progressDrawable="res/drawable/tw__video_seekbar.xml" android:thumb="res/drawable/tw__seekbar_thumb.xml" android:layout_toLeftOf="false" android:layout_toRightOf="false" android:layout_centerVertical="true" android:splitTrack="false" />
+	<TextView android:textSize="13sp" android:textColor="resourceId:0x106000b" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginRight="10dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

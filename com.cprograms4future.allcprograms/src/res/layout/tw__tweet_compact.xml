@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" style="resourceId:0x7f120264">
+	<TextView android:id="false" android:layout_alignLeft="false" style="resourceId:0x7f12026f" />
+	<ImageView android:id="false" android:layout_below="false" style="resourceId:0x7f120260" />
+	<LinearLayout android:id="false" android:layout_toRightOf="false" android:layout_below="false" style="resourceId:0x7f12024b">
+		<TextView android:id="false" style="resourceId:0x7f120266" />
+		<TextView android:id="false" style="resourceId:0x7f120271" />
+		<TextView android:id="false" style="resourceId:0x7f120276" />
+	</LinearLayout>
+	<ImageView android:id="false" android:layout_below="false" android:layout_alignParentRight="true" style="resourceId:0x7f120278" />
+	<com.twitter.sdk.android.tweetui.internal.AspectRatioFrameLayout android:id="false" android:layout_below="false" android:layout_alignLeft="false" style="resourceId:0x7f12026c">
+		<com.twitter.sdk.android.tweetui.internal.TweetMediaView android:id="false" style="resourceId:0x7f12026a" />
+		<com.twitter.sdk.android.tweetui.internal.MediaBadgeView android:id="false" style="resourceId:0x7f120261" />
+	</com.twitter.sdk.android.tweetui.internal.AspectRatioFrameLayout>
+	<TextView android:id="false" android:layout_toRightOf="false" android:layout_below="false" style="resourceId:0x7f120273" />
+	<FrameLayout android:id="false" android:layout_toRightOf="false" android:layout_below="false" style="resourceId:0x7f120259" />
+	<include android:layout_width="-1" android:layout_height="-2" android:layout_toRightOf="false" android:layout_below="false" layout="res/layout/tw__action_bar.xml" style="resourceId:0x7f12025e" />
+	<View android:id="false" android:layout_width="-1" android:layout_height="13dp" android:layout_below="false" />
+</merge>

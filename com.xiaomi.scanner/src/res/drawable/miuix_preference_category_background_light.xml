@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:variablePadding="true">
+	<item android:state_first="true" android:drawable="res/drawable/miuix_preference_category_bg_first_no_title_light.xml" app:state_no_title="true" />
+	<item android:state_single="true" android:drawable="res/drawable/miuix_preference_category_bg_first_no_title_light.xml" app:state_no_title="true" />
+	<item android:state_single="true" android:drawable="res/drawable/miuix_preference_category_bg_first_light.xml" />
+	<item android:state_first="true" android:drawable="res/drawable/miuix_preference_category_bg_first_light.xml" />
+	<item android:drawable="res/drawable/miuix_preference_category_bg_no_title_light.xml" app:state_no_title="true" />
+	<item android:drawable="res/drawable-xxhdpi-v19/miuix_preference_category_bg_light.9.png" />
+</selector>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+struct Subject{
+ char subjectName[20][20];
+ int subjectMarks[10];
+};
+struct Student{
+ char name[20];
+ int total;
+ struct Subject sub;
+};
+
+main()
+{
+ int i,size,subjectSize,j;
+ char tempSubName[20];
+ printf("Enter number of students\n");
+ scanf("%d",&amp;size);
+ printf("Enter number of Subjects\n");
+ scanf("%d",&amp;subjectSize);
+ struct Student s[size];
+ for(j=0;j&lt;subjectSize;j++)
+ {
+  printf("Enter Subject %d name\n",j+1);
+  fflush(stdin);
+  gets(tempSubName);
+  for(i=0;i&lt;size;i++)
+  {
+    strcpy(s[i].sub.subjectName[j],tempSubName);
+  }
+ }
+ for(i=0;i&lt;size;i++)
+ {
+  printf("Enter Student %d Name(max 20 characters)\n",i+1);
+  fflush(stdin);
+  gets(s[i].name);
+  s[i].total=0;
+  for(j=0;j&lt;subjectSize;j++){
+   printf("Enter %s Marks\n",s[i].sub.subjectName[j]);
+   scanf("%d",&amp;s[i].sub.subjectMarks[j]);
+   s[i].total+=s[i].sub.subjectMarks[j];
+  }
+  printf("\n");
+ }
+
+ printf("Final Marks for All Students\n");
+ for(i=0;i&lt;size;i++)
+ {
+  printf("Total Marks of %s=%d\n",s[i].name,s[i].total);
+ }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        <pre>
+Enter number of students
+2
+Enter number of Subjects
+3
+Enter Subject 1 name
+Maths
+Enter Subject 2 name
+Physics
+Enter Subject 3 name
+Chemistry
+Enter Student 1 Name(max 20 characters)
+Mahidhar
+Enter Maths Marks
+100
+Enter Physics Marks
+98
+Enter Chemistry Marks
+90
+
+Enter Student 2 Name(max 20 characters)
+Charan
+Enter Maths Marks
+99
+Enter Physics Marks
+97
+Enter Chemistry Marks
+94
+
+Final Marks for All Students
+Total Marks of Mahidhar=288
+Total Marks of Charan=290
+        </pre><br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

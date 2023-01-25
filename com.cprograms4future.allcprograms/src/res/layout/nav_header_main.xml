@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:theme="resourceId:0x7f1201ac" android:orientation="1" android:id="false" android:background="8739d" android:paddingRight="16dp" android:layout_width="-1" android:layout_height="90dp">
+	<ImageView android:id="false" android:visibility="2" android:layout_width="1dp" android:layout_height="1dp" android:src="res/drawable/nav_logo1.png" />
+	<TextView android:textAppearance="resourceId:0x7f120126" android:textColor="eeffffff" android:id="false" android:paddingLeft="16dp" android:paddingTop="40dp" android:layout_width="-1" android:layout_height="-2" android:text="CPROGRAMS4FUTURE" />
+	<TextView android:textStyle="0x1" android:textColorLink="eeffffff" android:autoLink="0x1" android:id="false" android:paddingLeft="16dp" android:layout_width="-2" android:layout_height="-2" android:text="www.cprograms4future.com" android:textIsSelectable="true" />
+</LinearLayout>

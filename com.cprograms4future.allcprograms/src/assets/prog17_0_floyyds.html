@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ int rows,i,j,k=1;
+ printf("Enter number of rows to get Floyds triangle\n");
+ scanf("%d",&rows);
+ for(i=1;i&lt;=rows;i++)
+ {
+  for(j=1;j&lt;=i;j++)
+  {
+   printf("%d ",k);
+   k++;
+  }
+  printf("\n");
+ }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter number of rows to get Floyds triangle<br>5<br>1<br>2 3<br>4 5 6<br>7 8 9 10<br>11 12 13 14 15<br></span><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing<ul style=list-style-type:square><li><b>rows</b> → Taken from <b>user</b> to print those<b> many rows</b><li><b>i,j</b><b>,k </b>→ used as <b>variables.</b></ul><li><pre>printf("Enter number of rows to get Floyds triangle\n");
+scanf("%d",&rows);</pre><b>Input</b> Taken from user.From out lets take <b>rows=7.</b><li><pre>for(i=1;i&lt;=rows;i++)
+{</pre>This <b>forloop</b> executes <b>rows</b> <b>number</b> of <b>times</b> which means if rows=7 the statements under this for loop will <b>execute 7 times</b><li><pre>for(i=1;i&lt;=rows;i++)
+{
+   for(j=1;j&lt;=i;j++)
+    {
+       printf("%d ",k);
+       k++;
+     }
+    printf("\n");
+}</pre><span>Let us start Compilation:<ul style=list-style-type:square;margin-left:-30px><li><b>Iteration 1 of <span style=text-decoration:underline>outer</span> forloop</b>: <b>i=1 & i&lt;=7 → true</b> so loop executes<ul style=list-style-type:disc><li><b>Iteration 1 of <span style=text-decoration:underline>inner</span> forloop: j=1& 1&lt;=1 → true so loop executes</b><ul style=list-style-type:circle><li>Now it prints value of <b>k</b> which is already <b>initialized</b> to<b> 1</b><li>Now<b> k</b> is <b>incremented</b> by <b>1.So k=2.</b></ul><li><b>Iteration 2 of <span style=text-decoration:underline>inner</span> forloop: j=2& 2&lt;=1 → flase so loop terminates</b><li><b>The printed values in this iteration are 1</b><li>The <b>final</b> values after 1st iteration are <b>i=2,k=2.</b><li>Then the <b>printf("\n")</b> <b>causes</b> the next iteration to start in <b>new row</b>.</ul><li><b>Iteration 2 of <span style=text-decoration:underline>outer</span> forloop</b>: <b>i=2 & 2&lt;=7 → true</b> so loop executes in new row<ul style=list-style-type:disc><li><b>Iteration 1 of <span style=text-decoration:underline>inner</span> forloop: j=1& 1&lt;=2 → true so loop executes</b><ul style=list-style-type:circle><li>Now it prints value of <b>k</b> which is 2<li>Now<b> k</b> is <b>incremented</b> by <b>1.So k=3</b></ul><li><b><b>Iteration 2 of <span style=text-decoration:underline>inner</span> forloop: j=2& 2&lt;=2 → true so loop executes</b></b><ul style=list-style-type:circle><li>Now it prints value of <b>k</b> which is 3<li>Now<b> k</b> is <b>incremented</b> by <b>1.So k=4</b><li><b>The printed values in this iteration are 2,3</b><li>The <b>final</b> values after 2nd iteration are <b>i=3,k=4.</b><li>Then the <b>printf("\n")</b> <b>causes</b> the next iteration to start in <b>new row</b>.</ul><li><b>Iteration 3 of <span style=text-decoration:underline>inner</span> forloop: j=3& 3&lt;=2 → flase so loop terminates</b></ul><li>In this way the <b>loop</b> goes on until <b>i becomes 7.</b></ul></span></ol><br></div>

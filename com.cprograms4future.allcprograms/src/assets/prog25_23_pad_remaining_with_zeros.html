@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+ int i,paddingDigits,lenNum,j;
+ char num[20],tempNum[20];
+ printf("Enter a number\n");
+ scanf("%s",num);
+ printf("Enter total number of digits\n");
+ scanf("%d",&amp;paddingDigits);
+ lenNum=strlen(num);
+
+ if(lenNum&lt;=paddingDigits &amp;&amp; (paddingDigits&lt;=20)){
+  paddingDigits-=lenNum;
+  for(i=0;i&lt;paddingDigits;i++)
+  {
+   tempNum[i]='0';
+  }
+  for(j=i;j&lt;lenNum+i;j++)
+  {
+   tempNum[j]=num[j-i];
+  }
+  tempNum[j]='\0';
+  printf("Total Digits padded with zeros in front is %s\n",tempNum);
+ }
+ else{
+  printf("Total number of Digits enetered is lesser than given number or Total Digits exceeded 20 as we have declared only a 20 character array,if you want to increase you can.\n");
+ }
+
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+Enter a number<br>
+1234<br>
+Enter total number of digits<br>
+20<br>
+Total Digits padded with zeros in front is 00000000000000001234<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

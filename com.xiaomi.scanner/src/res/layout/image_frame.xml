@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="0x800013" android:orientation="0" android:id="false" android:paddingLeft="0dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="-2" android:layout_height="-2" android:minWidth="56dp" android:paddingStart="0dp" android:paddingEnd="8dp">
+	<androidx.preference.internal.PreferenceImageView android:id="resourceId:0x1020006" android:layout_width="-2" android:layout_height="-2" app:maxHeight="48dp" app:maxWidth="48dp" />
+</LinearLayout>

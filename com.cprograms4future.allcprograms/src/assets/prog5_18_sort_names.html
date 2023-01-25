@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+int i,j,n;
+char str[100][100],s[100];
+printf("Enter number of names \n");
+scanf("%d",&n);
+printf("Enter names in any order\n");
+for(i=0;i&lt;n;i++)
+{
+ scanf("%s",str[i]);
+}
+
+
+for(i=0;i&lt;n;i++)
+{
+ for(j=i+1;j&lt;n;j++)
+ {
+   if(strcmp(str[i],str[j])>0)
+   {
+    strcpy(s,str[i]);
+    strcpy(str[i],str[j]);
+    strcpy(str[j],s);
+   }
+
+ }
+
+}
+printf("\nThe sorted order of alphabets are:\n");
+for(i=0;i&lt;n;i++)
+{
+ printf("%s\n",str[i]);
+}
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter number of names<br>6<br>Enter names in any order<br>java<br>cprogram<br>android<br>bootstrap<br>html<br>css<br><br>The sorted order of alphabets are:<br>android<br>bootstrap<br>cprogram<br>css<br>html<br>java<br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>This program starts with initializing :<ul style=list-style-type:square><li><b>i,j,s</b>→<b> Used as temporary variables</b><li><b>n </b>→ To store <b>how many names you are going to enter</b><li><b>s </b>→ To store<b> input names</b><li><b>str</b>→ To store <b>output names</b></ul><li><pre>printf("Enter number of names \n");
+scanf("%d",&n);
+printf("Enter names in any order\n");
+for(i=0;i&lt;n;i++)
+{
+ scanf("%s",str[i]);
+}
+</pre>Taking input from user<li><pre>for(i=0;i&lt;n;i++)
+{
+ for(j=i+1;j&lt;n;j++)
+ {
+   if(strcmp(str[i],str[j])>0)
+   {
+    strcpy(s,str[i]);
+    strcpy(str[i],str[j]);
+    strcpy(str[j],s);
+   }
+
+ }
+
+}</pre>Main logic of the program<ul style=list-style-type:square><li>The above logic is same as sorting an array but any how lets see what happens when compiling this logic and how names are sorted<li>Lets take an 3 example names<b> java,cprogram,android </b><li><b>Iteration 1:i=0 and n is 3  0&lt;3 </b><b>→true so the loop executes</b><ul style=list-style-type:disc><li><b>Iteration 1 of 2nd for loop:j=i+1</b>→j=1,1&lt;3 so true then 2nd loop is executed<ul style=list-style-type:circle><li>str[0],str[1] is compared using strcmmp where<b> str[0]→java</b> and <b>str[1]→cprogram</b> and as <b>java>cprogram </b>then<b> strcmp </b>returns<b> 1 </b>which is <b>>0 so the if part </b>is executed.<li>then both are swapped their positions using the 3 statements which is similar to swapping 2 values.<li>Now the 3 names are in position <b>cprogram,java,android</b></ul><li><b>Iteration 2 of 2nd for loop:</b>j=2,2&lt;3 so true then 2nd loop is executed<ul style=list-style-type:circle><li>str[0],str[2] is compared using strcmmp where<b> str[0]→cprogram now </b>and <b>str[2]→android</b> and as <b>cprogram>android </b>then<b> strcmp </b>returns<b> 1 </b>which is <b>>0 so the if part </b>is executed.<li>then both words are swapped<li>Now the 3 names are in position <b>android,cprogram,java</b></ul><li><b>Iteration 3 of 2nd for loop:</b>j=3,3&lt;3 so false then 2nd loop is terminated<li>Finallu the position of 3 names are  <b>android,cprogram,java </b>after 1st iteration of loop.</ul><li><b>Iteration 2:i=1 ; 1&lt;3 </b><b>→true so the loop executes</b><ul style=list-style-type:disc><li><b>Iteration 1 of 2nd for loop:j=1+1</b>→j=2,2&lt;3 so true then 2nd loop is executed<ul style=list-style-type:circle><li>str[1],str[1] is compared using strcmmp where<b> str[1]→cprogram </b>and <b>str[2]→java </b>and as <b>cprogram&lt;java </b>then<b> strcmp </b>returns<b> -1 </b>which is <b>&lt;0 so the if part </b>is not executed.<li>So the names remains same in their position.</ul><li><b>Iteration 2 of 2nd for loop:</b>j=3,3&lt;3 so false then 2nd loop is terminated<ul style=list-style-type:circle><li>After 2nd Iterations the names remain same</ul></ul><li><b>Iteration 3:i=2 ;2&lt;3 </b><b>→true </b>so the loop executes<ul style=list-style-type:disc><li><b>Iteration 1 of 2nd for loop:j=2+1</b>→j=3,3&lt;3 so false loop is terminated</ul><li><b>Iteration 4:i=3 ;3&lt;3 </b><b>→false </b>so the loop terminates<li>Finally the output is <b>android,cprogram,java </b>which are in sorted order</ul></ol></div>

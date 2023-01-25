@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+int GetGCD(int temp1,int temp2);
+main()
+{
+int num1,num2,gcd,lcm,x;
+printf("Enter number 1 and number 2\n");
+scanf("%d%d",&num1,&num2);
+gcd=GetGCD(num1,num2);
+lcm=(num1*num2)/gcd;
+printf("gcd is %d\n",gcd);
+printf("Lcm is %d\n",lcm);
+}
+
+int GetGCD(int temp1,int temp2)
+{
+ if(temp2!=0)
+    {
+     GetGCD(temp2,temp1%temp2);
+     }
+     else
+ {
+      return(temp1);
+     }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter number 1 and number 2<br>20<br>30<br>gcd is 10<br>Lcm is 60<br></span><span class=headings>Explanation:</span><br>
+
+    <ol style="list-style-type: upper-roman;">
+        <li>This program starts with initializing :
+            <ul style="list-style-type: square;">
+                <li><b>num1,num2</b>→ To store <b>numbers&nbsp;</b></li>
+                <li><b>gcd,lcm</b> →Used to <b>store gcd and lcm</b></li>
+                <li><b>int GetGCD</b>→ recursive function</li>
+            </ul>
+        </li>
+        <li><pre class="program prettyprint"> printf("Enter number 1 and number 2\n");</pre>
+            <pre class="program prettyprint">scanf("%d%d",&amp;num1,&amp;num2);</pre>
+            To take input from user
+        </li>
+        <li><pre class="program prettyprint">gcd=GetGCD(num1,num2);</pre>
+            Calling <b>GetGCD&nbsp;</b>Function and received output from the <b>called function(i.e&nbsp;<b>GetGCD&nbsp;</b>)&nbsp;</b>will be sored in <b>gcd</b></li>
+        <li><pre class="program prettyprint">int GetGCD(int temp1,int temp2)
+{
+ if(temp2!=0)
+    {
+     GetGCD(temp2,temp1%temp2);
+     }
+     else
+ {
+      return(temp1);
+     }
+}</pre>
+            Now lets take numbers 20,30 and passed it ti GetGCD so now temp1=20,temp2=30<br />now <b>temp2=30!=0 is true so if part is executed</b></li>
+        <li>Now<br />
+            <ol>
+                <li><pre class="program prettyprint">GetGCD(temp2,temp1%temp2);---&gt;GetGCD(30,20%30)--&gt;<b>GetGCD(30,20)</b></pre>
+                </li>
+                <li>Now again GetGCD function is called.But now <b>temp1=30,temp2=20</b></li>
+                <li>Now again&nbsp;</li>
+                <li><pre class="program prettyprint">if(temp2!=0)
+    {
+     GetGCD(temp2,temp1%temp2);
+     }
+     else
+     {
+      return(temp1);
+     }</pre>
+                </li>
+                <li>Since temp2=20 and is not equal to zero which is true and <b>if part is executed</b></li>
+                <li>So GetGCD(20,30%20)---&gt;<b>GetGCD(20,10)</b></li>
+                <li>Now in next recursion temp1=20,temp2=10</li>
+                <li>Since temp2=10 and is not equal to zero which is true and&nbsp;<b>if part is executed</b></li>
+                <li>So GetGCD(10,20%10)---&gt;<b>GetGCD(10,0).Now temp1=10,temp2=0</b></li>
+                <li>Since temp2=0 and is equal to zero which is true so <b>else&nbsp;part is executed</b></li>
+                <li><pre class="program prettyprint">return(temp1);---&gt;
+Finally temp1 which is 10 will be returned and stored in gcd</pre>
+                </li>
+            </ol>
+        </li>
+        <li><pre class="program prettyprint">gcd=GetGCD(num1,num2);
+lcm=(num1*num2)/gcd;
+printf("gcd is %d\n",gcd);
+printf("Lcm is %d\n",lcm);</pre>
+            so here gcd=10.</li>
+        <li>lcm=(num1*num2)/gcd--&gt;(20*30)/10=600/10=60</li>
+        <li>So gcd=10 and lcm=60</li>
+    </ol>
+    <br /><br><br></div>

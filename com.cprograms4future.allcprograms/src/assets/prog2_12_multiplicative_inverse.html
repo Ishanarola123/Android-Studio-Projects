@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ int i,num,MI;
+ printf("Enter number to get multiplicative Inverse\n");
+ scanf("%d",&num);
+ for(i=1;i&lt;=num;i++)
+ {
+  MI=((i*26)+1);
+  if(MI%num==0)
+  {
+   break;
+  }
+ }
+ MI=MI/num;
+ printf("Multiplicative inverse of %d is %d\n",num,MI);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter number to get multiplicative Inverse<br>7<br>Multiplicative inverse of 7 is 15<br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>This program starts with initializing :<ul style=list-style-type:square><li><b>num </b>→ To store <b>input from user</b><li><b>i</b> →Used as<b> helping variable</b><li><b>MI</b>→ To store <b>output Multiplicative Inverse</b></ul><li><pre>printf("Enter number to get multiplicative Inverse\n");
+ scanf("%d",&num);</pre>Taking input from user(<b>Let it be 7</b>)<li>Logic of this program is <span style=color:teal>MI=((I*26)+1)/num</span> . We obtain Multiplicative Inverse by substituting values in I so that the least integer when substituted in place of I (like 1,2,3,4...) the answer should be an integer.<li>For example:<pre>let I is 1 then MI=27/7 which is not integer.
+I=2 then MI=((2*26)+1)/7=53/7 which is also not integer</pre><pre>I=3 then MI=79/7 not an integer</pre><pre>I=4 then MI=105/7=15(integer) so this is the Multiplicative inverse of number 7 </pre><li>To achieve this first we do calculation for <b>MI=(i*26)+1</b> and by substituting from <b>1 till number(7 here)</b> one by one and checking whether the equation is factor for given <b>number(7)</b> or not and if it goes with <b>7</b> giving remainder <b>zero </b>then finally  <b>dividing MI with 7 </b>we will get output.<li>The main logic of code is:taking num as 7<br><pre>for(i=1;i&lt;=num;i++)
+ {
+  MI=((i*26)+1);
+  if(MI%num==0)
+  {
+   break;
+  }
+ }</pre><ul style=list-style-type:square><li><b>Iteration 1</b>:i=1 and 1&lt;=7 which is true so the forloop is executed<ul style=list-style-type:disc><li>MI=(1*26)+1=27<li>27%7!=0 so if part is not executed<li>i is incemented by 1 so i=2</ul><li><b>Iteration 2</b>:i=2 and 2&lt;=7 which is true so the forloop is executed<ul style=list-style-type:disc><li>MI=(2*26)+1=53<li>53%7!=0 so if part is not executed<li>i is incemented by 1 so i=3</ul><li><b>Iteration 3</b>:i=3 and 3&lt;=7 which is true so the forloop is executed<ul style=list-style-type:disc><li>MI=(3*26)+1=79<li>79%7!=0 so if part is not executed<li>i is incemented by 1 so i=4</ul><li><b>Iteration 4</b>:i=4 and 4&lt;=7 which is true so the forloop is executed<ul style=list-style-type:disc><li>MI=(4*26)+1=105<li>105%7==0 which is true so if part is executed<li>And will break out of forloop<li>Finally MI=105</ul></ul><li><pre>MI=MI/num;
+ printf("Multiplicative inverse of %d is %d\n",num,MI);</pre><pre>MI=105/7=15 </pre><pre><b>So inverse of 3 is 15 </b></pre></ol></div>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="415170unknown unit:0x22" android:textStyle="0x0" android:textColor="res/color/module_item_color.xml" android:ellipsize="3" android:gravity="0x11" android:id="false" android:layout_width="-2" android:layout_height="-2" android:checked="false" android:text="QR code" android:maxLines="2" android:drawableTop="res/drawable/ic_shopping.xml" android:drawablePadding="5dp" android:textAlignment="4" />

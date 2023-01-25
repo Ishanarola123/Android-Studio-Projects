@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.appcompat.internal.app.widget.ActionBarOverlayLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:layout_width="-1" android:layout_height="-1">
+	<FrameLayout android:id="resourceId:0x1020002" android:layout_width="-1" android:layout_height="-1" android:foreground="{2:16842841}" android:foregroundGravity="0x37" />
+	<miuix.appcompat.internal.app.widget.ActionBarContainer android:layout_gravity="0x30" android:id="false" android:layout_width="-1" android:layout_height="-2" style="{2:16843470}">
+		<miuix.appcompat.internal.app.widget.ActionBarView android:id="false" android:layout_width="-1" android:layout_height="-2" style="{2:16843470}" />
+		<ViewStub android:id="false" android:layout="res/layout/miuix_appcompat_screen_action_bar_context_layout.xml" android:layout_width="-1" android:layout_height="-2" />
+	</miuix.appcompat.internal.app.widget.ActionBarContainer>
+	<ViewStub android:layout_gravity="0x50" android:id="false" android:layout="res/layout/miuix_appcompat_screen_action_bar_split_layout.xml" android:layout_width="-1" android:layout_height="-2" />
+	<ViewStub android:id="false" android:layout="res/layout/miuix_appcompat_screen_action_bar_searchmask_layout.xml" android:layout_width="-1" android:layout_height="-1" />
+	<ViewStub android:id="false" android:layout="res/layout/miuix_appcompat_screen_action_bar_contentmask_layout.xml" android:layout_width="-1" android:layout_height="-1" />
+</miuix.appcompat.internal.app.widget.ActionBarOverlayLayout>

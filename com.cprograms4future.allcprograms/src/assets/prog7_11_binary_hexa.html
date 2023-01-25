@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+        <div class="row">
+            <div class="col-xs-12">
+                Method I:
+            </div>
+        </div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+ int binaryNum[]={0,1,10,11,100,101,110,111,1000,1001,1010,1011,1100,1101,1110,1111},j=0,i;
+ char hexa[20]="";
+ unsigned long long int binary,number,temp;
+ printf("Enter Binary number\n");
+ scanf("%llu",&amp;binary);
+ temp=binary;
+ while(temp!=0)
+ {
+  number=temp%10000;
+  for(i=0;i&lt;=15;i++)
+  {
+   if(binaryNum[i]==number)
+   {
+    if(i&lt;=9)
+    hexa[j]=(i+'0'); //i+'0' to convert integer to string
+    else
+    hexa[j]=(i+55);
+
+    j++;
+   }
+  }
+  temp/=10000;
+ }
+ hexa[j]='\0';
+ strrev(hexa);
+ printf("Octal number for given Binary number %llu is %s\n",binary,hexa);
+}
+</pre>
+        <br>
+        <div class="row">
+            <div class="col-xs-12">
+                Method II:
+            </div>
+        </div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;math.h&gt;
+#include&lt;ctype.h&gt;
+int ConvertFromBinarytoOther(unsigned long long int,int);
+char *ConvertFromDecimalToHexa(int,int);
+int main()
+{
+    char final[20];
+    unsigned long long int binary,decimal;
+    printf("Enter Binary Number\n");
+    scanf("%llu",&amp;binary);
+    decimal=ConvertFromBinarytoOther(binary,2);//Converting binary to decimal
+    strcpy(final,ConvertFromDecimalToHexa(decimal,16));//Converting Decimal to Hexa
+    printf("HexaDecimal for given Binary %llu is %s\n",binary,final);
+
+
+return(0);
+}
+
+char *ConvertFromDecimalToHexa(int decimal,int num)
+{
+ int temp,i,k=0;
+ char final[20];
+    temp=decimal;
+    while(temp!=0)
+    {
+      i=temp%num;
+      if(i&gt;9)
+      {
+       final[k]=i+55;
+       k++;
+      }
+      else{
+       final[k]=(i+'0');//To convert from integer to character add (number+'0')
+       k++;
+      }
+      temp=temp/num;
+     }
+     final[k]='\0';
+     return(strrev(final));
+}
+
+int ConvertFromBinarytoOther(unsigned long long int binary,int num)
+{
+ int i,inc=0,final=0;
+ unsigned long long int temp;
+    temp=binary;
+    while(temp!=0)
+    {
+      i=temp%10;
+      final=final+(i*pow(num,inc));
+      temp=temp/10;
+      inc++;
+     }
+     return(final);
+
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+Enter Binary number<br>
+1011101011000100<br>
+Octal number for given Binary number 1011101011000100 is BAC4<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

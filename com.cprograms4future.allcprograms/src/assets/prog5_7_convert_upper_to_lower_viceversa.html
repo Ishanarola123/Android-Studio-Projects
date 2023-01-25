@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+    int i;
+    char str1[100],str2[100]={0};
+    printf("Enter a sentence to convert upper to lower and vice versa\n");
+    gets(str1);
+for(i=0;i&lt;strlen(str1);i++)
+{
+    if(str1[i]>='a'&&str1[i]&lt;='z')
+    {
+        str2[i]=(char)str1[i]-32;
+    }
+    else if(str1[i]>='A'&&str1[i]&lt;='Z')
+    {
+        str2[i]=(char)str1[i]+32;
+    }
+    else
+    {
+        str2[i]=str1[i];
+    }
+}
+printf("The converted sentence is %s\n",str2);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a sentence to convert upper to lower and vice versa<br>cProgRamS4FUTure<br>The converted sentence is CpROGraMs4futURE<br></span><span class=headings>Explanation:</span><br><b><span style=color:teal>Logic of the program: </span></b>If the entered string is <b>HellO </b>then<br><br><b>H</b> is <b>added </b>with <b>32 </b>to get '<b>h</b>'<b>(as 'H' ascii value is 72 so if it is added with 32 then 72+32 is 104 which is 'h')</b> and is stored in another variable.<br><br>'<b>e</b>' is <b>subtracted </b>with <b>32 </b>to get '<b>E</b>'<b>(as 'e' ascii value is 101 so if it is subtracted with 32 then 101-32 is 69 which is 'E')</b>.<br><br>So if it is <b>capital </b>letter,it is <b>added </b>with <b>32</b>.If it is <b>small </b>letter it is <b>subtracted </b>with <b>32</b>.<br><br><ol style=text-align:left><li>This program starts with initializing :<ul style=list-style-type:square><li><b>str1[100] </b>→ To store <b>string with length of 100 </b>which means it can store<b> 100 letters </b>given by<b> user</b><li><b>str2[100] </b>→ To store <b>converted string</b><li><b>i</b> →Used as<b> helping variable</b></ul><li><pre>printf("Enter a sentence to convert upper to lower and vice versa\n");
+    gets(str1);</pre>To take string from user <li><pre>for(i=0;i&lt;strlen(str1);i++)
+{
+    if(str1[i]>'a'&&str1[i]&lt;'z')
+    {
+        str2[i]=(char)str1[i]-32;
+    }
+    else if(str1[i]>'A'&&str1[i]&lt;'Z')
+    {
+        str2[i]=(char)str1[i]+32;
+    }
+    else
+    {
+        str2[i]=str1[i];
+    }
+}</pre>Converts 'H' to h by adding 32 to 'H'.Similarly if letter is 'e' then it is subtracted with 32 to get 'E' .Each time it converts it will store character by character in another variable (say str2)<li>Finally <b>str2</b> is printed.</ol><pre>printf("The converted sentence is %s\n",str2);</pre><br></div>

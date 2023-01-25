@@ -1,0 +1,105 @@
+Summary for /storage/emulated/0/show-java/sources/com.cprograms4future.allcprograms/jar-files/2.jar
+Decompiled with CFR 0.0
+
+
+a.a.a.a.h
+----------------------------
+
+a()
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.a.a.o
+----------------------------
+
+a(android.content.ContentResolver android.net.Uri )
+  Loose catch block
+
+
+com.cprograms4future.allcprograms.BenefitsPro
+----------------------------
+
+onOptionsItemSelected(android.view.MenuItem )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl121.1 : ILOAD_2 : trying to set 1 previously set to 0
+
+
+com.cprograms4future.allcprograms.HelloWorld
+----------------------------
+
+onCreate(android.os.Bundle )
+  Unable to fully structure code
+onOptionsItemSelected(android.view.MenuItem )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl73.1 : ILOAD_2 : trying to set 1 previously set to 0
+onPrepareOptionsMenu(android.view.Menu )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl278 : ICONST_1 : trying to set 1 previously set to 0
+
+
+com.cprograms4future.allcprograms.Main3Activity
+----------------------------
+
+showDialogInternet(int )
+  Unable to fully structure code
+onCreate(android.os.Bundle )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl127 : ALOAD_0 : trying to set 1 previously set to 0
+
+
+com.cprograms4future.allcprograms.MainActivity
+----------------------------
+
+onCreate(android.os.Bundle )
+  Exception : java.lang.UnsupportedOperationException
+onNavigationItemSelected(android.view.MenuItem )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl59 : ALOAD_0 : trying to set 1 previously set to 0
+onOptionsItemSelected(android.view.MenuItem )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl1173 : ICONST_1 : trying to set 1 previously set to 0
+
+
+com.cprograms4future.allcprograms.MainBookmarkActivity
+----------------------------
+
+onOptionsItemSelected(android.view.MenuItem )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl182 : ICONST_1 : trying to set 0 previously set to 1
+
+
+com.cprograms4future.allcprograms.MyFirebaseMessagingService
+----------------------------
+
+sendNotification(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl45 : ALOAD : trying to set 1 previously set to 0
+
+
+com.firebase.ui.auth.b.a.d
+----------------------------
+
+b(java.lang.String )
+  Unable to fully structure code
+c(java.lang.String )
+  Unable to fully structure code
+
+
+com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity
+----------------------------
+
+a(java.util.List<com.firebase.ui.auth.a$a> )
+  Unable to fully structure code
+
+
+com.twitter.sdk.android.core.internal.oauth.OAuth1aService
+----------------------------
+
+a(com.twitter.sdk.android.core.i<b.ac> )
+  Loose catch block
+
+
+com.twitter.sdk.android.core.internal.scribe.ScribeFilesSender
+----------------------------
+
+b(java.util.List<java.io.File> )
+  Unable to fully structure code
+
+
+com.twitter.sdk.android.tweetui.internal.d
+----------------------------
+
+d()
+  Unable to fully structure code

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="-1" android:layout_height="-1">
+	<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="BANNER" ads:adUnitId="ca-app-pub-3470881500949309/9907622071" />
+	<EditText android:id="false" android:layout_width="-1" android:layout_height="-2" android:hint="Search Program" android:drawableLeft="res/drawable-xxxhdpi-v4/ic_search.png" android:inputType="0x91" />
+	<Button android:id="false" android:background="res/drawable-xxxhdpi-v4/ic_clear_search.png" android:layout_width="23dp" android:layout_height="23dp" android:layout_marginTop="13dp" android:layout_marginBottom="0dp" android:layout_alignRight="false" android:onClick="clear" />
+	<ListView android:id="false" android:layout_width="-1" android:layout_height="-1" android:layout_above="false" android:layout_below="false" />
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include &lt;stdio.h>
+#include &lt;math.h>
+int factorial(int);
+main()
+{
+//sinx=x1/1!-x3/3!+x5/5!-x7/7!...
+int accuracy,count=0,k=1;
+float x,temp,sine=0;
+
+printf("Enter value x(in degrees) to find sin x value\n");
+scanf("%f",&x);
+temp=x;
+//Degrees to Radians
+x=(float)x*(3.14159/180);
+printf("Enter value to get more accurate\n 3 for least and more for more accuracy\n");
+scanf("%d",&accuracy);
+
+do
+{
+ if(count%2==0)
+ {
+  sine=(float)sine+(pow(x,k)/factorial(k));
+ }
+ if(count%2==1)
+ {
+  sine=(float)sine-(pow(x,k)/factorial(k));
+ }
+ count++;
+ k=k+2;
+}while(count&lt;=accuracy);
+
+printf("Sine(%f)=%f calcualted mathematically\n",temp,sine);
+printf("Sine(%f)=%f calculated using library function\n",temp,sin(x));
+}
+
+int factorial(int val)
+{
+ int factorial=1,i;
+ for(i=1;i&lt;=val;i++)
+ {
+     factorial=factorial*i;
+ }
+ return(factorial);
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter value x(in degrees) to find sin x value<br>90<br>Enter value to get more accurate<br>3 for least and more for more accuracy<br>6<br>Sine(90.000000)=1.000000 calcualted mathematically<br>Sine(90.000000)=1.000000 calculated using library function<br></span><span class=headings>Explanation:</span><br>To know the <b>sine </b>value of any thing say <b>'x'</b>.<br><b>Formula is</b><br><pre>sinx=x1/1!-x3/3!+x5/5!-x7/7!...</pre><ol style=text-align:left><li>The Program Starts with intializing<ul style=list-style-type:square><li><b>accuracy</b>→ To print <b>output </b>accurately<b><br></b><li><b>count</b> → To keep track of<b> even and odd iterations</b><li><b>k</b> → To store <b>power of a base</b><li><b>x</b>→ To store <b>user input</b> for<b> substituting </b>in place of<b> x in formula</b><li><b>temp </b>→ <b>temporary variable</b><li><b>sine</b> → To store <b>output</b></ul><li><pre>printf("Enter value x(in degrees) to find sin x value\n");
+scanf("%f",&x);
+temp=x;</pre>Taking user input in <b>'x'</b> and store it in temp for future reference as x may be manipulated while execution of program which cause the loss of <b>original </b>value in <b>x</b><li><pre>x=(float)x*(3.14159/180); </pre>Value which we give in <b>x</b> is in terms of <b>degrees </b>so we need a <b>conversion </b>to <b>radians</b>.So value in<b> x </b>is converted to <b>radians</b>.Lets take value of <b>x </b>as 90(degrees) so x is converted to 1.570795 radians<li> <pre>do
+{
+ if(count%2==0)
+ {
+  sine=(float)sine+(pow(x,k)/factorial(k));
+ }
+ if(count%2==1)
+ {
+  sine=(float)sine-(pow(x,k)/factorial(k));
+ }
+ count++;
+ k=k+2;
+}while(count&lt;=accuracy);</pre>In this logic we will calculate factorial of a number by passing the value(say k) to factorial(int val) function.The factorial function is:-<li><pre>int factorial(int val)
+{
+ int factorial=1,i;
+ for(i=1;i&lt;=val;i++)
+ {
+     factorial=factorial*i;
+ }
+ return(factorial);
+
+}</pre>This <b>function </b>takes the <b>value</b>(say k) from <b>main </b>and <b>returns </b>the <b>factorial </b>of <b>received </b>number to <b>main</b>.To <b>clearly </b>understand how this <b>factorial </b>function <b>works </b><a class="href" href=prog1_5_factorial.html target=_blank title="Factorial Program Explanation">click here to go to factorial program(Open in same window)</a><li>Lets continue with our logic <li><pre>do
+{
+ if(count%2==0)
+ {
+  sine=(float)sine+(pow(x,k)/factorial(k));
+ }
+ if(count%2==1)
+ {
+  sine=(float)sine-(pow(x,k)/factorial(k));
+ }
+ count++;
+ k=k+2;
+}while(count&lt;=accuracy);
+</pre>Lets take <b>x as 90 degrees</b> which is converted to <b>1.570795 radians</b> .So to calculate<b> sin(90)</b>.Here we used do while which executes atleast 1 time.<ul style=list-style-type:square><li><b>Iteration 1</b>:<b>count </b>and <b>sine </b>are <b>initialized </b>to <b>zero.k initialized </b>to<b> 1.</b>Lets take <b>accuracy=3</b><br><pre>if(count%2==0)
+ {
+  sine=(float)sine+(pow(x,k)/factorial(k));
+ }</pre><ul style=list-style-type:disc><li>As count=0 so 0%2 is 0 which is true so if part executes<li>And the value of <b>sine=0+pow(1.570795,1)/1!</b><b><b>→ sine=</b>1.570795.</b><li>Now the <b>second if part</b> is <b>checked </b>and as <b>0%2 !=1 </b>so the part won't execute<br><pre> if(count%2==1)
+ {
+  sine=(float)sine-(pow(x,k)/factorial(k));
+ }</pre><li>Then both <b>count</b> is incremented by <b>1</b> and <b>k</b> is incremented by <b>2</b>.<li>So the final values after 1st iteration is<b> x=</b><b><b>1.570795</b>,sine=</b><b><b>1.570795</b>,count=1;k=3</b><li>Then <b>count&lt;=accuracy </b><b>→ 1&lt;=3 which is true</b> so the loop<b> executes once more</b></ul><li><b>Iteration 2</b>:<br><pre>if(count%2==0)
+ {
+  sine=(float)sine+(pow(x,k)/factorial(k));
+ }</pre><ul style=list-style-type:disc><li>As count=1 after 1st iteration so 1%2 != 0 so 1st if part won't executes<li>Now the <b>second if part</b> is <b>checked </b>and as <b>1%2 =1 </b>so the 2nd if part is executed<br><pre> if(count%2==1)
+ {
+  sine=(float)sine-(pow(x,k)/factorial(k));
+ } </pre><li>And the value of <b>sine=</b><b><b>1.570795</b>-pow(</b><b><b>1.570795</b>,3)/3!</b><b><b>→ sine=0.915965158</b></b><li>Then both <b>count</b> is incremented by <b>1</b> and <b>k</b> is incremented by <b>2</b>.<li>So the final values after 1st iteration is<b> x=</b><b><b><b>1.570795</b></b>,sine=</b><b><b><b><b><b>0.915965158</b></b></b></b>,count=2;k=5</b><li>Then <b>count&lt;=accuracy </b><b>→ 2&lt;=3 which is true</b> so the loop<b> executes once more</b></ul><li><b>Iteration 3</b>:<br><pre>if(count%2==0)
+ {
+  sine=(float)sine+(pow(x,k)/factorial(k));
+ }</pre><ul style=list-style-type:disc><li>As count=2 so 2%2 is 0 which is true so if part executes<li>And the value of <b>sine=</b><b><b>0.915965158</b></b><b>+pow(</b><b><b><b><b>1.570795</b></b></b>,5)/5!</b><b><b>→ sine=0.995657448</b></b><li>Now the <b>second if part</b> is <b>checked </b>and as <b>0%2 !=1 </b>so the part won't execute<br><pre> if(count%2==1)
+ {
+  sine=(float)sine-(pow(x,k)/factorial(k));
+ }</pre><li>Then both <b>count</b> is incremented by <b>1</b> and <b>k</b> is incremented by <b>2</b>.<li>So the final values after 1st iteration is<b> x=</b><b><b><b><b><b>1.570795</b></b></b></b>,sine=</b><b><b>0.995657448</b></b><b>,count=3;k=7</b><li>Then <b>count&lt;=accuracy </b><b>→ 3&lt;=3 which is true</b> so the loop<b> executes once more</b></ul><li><b>Iteration 4</b>:<br><pre>if(count%2==0)
+ {
+  sine=(float)sine+(pow(x,k)/factorial(k));
+ }</pre><ul style=list-style-type:disc><li>As count=3 after 1st iteration so 3%2 != 0 so 1st if part won't executes<li>Now the <b>second if part</b> is <b>checked </b>and as <b>3%2 =1 </b>so the 2nd <b>if part</b> is executed<br><pre> if(count%2==1)
+ {
+  sine=(float)sine-(pow(x,k)/factorial(k));
+ } </pre><li>And the value of <b>sine=</b><b><b>0.995657448</b></b><b>-pow(</b><b><b>1.570795</b>,7)/7!</b><b><b>→ sine=0.990975722~1.00(this is human calc so might not be as exact as system calc).</b></b><li>Then both <b>count</b> is incremented by <b>1</b> and <b>k</b> is incremented by <b>2</b>.<li>So the final values after 1st iteration is<b> x=</b><b><b><b>1.570795</b></b>,sine=</b><b><b><b>1.00</b></b>,count=4;k=9</b><li>Then <b>count&lt;=accuracy </b><b>→ 4&lt;=3 which is false </b>so the loop<b> is terminated </b></ul><li><b><span style=color:red>Note:-</span></b><br><pre>In the given output I took <b>6 and 4</b> as accuracy but here we took it as 3 .
+So more number of iterations we get more accuarate answer.
+If we give accuracy as <b>6 </b>.
+The loop will iterate <b>3 more times same as above iterations.</b></pre><li>So the final value of <b>sine </b>is <b>printed</b></ul></ol><br></div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:gravity="0x17" android:id="resourceId:0x1020000" android:drawable="res/drawable/miuix_appcompat_seekbar_progress_bg_light.xml" />
+	<item android:gravity="0x17" android:id="resourceId:0x102000d">
+		<clip>
+			<shape android:shape="0">
+				<solid android:color="ff073dd" />
+				<corners android:radius="1191444unknown unit:0x21" />
+			</shape>
+		</clip>
+	</item>
+</layer-list>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+main()
+{
+  int i,num;
+  printf("Enter a number\n");
+  scanf("%d",&amp;num);
+  for(i=1;i&lt;=num;i++)
+  {
+	if(i%10==0)
+	{
+		printf("%3d\n",i);
+	}
+	else
+	{
+		printf("%3d",i);
+	}
+  }
+  printf("\n");
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+<pre>
+Enter a number
+50
+  1  2  3  4  5  6  7  8  9 10
+ 11 12 13 14 15 16 17 18 19 20
+ 21 22 23 24 25 26 27 28 29 30
+ 31 32 33 34 35 36 37 38 39 40
+ 41 42 43 44 45 46 47 48 49 50
+</pre><br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

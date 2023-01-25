@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="0x800015" android:orientation="0" android:layout_width="-1" android:layout_height="-2" style="resourceId:0x7f1102ef">
+	<TextView android:gravity="0x800005" android:id="resourceId:0x1020014" android:layout_width="0dp" android:layout_height="-2" android:layout_weight="{4:1065353216}" android:textDirection="5" style="resourceId:0x7f1100f5" />
+	<androidx.appcompat.widget.AppCompatImageView android:layout_gravity="0x800015" android:id="resourceId:0x1020007" android:layout_width="-2" android:layout_height="-2" android:layout_marginStart="109117unknown unit:0x21" app:srcCompat="res/drawable/miuix_appcompat_arrow_up_down.xml" />
+</LinearLayout>

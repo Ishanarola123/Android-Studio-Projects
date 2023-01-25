@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+ struct Book{
+  int id,price;
+  char name[100];
+ }b[3];
+main()
+{
+int i,max=3;
+  for(i=0;i&lt;max;i++)
+  {
+    printf("Enter book %d id\n",i+1);
+    scanf("%d",&amp;b[i].id);
+    printf("Enter book %d name\n",i+1);
+    scanf("%s",&amp;b[i].name);
+    printf("Enter book %d price\n",i+1);
+    scanf("%d",&amp;b[i].price);
+  }
+
+   for(i=0;i&lt;max;i++)
+   {
+     printf("Book %d id=%d\n",i+1,b[i].id);
+       printf("Book %d Name=%s\n",i+1,b[i].name);
+       printf("Book %d Price=%d\n",i+1,b[i].price);
+    }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter book 1 id<br>
+1<br>
+Enter book 1 name<br>
+HarryPotter<br>
+Enter book 1 price<br>
+400<br>
+Enter book 2 id<br>
+2<br>
+Enter book 2 name<br>
+MahabharataSecret<br>
+Enter book 2 price<br>
+550<br>
+Enter book 3 id<br>
+3<br>
+Enter book 3 name<br>
+ABCMurder<br>
+Enter book 3 price<br>
+235<br>
+Book 1 id=1<br>
+Book 1 Name=HarryPotter<br>
+Book 1 Price=400<br>
+Book 2 id=2<br>
+Book 2 Name=MahabharataSecret<br>
+Book 2 Price=550<br>
+Book 3 id=3<br>
+Book 3 Name=ABCMurder<br>
+Book 3 Price=235<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

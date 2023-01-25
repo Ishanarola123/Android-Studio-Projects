@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+main()
+{
+  char s1[25],s2[25],*t1,*t2;
+  int len1=0,len2=0,i;
+  printf("Enter a string 1\n");
+  scanf("%s",&amp;s1);
+  printf("Enter a string 2\n");
+  scanf("%s",&amp;s2);
+  t1=s1;//copying base address of string
+  t2=s2;
+  while(*t1!='\0')
+  {
+   t1++;
+   len1++;
+  }
+ //copying second string to first
+  while(*t2!='\0')
+  {
+   *t1=*t2;
+   t1++;
+   t2++;
+   len2++;
+  }
+  *t1='\0';
+  i=0;
+  //taking total string to initial base address
+  while(i&lt;len1+len2)
+  {
+   i++;
+   t1--;
+  }
+
+    printf("Concatenated String is ");
+
+    while(*t1!='\0')
+    {
+     printf("%c",*t1);
+     t1++;
+    }
+
+printf("\n");
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter a string 1<br>
+Hello<br>
+Enter a string 2<br>
+World<br>
+Concatenated String is HelloWorld<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

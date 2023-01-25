@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+char choice;
+float num1,num2,result;
+int flag=1;
+printf("Enter +,-,/,* for knowing the result\n");
+scanf("%c",&choice);
+printf("Enter number 1\n");
+scanf("%f",&num1);
+printf("Enter number 2\n");
+scanf("%f",&num2);
+
+switch(choice)
+{
+case '+':
+result=num1+num2;
+break;
+case '-':
+result=num1-num2;
+break;
+case '/':
+{
+
+if(num2==0)
+{
+flag=0;
+}
+else
+{
+result=num1/num2;
+}
+break;
+}
+case '*': result=num1*num2;
+break;
+default:printf("Error");
+break;
+}
+if(flag==1)
+{
+printf("%f %c %f = %f",num1,choice,num2,result);
+}
+else
+{
+printf("%f %c %f = undefined\n",num1,choice,num2);
+}
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter +,-,/,* for knowing the result<br>*<br>Enter number 1<br>1234<br>Enter number 2<br>1234<br>1234.000000 * 1234.000000 = 1522756.000000<br></span><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing<ul style=list-style-type:square><li><b>choice</b> → For storing the <b>operators</b> like +,-,/,*<li><b>num1</b>,<b>num2 </b>→ For storing two <b>integers</b><li><b>result</b> → For storing the <b>resulting</b> value<li><b>flag</b> → To store <b>true</b> or <b>false</b>.</ul><li>First we take <b>choice</b> of <b>user</b> (+,-,/,*) then the two numbers.<li>Now we use <b>switch</b> case<ul style=list-style-type:square><li>If the user enters <b>'+'</b> as his choice then the result will be <b>result=num1+num2</b><li>If the user enters<b> '-'</b> as his choice then the result will be <b>result=num1-num2</b><li>If the user enters <b>'/'</b> as his choice then the result will be <b>result=num1/num2</b> <b>if</b> <b>num2</b> is <b>not zero</b> <b>else</b> <b>flag will be zero</b> and the <b>output would be undefined</b><li>If the user enters <b>'*'</b> as his choice then the result will be <b>result=num1*num2</b></ul></ol></div>

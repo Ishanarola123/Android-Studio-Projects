@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+    int i,vowelcount=0;
+    char str[100];
+    printf("Enter a string\n");
+    gets(str);
+    for(i=0;i&lt;strlen(str);i++)
+    {
+        if(str[i]=='A'||str[i]=='a'||str[i]=='e'||str[i]=='E'||str[i]=='I'
+        ||str[i]=='i'||str[i]=='O'||str[i]=='o'||str[i]=='U'||str[i]=='u')
+        {
+            vowelcount++;
+        }
+    }
+    printf("%d\n",vowelcount);
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a string<br>Now you see me<br>6<br></span><span class=headings>Explanation:</span><br><ol><li>This program starts with initializing :<ul style=list-style-type:square><li><b>str[100] </b>→ To store <b>string with length of 100 </b>which means it can store<b> 100 letters</b><li><b>i</b> →Used as<b> helping variable</b><li><b>vowelcount</b>→ To store <b>number of vowelsof given string </b>and is initilized to<b> zero.</b></ul><li><pre>printf("Enter a string\n");
+    gets(str);</pre>takes the string from user<li><pre>for(i=0;i&lt;strlen(str);i++)
+    {
+        if(str[i]=='A'||str[i]=='a'||str[i]=='e'||str[i]=='E'||str[i]=='I'
+        ||str[i]=='i'||str[i]=='O'||str[i]=='o'||str[i]=='U'||str[i]=='u')
+        {
+            vowelcount++;
+        }
+    }</pre>It will iterate from <b>0 to the length of the string </b>(i.e. from our example of "Now You See Me" it will iterate from <b>0 to 13</b> as length of string is 14.)<li>Each time it iterates,each <b>character </b>in given string is <b>compared </b>with either of the letters from <b>a,e,i,o,u,A,E,I,O,U</b>.If any <b>character </b>is <b>matched </b>with one of these letters <b>vowelcount </b>is <b>incremented </b>by <b>1</b>.<li>From our example "<b>Now You See Me</b>" has <b>6</b> vowels.</ol></div>

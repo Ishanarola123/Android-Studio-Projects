@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;math.h>
+main()
+{
+  int num,i,sum=0;
+  printf("Enter a number to know whether it is perfect or not\n");
+  scanf("%d",&num);
+  for(i=1;i&lt;num;i++)
+  {
+    if(num%i==0)
+    {
+      sum+=i;
+    }
+  }
+  if(sum==num)
+  {
+    printf("The given number %d is perfect\n",num);
+  }
+  else
+  {
+    printf("The given number %d is not perfect because the sum of its divisors are %d\n",num,sum);
+  }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a number to know whether it is perfect or not<br>8<br>The given number 8 is not perfect because the sum of its divisors are 7<br></span><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing :<ul style=list-style-type:square><li><b>num</b> → To store <b>input </b>from user<li><b>i</b> → used as <b>helping</b> variable<li><b>sum</b> → To store <b>output</b></ul><li><pre>printf("Enter a number to know whether it is perfect or not\n");
+scanf("%d",&num);</pre>Takes input from user and is stored in num. Lets take <b>num</b>=<b>6</b><li><pre>for(i=1;i&lt;num;i++)
+{
+if(num%i==0)
+{
+sum+=i;
+}
+}</pre>This is the <b>main</b> <b>logic</b> of this <b>program</b>.Lets take <b>num</b>=<b>6</b><ul style=list-style-type:square><li><b>Iteration</b> <b>1</b>: <b>i=1,1&lt;6; </b>which is<b> true</b> so the <b>loop executes</b><ul style=list-style-type:disc><li><b>num%i</b> → 6%1=0→<b>0==0</b> which is <b>true</b> so if part is <b>executed</b><ul style=list-style-type:circle><li><b>sum+=i</b> → sum=0+1→<b>sum=1</b><li>Now<b> i</b> <b>increments</b> by <b>1</b> so <b>i=2</b></ul></ul><li><b>Iteration</b> <b>2</b>: <b>i=2,2&lt;6; </b>which is<b> true</b> so the <b>loop executes</b><ul style=list-style-type:disc><li><b>num%i</b> → 6%2=0→0==0 which is <b>true</b> so if part is <b>executed</b><ul style=list-style-type:circle><li><b>sum+=i </b>→ sum=1+2→<b>sum=3</b><li>Now<b> i</b> <b>increments</b> by <b>1</b> so <b>i=3</b></ul></ul><li><b>Iteration</b> <b>3</b>: <b>i=3,3&lt;6; </b>which is<b> true</b> so the <b>loop executes</b><ul style=list-style-type:disc><li><b>num%i</b> → 6%3=0→0==0 which is <b>true</b> so if part is <b>executed</b><ul style=list-style-type:circle><li><b>sum+=i </b>→ sum=3+3→<b><b>sum=6</b></b><li>Now<b> i</b> <b>increments</b> by <b>1</b> so <b>i=4</b></ul></ul><li><b>Iteration</b> <b>4</b>: <b>i=4,4&lt;6; </b>which is<b> true</b> so the <b>loop executes</b><ul style=list-style-type:disc><li><b>num%i</b> → 6%4=2→2==0 which is <b>flase </b>so if part is not <b>executed</b><ul style=list-style-type:circle><li><b>sum+=i </b>→ sum=6<b>(remains same)</b><li>Now<b> i</b> <b>increments</b> by <b>1</b> so <b>i=5</b></ul></ul><li><b>Iteration</b> <b>5</b>: <b>i=5,5&lt;6; </b>which is<b> true</b> so the <b>loop executes</b><ul style=list-style-type:disc><li><b>num%i</b> → 6%5=1→1==0 which is <b>flase </b>so if part is not <b>executed</b><ul style=list-style-type:circle><li><b>sum+=i </b>→ sum=6<b>(remains same)</b><li>Now<b> i</b> <b>increments</b> by <b>1</b> so <b>i=6</b></ul></ul><li><b>Iteration</b> <b>6</b>: <b>i=6,6&lt;6; </b>which is<b> flase </b>so the <b>loop terminates</b></ul><li>The final output which is stored in <b>sum=6</b><li><pre>if(sum==num)
+{
+printf("The given number %d is perfect\n",num);
+
+}
+else
+{
+printf("The given number %d is not perfect because the sum of its divisors are %d\n",num,sum);
+}</pre>Now <b>sum</b> is <b>compared</b> with the <b>original</b> <b>number</b> given as <b>input</b> ans if they are <b>equal</b> then it is a <b>perfect</b> number <b>else</b> <b>not</b><li>As <b>sum=6 and num=6</b> so <b>6</b> is a <b>perfect</b> <b>number.</b><li>The <b>divisors</b> of <b>6</b> are <b>1,2,3</b> and the <b>sum is 1+2+3=6</b> so sum and <b>number</b> is <b>same</b> which is why it is <b>perfect</b> <b>number</b><li>If we take <b>8</b> as <b>number</b> its divisors are<b> 8=1,2,4</b> and its <b>sum is 1+2+4=7</b> which is <b>not</b> <b>equal</b> to the <b>input</b> we gave.</ol></div>

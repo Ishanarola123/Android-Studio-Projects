@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_home.png" android:id="false" android:title="Home" app:showAsAction="0x2" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_menu_share.png" android:id="false" android:title="Share App" android:actionProviderClass="android.widget.ShareActionProvider" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_visit_website.png" android:id="false" android:title="Visit Website" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_rate.png" android:id="false" android:title="Rate All C Programs" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxhdpi-v4/ic_fblike.png" android:id="false" android:title="Like at Facebook" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_likedislike.png" android:id="false" android:title="Feedback" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_noads.png" android:id="false" android:visible="false" android:title="Unlock PRO" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_smiley.png" android:id="false" android:visible="false" android:title="Benefits of Pro" app:showAsAction="0x1" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_bug_report.png" android:id="false" android:title="Report Bug" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_logout.png" android:id="false" android:title="Exit" app:showAsAction="0x0" />
+</menu>

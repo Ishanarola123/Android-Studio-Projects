@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="1" android:background="res/drawable/bg_chooseopen_dialog.xml" android:layout_width="-1" android:layout_height="-1">
+	<TextView android:textSize="18sp" android:textStyle="0x1" android:textColor="ff000" android:gravity="0x11" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" android:text="Open with" />
+	<LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+		<LinearLayout android:gravity="0x11" android:orientation="1" android:id="false" android:layout_width="0dp" android:layout_height="-2" android:layout_weight="{4:1065353216}">
+			<ImageView android:layout_width="50dp" android:layout_height="50dp" android:layout_marginBottom="5dp" android:src="res/drawable-xxhdpi-v4/icon_mipay.png" />
+			<TextView android:textSize="16sp" android:textColor="ff000" android:layout_width="-2" android:layout_height="-2" android:text="Mi Pay" />
+		</LinearLayout>
+		<LinearLayout android:gravity="0x11" android:orientation="1" android:id="false" android:layout_width="0dp" android:layout_height="-2" android:layout_weight="{4:1065353216}">
+			<ImageView android:layout_width="50dp" android:layout_height="50dp" android:layout_marginBottom="5dp" android:src="res/drawable-xxhdpi-v4/icon_more.png" />
+			<TextView android:textSize="16sp" android:textColor="ff000" android:layout_width="-2" android:layout_height="-2" android:text="More" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:gravity="0x10" android:orientation="0" android:id="false" android:layout_width="-1" android:layout_height="60dp">
+		<CheckBox android:textColor="ff000" android:gravity="0x10" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginLeft="10dp" android:button="res/drawable/choosepay_checkbox.xml" />
+		<TextView android:textSize="14sp" android:textColor="ff000" android:layout_width="-2" android:layout_height="-2" android:layout_marginLeft="5dp" android:text="Remember my choice" />
+	</LinearLayout>
+	<Button android:textColor="cc000" android:gravity="0x11" android:id="false" android:background="res/drawable/bg_button.xml" android:layout_width="-1" android:layout_height="50dp" android:layout_marginBottom="14dp" android:text="Cancel" android:maxLines="1" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" />
+</LinearLayout>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+ main ()
+ {
+    FILE *file1,*file2,*mergeFile;
+    char c;
+    file1=fopen("file1.txt","r");
+    file2=fopen("file2.txt","r");
+
+     if(file1==NULL)
+     {
+      printf("File 1 Not Found\n");
+      exit(0);
+     }
+
+     if(file2==NULL)
+     {
+      printf("File 2 Not Found\n");
+      exit(0);
+     }
+
+    mergeFile=fopen("mergefile.txt","w");
+    if(mergeFile==NULL)
+    {
+     printf("Merge File Not Found\n");
+     exit(0);
+    }
+  while(1)
+  {
+   c=fgetc(file1);
+   if(c!=EOF)
+   {
+    fputc(c,mergeFile);
+    }
+    else
+    {
+     break;
+    }
+  }
+  fputs("\n---------------------From file 2--------------------\n",mergeFile);
+  while(1)
+  {
+   c=fgetc(file2);
+   if(c!=EOF)
+   {
+    fputc(c,mergeFile);
+    }
+    else
+    {
+     break;
+    }
+  }
+  fclose(file1);
+  fclose(file2);
+  fclose(mergeFile);
+  printf("Successfully Merged\n");
+ }
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+       Store all text file and program in same folder.
+<br>
+        Before Running the Program<br>
+        <img class="img-responsive" src="file1text.JPG"><br/>
+        <img class="img-responsive" src="file2text.JPG"><br/>
+        <img class="img-responsive" src="mergefile.JPG"><br/>
+        After Running the Program<br>
+        <img class="img-responsive" src="output mergefile.JPG"><br/>
+        <img class="img-responsive" src="after output.JPG"><br/>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

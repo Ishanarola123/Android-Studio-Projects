@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+    int i,word=1;
+    char str[100];
+    printf("Enter a string\n");
+    gets(str);
+    for(i=0;i&lt;strlen(str);i++)
+    {
+        if(str[i]==' ')
+        {
+            word++;
+        }
+    }
+    printf("%d\n",word);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a string<br>I love Harry Potter<br>4<br></span><span class=headings>Explanation:</span><br><ol><li>This program starts with initializing :<ul style=list-style-type:square><li><b>str[100] </b>→ To store <b>string with length of 100 </b>which means it can store<b> 100 letters</b><li><b>i</b> →Used as<b> helping variable</b><li><b>word</b>→ To store <b>number of words in a given string </b>and is initilized to<b> 1.</b></ul><li><pre>printf("Enter a string\n");
+    gets(str); </pre>To take input from user<li><pre>for(i=0;i&lt;strlen(str);i++)
+    {</pre>it will traverse from i=0 to length of the string.For example if length of string is 10 for helloworld then it will iterate 10 times.From our example "I love Harry Potter" has length of 19 characters (remember to include space as it also counts as character) then for loop will iterate 19 times from 0 to 18.<li><pre>if(str[i]==' ')
+        {
+            word++;
+        }</pre>Each time the loop iterates, each character is checked whether it is space or not as Number of spaces is equal to number of words if words count start from <b>1</b>.</li><hr><li>Ok.Lets take an example of <b>I love harry potter.</b><ul style=list-style-type:square><li><b>Iteration 1</b>:-<b> i=0</b>;<b>words=1</b> and <b>strlen(str)=19</b> as 0&lt;19 the loop is <b>executed</b><ul style=list-style-type:disc><li>str[i]==' ' →str[0]='I' which is not equal to ' '(i.e. space) so <b>if</b> part is not executed<li>so <b>word=1</b> remains <b>same </b>without any increment.<li>final values after 1st iteration is <b>i=1,word=1</b></ul><li><b>Iteration 2</b>:-<b> i=1</b>;<b>words=1</b> and <b>strlen(str)=19</b> as 1&lt;19 the loop is <b>executed</b><ul style=list-style-type:disc><li>str[i]==' ' →str[1]=' ' which is  equal to ' '(i.e. space) so <b>if</b> part is executed<li>so <b>word=1</b> is incremented by 1 so <b>word=2.(</b><i><span style=color:red>*</span>remember it is post increment but to avoid confusion I am showing that it will increment in this iteration  but the actual truth is it will be incremented in next iteration. To clearly understand post and pre increment refer its concept.).</i><li>final values after 1st iteration is <b>i=2,word=2</b></ul><li><b>Iteration 3</b>:-<b> i=2</b>;<b>words=2</b> and <b>strlen(str)=19</b> as 2&lt;19 the loop is <b>executed</b><ul style=list-style-type:disc><li>str[i]==' ' →str[0]='l' which is not equal to ' '(i.e. space) so <b>if</b> part is not executed<li>so <b>word=2</b> remains <b>same </b>without any increment.<li>final values after 1st iteration is <b>i=3,word=2</b></ul><li>Like this <b>word </b>will be <b>incremented </b>to <b>3 at 6th iteration </b>and to<b> 4 at 12th iteration</b>.<li>Finally <b>word are 4</b></ul></ol></div>

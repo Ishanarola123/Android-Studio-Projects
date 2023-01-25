@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><link href=file:///android_asset/fontawesome.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+  int i;
+  for(i=97;i&lt;=122;i++)
+  {
+    printf("%c",i);
+  }
+   printf("\n");
+}
+</pre></div><span class=headings>Output:</span><br><img class=img-responsive src=prog4_a_z.JPG><br><span class=headings>Explanation:</span><br><br><ol><li><span style=color:#000>Here we declared an integer i.</span><li><span style=color:#000>Now this program is same as printing numbers from 97 to 122.</span><li><span style=color:#000>But if you can remember the "ASCII" values of 97 which resembles 'a' and 122 which resembles 'z' as in ascii sheet. To refer ASCII Values <a href="asciitable.html"rel=nofollow target=_blank>click here</a>.</span><li><span style=color:#000>So instead of "%d" if we use "%c" it is converted to ascii value.</span></ol></div>

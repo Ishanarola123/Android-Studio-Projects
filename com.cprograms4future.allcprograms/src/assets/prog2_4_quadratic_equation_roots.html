@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;stdlib.h>
+#include&lt;math.h>
+int main()
+{
+  float A, B, C, root1, root2;
+  float real, imaginary, discriminant;
+  printf("Enter the values of A, B and C\n");
+  scanf("%f %f %f", &A,&B,&C);
+  if( A==0 || B==0 || C==0)
+  {
+   printf("Error: Roots cannot be determined\n");
+  }
+  else
+  {
+   discriminant = B*B - 4.0*A*C;
+   if(discriminant &lt; 0)
+   {
+     printf("Imaginary Roots\n");
+     real = -B/(2.0*A) ;
+     imaginary = sqrt(abs(discriminant))/(2.0*A);
+     printf("Root1 = %f +i %f\n",real, imaginary);
+     printf("Root2 = %f -i %f\n",real, imaginary);
+    }
+    else if(discriminant == 0)
+    {
+     printf("Roots are real and equal\n");
+     root1 = -B/(2.0*A);
+     root2 = root1;
+     printf("Root1 = %f \n",root1);
+     printf("Root2 = %f \n",root2);
+    }
+    else if(discriminant > 0 )
+    {
+     printf("Roots are real and distinct\n");
+     root1 =(-B+sqrt(discriminant))/(2.0*A);
+     root2 =(-B-sqrt(discriminant))/(2.0*A);
+     printf("Root1 = %f \n",root1);
+     printf("Root2 = %f \n",root2);
+    }
+  }
+  return 0;
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter the values of A, B and C<br>1<br>2<br>3<br>Imaginary Roots<br>Root1 = -1.000000 +i 1.414214<br>Root2 = -1.000000 -i 1.414214<br></span><span class=headings>Explanation:</span><br><ol><li>As you know a quadratic equation is<b> ax<sup>2</sup>+bx+c</b><li>The program starts with initilizing<ul style=list-style-type:square><li><b>A</b>-for storing value of <b>a</b> as in <b>ax<sup>2</sup>+bx+c</b><li><b>B</b>-for storing value of <b>b</b> as in <b><b>ax<sup>2</sup>+bx+c</b></b><li><b>C</b>-for storing value of <b>c </b>as in <b>ax<sup>2</sup>+bx+c</b></ul><li>Checking whether all values are <b>0 or not</b> and if any one of them is <b>zero</b> then it will<ul style=list-style-type:square><li>print an error message saying <b>roots can't be determined.</b></ul><li>If<b> step 3</b> is not satisfied then<ul style=list-style-type:square><li>we should calculate <b>discriminant</b> by using formula (<b>d=b<sup>2</sup>-4ac)</b><ul style=list-style-type:disc><li>If <b>discriminant</b> is <b>less than</b> <b>zero</b><ul style=list-style-type:circle><li>There are no real roots and all are imaginary<li><b>real part</b> is calculated by using formula <b>real=-b/2a</b><li>imaginary part is calculated by formula <b>imaginary=√<span style=text-decoration:overline>|d|/2a</span></b><li>Then printing roots of equation.</ul><li>If <b>discriminant</b> is <b>equal</b> <b>to zero </b>then the roots are<b> Real and Equal</b><ul style=list-style-type:circle><li><b>roots </b>are calculated by using formula root<b>=-b/2a </b>for both<li>Then printing roots of equation.</ul><li>If <b>discriminant</b> is <b>greater than zero</b> then the <b>Roots are real and distinct</b><ul style=list-style-type:circle><li><b>root1</b> is calculated by using formula <b>root1=(-b+√<span style=text-decoration:overline>|d|/2a</span>)/2a</b><li><b>root2 </b>is calculated by formula <b>root2=(-b-√<span style=text-decoration:overline>|d|/2a</span>)/2a</b><li>Then printing roots of equation.</ul> <br><ul style=list-style-type:circle></ul></ul></ul></ol></div>

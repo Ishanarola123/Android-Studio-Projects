@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="764477unknown unit:0x21" android:paddingRight="764477unknown unit:0x21">
+	<item>
+		<shape android:shape="0">
+			<solid android:color="ff000" />
+			<size android:height="1026621unknown unit:0x21" />
+		</shape>
+	</item>
+	<item android:gravity="0x50" android:drawable="res/drawable/miuix_appcompat_divider_line_dark.xml" android:right="764477unknown unit:0x21" />
+	<item android:gravity="0x55">
+		<shape android:shape="0">
+			<solid android:color="ff000" />
+			<size android:height="1px" android:width="764477unknown unit:0x21" />
+		</shape>
+	</item>
+</layer-list>

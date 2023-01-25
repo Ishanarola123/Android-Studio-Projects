@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.appcompat.internal.app.widget.SearchActionModeView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="false" android:layout_width="-1" android:layout_height="1746534unknown unit:0x21" style="resourceId:0x7f110357">
+	<RelativeLayout android:layout_width="-1" android:layout_height="40dp">
+		<TextView android:textSize="14sp" android:textColor="{2:2130969467}" android:gravity="0x11" android:id="false" android:background="resourceId:0x0" android:layout_width="-2" android:layout_height="-1" android:text="Cancel" android:fontFamily="sans-serif-medium" android:textDirection="5" android:paddingStart="633405unknown unit:0x21" android:paddingEnd="633405unknown unit:0x21" android:layout_alignParentEnd="true" />
+		<LinearLayout android:gravity="0x10" android:id="false" android:background="{2:2130969211}" android:layout_width="-1" android:layout_height="-1">
+			<ImageView android:layout_gravity="0x10" android:layout_width="-2" android:layout_height="-2" android:src="{2:2130969199}" />
+			<miuix.androidbasewidget.widget.ClearableEditText android:textSize="437125unknown unit:0x22" android:id="resourceId:0x1020009" android:background="resourceId:0x0" android:layout_width="0dp" android:layout_height="-2" android:layout_weight="{4:1065353216}" android:contentDescription="Search" android:textDirection="5" app:drawableEndCompat="{2:2130968820}" />
+		</LinearLayout>
+	</RelativeLayout>
+</miuix.appcompat.internal.app.widget.SearchActionModeView>

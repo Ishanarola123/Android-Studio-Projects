@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;math.h>
+main()
+{
+//an=a*r^(n-1)
+//lastnum=num1*commonratio^(n-1) this is formula from our variables
+  int i,n,sum=0,num1,num2,commonratio,series,lastnum;
+
+  printf("Enter first 2 numbers for finding common Difference\n");
+  scanf("%d%d",&num1,&num2);
+  printf("Enter number of terms in series\n");
+  scanf("%d",&n);
+  commonratio=num2/num1;
+  printf("Common Ratio is %d\n",commonratio);
+lastnum=(num1*(pow(commonratio,(n-1))));
+  printf("Last term in series is %d\n",lastnum);
+ sum=(num1*(1-pow(commonratio,n)))/(1-commonratio);
+  series=num1;
+  printf("Sum of the series \n");
+    for(i=1;i&lt;=n;i++)
+  {
+     if(i&lt;n)
+     {
+      printf("%d+",series);
+      series*=commonratio;
+     }
+     else
+     {
+      printf("%d=%d\n",series,sum);
+      series*=commonratio;
+     }
+  }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter first 2 numbers for finding common Difference<br>10<br>30<br>Enter number of terms in series<br>10<br>Common Ratio is 3<br>Last term in series is 196830<br>Sum of the series<br>10+30+90+270+810+2430+7290+21870+65610+196830=295240<br></span><span class=headings>Explanation:</span><br>//Coming Soon..<br></div>

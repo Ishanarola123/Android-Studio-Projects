@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ int num,k,temp,frequency[9],flag=0,i;
+ printf("Enter number to find which digits are repeated\n");
+ scanf("%d",&num);
+ temp=num;
+ //By default setting frequency of digits as zero
+ for(i=0;i&lt;10;i++)
+ {
+     frequency[i]=0;
+ }
+ while(num>0)
+ {
+  k=num%10;
+  frequency[k]++;
+  num/=10;
+ }
+ for(i=0;i&lt;10;i++)
+ {
+  if(frequency[i]>1)
+  {
+   flag=1;
+   printf("%d --> repeated %d times\n",i,frequency[i]);
+  }
+ }
+ if(flag==0)
+ {
+  printf("No Repeated Digits\n");
+ }
+ else
+ {
+  printf("Repeated digits are there\n");
+ }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter number to find which digits are repeated<br>12116744<br>1 --> repeated 3 times<br>4 --> repeated 2 times<br>Repeated digits are there<br></span><span class=headings>Explanation:</span><br><br />
+ <b><u><br /></u></b> <b><u>The Logic of Program:</u></b><br />
+ <b><u><br /></u></b> We declared "frequency" to store the number of times a digit is repeated<br />
+ For Ex:- <b>frequency[0] </b>will store the number of times<b> '0'&nbsp;</b> is repeated<br />
+ <b>frequency[1] </b>will store the number of times <b>'1'&nbsp; </b>is repeated and so on till <b>'9'.</b><br />
+ <br />
+ So By default, we are making all the frequency of digits empty i.e assigning"frequency" array to "0" using for loop<br />
+ <br />
+<pre class="program prettyprint">for(i=0;i&lt;10;i++)
+ {
+     frequency[i]=0;
+ }</pre>
+ <br />
+ Then we have to retrieve each digit and increment corresponding frequency array element.So while retrieving if the digit is <b>'1' </b>then we increment<b> 'frequency[1]'</b>.Given below is the logic which will do this part.<br />
+<pre class="program prettyprint">while(num&gt;0)
+ {
+  k=num%10;
+  frequency[k]++;
+  num/=10;
+ }</pre>
+ <b><u>Explanation of above logic is:</u></b><br />
+ Let's take a&nbsp;number '<b>1252'</b><br />
+ <br />
+ <ol>
+  <li>Since 1252&gt;0,&nbsp; it's true so the loop continues<ul style="list-style-type: square;">
+   <li>Now<b> k=1252%10=2</b> → the last digit of the number is retrieved</li>
+   <li>Then <b>frequency[k]→ frequency[2]++</b>→ so <b>frequency[2]=1</b>(<span style="color: red;">*</span>for explanation ignoring the true meaning of postfix since by now you might have understood postfix meaning)</li>
+   <li>&nbsp;<b>num/10=1252/10</b>→ will remove the last digit from the number and gives <b>125 </b>as we have already added<b> '1'</b> to the corresponding frequency element.</li>
+   <li>Finally <b>frequency[2]=1 and num=125</b> and remaining <b>frequnecy[1],frequncy[3],...till 9 are remained with '0's.</b></li>
+  </ul>
+   <br />
+  </li>
+  <li>Since 125&gt;0,&nbsp; it's true so the loop continues<ul style="list-style-type: square;">
+   <li>Now<b>&nbsp;k=125%10=5</b>&nbsp;→ the last digit of the number is retrieved</li>
+   <li>Then&nbsp;<b>frequency[k]→ frequency[5]++</b>→ so&nbsp;<b>frequency[5]=1</b></li>
+   <li>&nbsp;<b>num/10=125/10</b>→ will remove the last digit from the number and gives&nbsp;<b>12&nbsp;</b>as we have already added<b>&nbsp;'1'</b>&nbsp;to the corresponding frequency element.</li>
+   <li>Finally&nbsp;<b>frequency[2]=1,frequency[5]=1 and num=12</b>&nbsp;and remaining&nbsp;<b>frequnecy[1],frequncy[3],4,6,...till 9 are remained with '0's.</b></li>
+  </ul>
+   <br />
+  </li>
+  <li>Since 12&gt;0,&nbsp; it's true so the loop continues<ul style="list-style-type: square;">
+   <li>Now<b>&nbsp;k=12%10=2</b>&nbsp;→ the last digit of the number is retrieved</li>
+   <li>Then&nbsp;<b>frequency[k]→ frequency[2]++</b>→ so&nbsp;<b>frequency[2]=2</b></li>
+   <li>&nbsp;<b>num/10=12/10</b>→ will remove the last digit from the number and gives&nbsp;<b>1&nbsp;</b>as we have already added<b>&nbsp;'1'</b>&nbsp;to the corresponding frequency element.</li>
+   <li>Finally&nbsp;<b>frequency[2]=2,frequency[5]=1 and num=1</b>&nbsp;and remaining&nbsp;<b>frequnecy[1],frequncy[3],4,6,...till 9 are remained with '0's.</b></li>
+  </ul>
+   <br />
+  </li>
+  <li>Since 1&gt;0,&nbsp; it's true so the loop continues<ul style="list-style-type: square;">
+   <li>Now<b>&nbsp;k=1%10=1</b>&nbsp;→ the last digit of the number is retrieved</li>
+   <li>Then&nbsp;<b>frequency[k]→ frequency[1]++</b>→ so&nbsp;<b>frequency[1]=0</b></li>
+   <li>&nbsp;<b>num/10=1/10</b>→ will remove the last digit from the number and gives 0<b>&nbsp;</b>as we have already added<b>&nbsp;'1'</b>&nbsp;to the corresponding frequency element.</li>
+   <li>Finally&nbsp;<b>frequency[2]=2,frequency[5]=1,frequency[1]=1 and num=0</b>&nbsp;and remaining&nbsp;<b>frequncy[3],4,6,...till 9 are remained with '0's.</b></li>
+  </ul>
+   <br />
+  </li>
+  <li>Since 0&gt;0 is false loop terminates</li>
+  <li>So ultimate result will be&nbsp;<b>frequency[2]=2,frequency[5]=1,frequency[1]=1 remaining all have 0's</b></li>
+ </ol>
+<pre class="program prettyprint">for(i=0;i&lt;10;i++)
+ {
+  if(frequency[i]&gt;1)
+  {
+   flag=1;
+   printf("%d --&gt; repeated %d times\n",i,frequency[i]);
+  }
+ }</pre>
+ <br />
+ Using above logic we are printing only those frequency array elements that are having greater than <b>'1'</b>. For Ex: <b>frequency[1]=1</b> as it is <b>not greater</b> than <b>'1'&nbsp;</b> it won't be printed showing that it is not a repeated digit in the given number.Similarly, <b>frequency[5]</b>.<br />
+ But <b>frequency[2] =2</b> since it is <b>greater than</b> <b>1</b> only <b>number 2 is printed</b> along with how many time <b>'2'</b> is repeated in the given number.<br />
+ <br />
+ And Finally storing <b>flag=1</b> if repeated numbers are there so that we can display a message to user that <b>"No Repeated Digits"</b><br />
+ <br />
+ <br /><br><br></div>

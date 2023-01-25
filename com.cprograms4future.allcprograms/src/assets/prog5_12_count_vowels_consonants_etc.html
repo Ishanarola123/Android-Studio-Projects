@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+int i,vowel=0,consonant=0,special=0,letters=0,digits=0;
+char str[100];
+printf("Enter string 1\n");
+gets(str);
+
+for(i=0;i&lt;strlen(str);i++)
+{
+    if(str[i]=='A'||str[i]=='a'||str[i]=='E'||str[i]=='e'||
+    str[i]=='I'||str[i]=='i'||str[i]=='O'||str[i]=='o'||str[i]=='U'||str[i]=='u')
+    {
+        vowel++;
+    }
+
+    else if(str[i]>=0&&str[i]&lt;=47||str[i]>=58&&str[i]&lt;=64||
+    str[i]>=91&&str[i]&lt;=96||str[i]>=123&&str[i]&lt;=127)
+    {
+        special++;
+    }
+
+    else if(str[i]>'0'&&str[i]&lt;'9')
+    {
+        digits++;
+    }
+}
+printf("vowel count=%d\n",vowel);
+printf("consonant count=%d\n",strlen(str)-vowel-special-digits);
+printf("digits count=%d\n",digits);
+printf("Special Characters=%d\n",special);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter string 1<br>@@@@hllpa ioue[]{}12345&^%#!*+=<br>vowel count=5<br>consonant count=4<br>digits count=5<br>Special Characters=17<br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>This program starts with initializing :<ul style=list-style-type:square><li><b>i </b>→ used as helping variable<b><br></b><li><b>str</b> → To store <b>input from user</b><li><b>vowel,consonant,special,digit</b> → To store<b> number of vowels,consonants etc</b></ul><li><pre>printf("Enter string 1\n");
+gets(str);</pre>To take input from user <li><pre>for(i=0;i&lt;strlen(str);i++)
+{</pre>To traverse from 0 to end of string one by one <li><pre>if(str[i]=='A'||str[i]=='a'||str[i]=='E'||str[i]=='e'||
+    str[i]=='I'||str[i]=='i'||str[i]=='O'||str[i]=='o'||str[i]=='U'||str[i]=='u')
+    {
+        vowel++;
+    }</pre>To check whether the character is A/a,E/e,I/i,O/o,U/u and if the character is anyone of them then vowel is incremented by 1.Finally number of vowels are stored in <b>vowel</b><li><pre>else if(str[i]>=0&&str[i]&lt;=47||str[i]>=58&&str[i]&lt;=64||
+    str[i]>=91&&str[i]&lt;=96||str[i]>=123&&str[i]&lt;=127)
+    {
+        special++;
+    }</pre>To understand this refer ASCII Sheet as the characters which are not alphabets,numbers are considered as special characters so the character which lies between 0&47 or 58&64 or 91&96 or 123&127 are special characters (space included) from ASCII Sheet. If the character lies in between these <b>special</b> is incremented by 1<li><pre>else if(str[i]>'0'&&str[i]&lt;'9')
+    {
+        digits++;
+    }</pre>If character lies in between 0 and 9 then digit is incremented by 1. <li><pre>printf("vowel count=%d\n",vowel);
+printf("consonant count=%d\n",strlen(str)-vowel-special-digits);
+printf("digits count=%d\n",digits);
+printf("Special Characters=%d\n",special);</pre>Finally all vowels,digit,special are printed and we get consonant by calculating stringlength-vowel-special-digits.<pre>Example <b>Hello World</b> has
+vowel=e,o,o=3
+digit=0
+special=(space)=1
+consonant=11-3-0-1=7</pre></ol><br></div>

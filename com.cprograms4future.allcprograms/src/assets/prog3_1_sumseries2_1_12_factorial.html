@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+int factorial(int);
+main()
+{
+int i,n;
+float sum=0;
+printf("Enter value of n\n");
+scanf("%d",&n);
+
+
+for(i=1;i&lt;=n;i++)
+{
+ sum+=(float)i/factorial(i);
+}
+printf("The value of\n");
+for(i=1;i&lt;=n;i++)
+{
+ if(i&lt;n)
+ {
+  printf("%d/%d!+ ",i,i);
+ }
+ else
+ {
+  printf("%d/%d!= ",i,i);
+ }
+
+}
+printf("%f\n",sum);
+
+}
+
+int factorial(int num)
+{
+ int i,fact=1;
+ for(i=1;i&lt;=num;i++)
+ {
+  fact=fact*i;
+ }
+
+ return(fact);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter value of n<br>5<br>The value of<br>1/1!+ 2/2!+ 3/3!+ 4/4!+ 5/5!= 2.708333<br></span><span class=headings>Explanation:</span><br>//Coming Soon<br><br></div>

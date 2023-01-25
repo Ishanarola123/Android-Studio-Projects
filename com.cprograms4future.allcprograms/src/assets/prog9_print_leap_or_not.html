@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+<span style=color:#000>#include</span>&lt;stdio.h>
+<span style=color:#000>main()</span>
+<span style=color:#000>{</span>
+<span style=color:#000>  int year;</span>
+<span style=color:#000>  printf("Enter the year you want to check\n");</span>
+<span style=color:#000>  scanf("%d",&year);</span>
+<span style=color:#000>  if(year%400==0)</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>    printf("%d is leap year\n",year);</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>  else if(year%100==0)</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>    printf("%d is not a leap year\n",year);</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>  else if(year%4==0)</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>    printf("%d is a leap year\n",year);</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>  else</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>    printf("%d is not a leap year\n",year);</span>
+<span style=color:#000>  }</span>
+<span style=color:#000> }</span></pre></div><span class=headings>Output:</span><br><span>Enter the year you want to check<br>2017<br>2017 is not a leap year<br></span><span class=headings>Explanation:</span><br><ol><li><span style=color:#000>Initialization of variable 'year' for taking user input.</span><li><span style=color:#000>Then prompting user to give the year of his interest.</span><li><span style=color:#000>Now we check whether the year is divisible by 400 or 100 or 4</span><li><span style=color:#000>If the variable is divisible by</span><ul><li><span style=color:#000>400 then it is leap year(ex: 2000,2400)</span><li><span style=color:#000>100 then it is not a leap year.(ex: 2100 which is divisible by 4 but not with 400)</span><li><span style=color:#000>4 then it is leap year.</span></ul><li><span style=color:#000>Then printing the corresponding printf.</span></ol></div>

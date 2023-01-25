@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="res/drawable/bg_translation_language_list.xml" android:layout_width="150dp" android:layout_height="254dp">
+	<ListView android:id="false" android:fadingEdge="0x0" android:layout_width="-1" android:layout_height="-1" android:cacheColorHint="0000" android:divider="33ffffff" android:dividerHeight="1px" android:fadeScrollbars="true" android:overScrollMode="2" />
+</LinearLayout>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+main()
+{
+//Converts ascii value to base=2 or base=3 or base=4 etc including space and everything
+//Ex:ABCDE-base=2:- Same as binary code encryption
+//Ex:ABCD-base=3:-A-1001,B-1002,C-1003,D-1004
+int i,j,n,temp,x,decimal=0,base,inc;
+  printf("Enter how many numbers are there\n");
+ scanf("%d",&amp;n);
+ int num[n];
+ printf("Enter numbers separated by space\n");
+ for(i=0;i&lt;n;i++)
+ {
+  scanf("%d",&amp;num[i]);
+ }
+ printf("Enter base value to encrypt starting from 2\n");
+ scanf("%d",&amp;base);
+ if(base&gt;1)
+ {
+
+ printf("Decrypted Numeral code\n");
+  for(i=0;i&lt;n;i++)
+  {
+      inc=0;
+      decimal=0;
+      temp=num[i];
+      while(temp!=0)
+       {
+         x=temp%10;
+         decimal=decimal+(x*pow(base,inc));
+         temp=temp/10;
+         inc++;
+        }
+        printf("%c",decimal);
+  }
+  printf("\n");
+ }
+ else
+ {
+  printf("Please Enter base greater than or equal to 2\n");
+ }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter how many numbers are there<br>
+9<br>
+Enter numbers separated by space<br>
+116 145 145 144 40 110 145 154 160<br>
+Enter base value to encrypt starting from 2<br>
+8<br>
+Decrypted Numeral code<br>
+Need Help<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

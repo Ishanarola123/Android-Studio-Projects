@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<shape android:shape="0">
+			<solid android:color="0000" />
+			<size android:height="1333657unknown unit:0x21" />
+		</shape>
+	</item>
+	<item android:gravity="0x11" android:drawable="res/drawable/miuix_preference_first_last_divider_line_dark.xml" android:left="873922unknown unit:0x21" android:right="873922unknown unit:0x21" />
+</layer-list>

@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+<span style=color:#000>#include</span>&lt;stdio.h>
+<span style=color:#000>main()</span>
+<span style=color:#000>{</span>
+<span style=color:#000>  int num1,num2,num3;</span>
+<span style=color:#000>  printf("Enter a number 1\n");</span>
+<span style=color:#000>  scanf("%d",&num1);</span>
+<span style=color:#000>  printf("Enter a number 2\n");</span>
+<span style=color:#000>  scanf("%d",&num2);</span>
+<span style=color:#000>  printf("Enter a number 3\n");</span>
+<span style=color:#000>  scanf("%d",&num3);</span>
+<span style=color:#000>  if((num1>num2) && (num1>num3))</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>     printf("%d is bigger\n",num1);</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>  else if((num2>num1) && (num2>num3))</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>    printf("%d is bigger\n",num2);</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>  else</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>    printf("%d is bigger\n",num3);</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>}</span>
+</pre></div><span class=headings>Output:</span><br><span>Enter a number 1<br>-200<br>Enter a number 2<br>345<br>Enter a number 3<br>123<br>345 is bigger<br></span><span class=headings>Explanation:</span><br><ol><li>Initializes :<ul style=list-style-type:square><li><b>num1</b>-for storing number 1<li><b>num2</b>-for storing number 2<li><b>num3</b>- for storing number 3</ul><li>Using if to check whether the number 1(<b>num1</b>) is greater than both <b>num2</b> and <b>num3</b> and if <b>num1</b> is greater it is printed as bigger of the three numbers.<li>The same step above is repeated for <b>num2</b> and <b>num3</b>.</ol></div>

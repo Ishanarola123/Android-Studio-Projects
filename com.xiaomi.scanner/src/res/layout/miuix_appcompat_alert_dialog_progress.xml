@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="0dp" android:paddingBottom="0dp" android:layout_width="-2" android:layout_height="-1" android:paddingStart="873922unknown unit:0x21" android:paddingEnd="873922unknown unit:0x21">
+	<LinearLayout android:gravity="0x10" android:layout_gravity="0x10" android:id="false" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="-1" android:layout_height="-2" android:baselineAligned="false">
+		<TextView android:textSize="16sp" android:gravity="0x10" android:id="false" android:layout_width="0dp" android:layout_height="-2" android:layout_weight="{4:1065353216}" android:textAlignment="5" style="{2:16842816}" />
+		<TextView android:textSize="16sp" android:gravity="0x800005" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginStart="218562unknown unit:0x21" style="{2:16842816}" />
+	</LinearLayout>
+	<miuix.androidbasewidget.widget.ProgressBar android:id="resourceId:0x102000d" android:layout_width="-1" android:layout_height="-2" android:layout_below="false" style="{2:2130969287}" />
+</RelativeLayout>

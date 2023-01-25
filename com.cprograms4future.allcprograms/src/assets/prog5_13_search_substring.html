@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+int i,j,flag=0,len1,len2;
+char str[100],substr[100];
+printf("Enter a string\n");
+gets(str);
+printf("Enter a substring to be searched\n");
+gets(substr);
+len1=strlen(str);
+len2=strlen(substr);
+
+for(i=0;i&lt;=len1-len2;i++)
+{
+    for(j=i;j&lt;i+len2;j++)
+    {
+        flag=1;
+        if(str[j]!=substr[j-i])
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+    break;
+}
+if(flag==1)
+{
+    printf("Search is Successful\n");
+}
+else
+{
+        printf("Search is not Successful\n");
+}
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a string<br>all c programs<br>Enter a substring to be searched<br>all c<br>Search is Successful<br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>This program starts with initializing :<ul style=list-style-type:square><li><b>i,j </b>→ used as helping variable<b><br></b><li><b>str</b> → To store <b>input from user</b><li><b>substr </b><b>→</b>To store<b> substring to search</b><li><b>len1,len2</b>→ To store<b> length of str and sustr</b><li><b>flag </b>→To use this for checking whether the given substr is present in str</ul><li><pre>printf("Enter a string\n");
+gets(str);
+printf("Enter a substring to be searched\n");
+gets(substr);</pre>Taking input from user where <b>str </b>represents <b>string</b>(let's take "<b>all c program</b>") and <b>substr</b> represents <b>substring</b>("lets take "<b>all c</b>" as substring) <li><pre>for(i=0;i&lt;=len1-len2;i++)
+{</pre>length of "<b>all c programs</b>" is <b>14(i.e from 0 to 13) in arrays </b>and <b>"all c"</b> is<b> 5. </b>So <b>len1=14 and len2=5.len1-len2=9.</b>The loop iterates 10 times from 0 to 9.<li>Why <b>len1-len2?<pre> </pre></b>As <b>substring length is 5 </b>then, if the loop traverses till the last but 5 letters without output i.e from 0 to 9 then remaining letters, after the 9th letter there are 4<b>(all c programs having length of  14 i.e from 0-13 in arrays) letters which will not have enough letters for searching the substring.</b><li>Main logic<br><pre>for(j=i;j&lt;i+len2;j++)
+    {
+        flag=1;
+        if(str[j]!=substr[j-i])
+        {
+            flag=0;
+            break;
+        }
+    }//end of forloop
+    if(flag==1)
+    break;</pre>i will traverse from 0 to 9(len1-len2) for each iteration <b>i</b> will be <b>incremented by 1</b>.len1=14,len2=5<br><ul style=list-style-type:square><li><b>Iteration 1</b>:<b>j=i →j=0,j&lt;0+5 which is true so loop is executed</b><ul style=list-style-type:disc><li> j=0<li>flag=1 by default when ever the loop is entered<li>now str[0]!=substr[0-0]<b>→a!=a which is false so flag remains same</b><li>now <b>j </b>is incremented by <b>1 </b>so <b>j=1</b></ul><li><b>Iteration 2</b>:<b>j=1 ,1&lt;0+5 which is true so loop is executed</b><ul style=list-style-type:disc><li> j=1,flag=1<li>now str[1]!=substr[1-0]<b>→l!=l which is false so flag remains same</b><li><b> </b>now <b>j </b>is incremented by <b>1 </b>so <b>j=2</b></ul><li><b>Iteration 3</b>:<b>j=2 ,2&lt;0+5 which is true so loop is executed</b><ul style=list-style-type:disc><li> j=2,flag=1<li>now str[2]!=substr[2-0]<b>→l!=l which is false so flag remains same</b><li><b> </b>now <b>j </b>is incremented by <b>1 </b>so <b>j=3</b></ul><li><b>Iteration 4</b>:<b>j=3 ,3&lt;0+5 which is true so loop is executed</b><ul style=list-style-type:disc><li> j=3,flag=1<li>now str[3]!=substr[3-0]<b>→space!=space which is false so flag remains same</b><li><b> </b>now <b>j </b>is incremented by <b>1 </b>so <b>j=4</b></ul><li><b>Iteration 5</b>:<b>j=4 ,4&lt;0+5 which is true so loop is executed</b><ul style=list-style-type:disc><li> j=4,flag=1<li>now str[4]!=substr[4-0]<b>→c!=c which is false so flag remains same</b><li><b> </b>now <b>j </b>is incremented by <b>1 </b>so <b>j=5</b></ul><li><b>Iteration 4</b>:<b>j=5,5&lt;0+5 which is false so loop is terminated</b> <li>So the <b>if part</b> is never executed at all in 5 iterations so <b>flag </b>is remained as <b>1</b><li><b>finally when flag=1 then the main loop for(i=0;i&lt;len1-len2;i++) is terminated as if(flag==1){break;} is there inside the 1st forloop</b></ul><li><pre>if(flag==1)
+{
+    printf("Search is Successful\n");
+}
+else
+{
+        printf("Search is not Successful\n");
+}</pre>As flag ==1 which is true so the if part is executed So Search is successful</ol></div>

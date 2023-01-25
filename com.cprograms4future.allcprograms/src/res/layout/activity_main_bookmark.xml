@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="ff424242" android:paddingLeft="3dp" android:paddingTop="6dp" android:paddingRight="3dp" android:layout_width="-1" android:layout_height="-1">
+	<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="BANNER" ads:adUnitId="ca-app-pub-3470881500949309/9907622071" />
+	<ListView android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="50dp" android:layout_centerHorizontal="true" />
+	<TextView android:textSize="30dp" android:textColor="eeffffff" android:id="false" android:visibility="1" android:layout_width="-2" android:layout_height="-2" android:text="No Bookmark Added" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+</RelativeLayout>

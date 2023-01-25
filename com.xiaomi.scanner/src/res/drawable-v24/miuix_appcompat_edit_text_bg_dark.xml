@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:minLevel="0" android:maxLevel="1">
+		<layer-list>
+			<item>
+				<selector android:enterFadeDuration="200" android:exitFadeDuration="200">
+					<item android:state_focused="true">
+						<miuix.smooth.SmoothContainerDrawable android:radius="579010unknown unit:0x21">
+							<child>
+								<shape android:shape="0">
+									<solid android:color="ffd84ff" />
+								</shape>
+							</child>
+						</miuix.smooth.SmoothContainerDrawable>
+					</item>
+					<item>
+						<miuix.smooth.SmoothContainerDrawable android:radius="579010unknown unit:0x21">
+							<child>
+								<shape android:shape="0">
+									<solid android:color="0000" />
+								</shape>
+							</child>
+						</miuix.smooth.SmoothContainerDrawable>
+					</item>
+				</selector>
+			</item>
+			<item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+				<miuix.smooth.SmoothContainerDrawable android:radius="513474unknown unit:0x21">
+					<child>
+						<shape android:shape="0">
+							<solid android:color="ff262626" />
+							<padding android:left="514457unknown unit:0x21" android:top="514457unknown unit:0x21" android:right="514457unknown unit:0x21" android:bottom="514457unknown unit:0x21" />
+						</shape>
+					</child>
+				</miuix.smooth.SmoothContainerDrawable>
+			</item>
+		</layer-list>
+	</item>
+	<item android:minLevel="404" android:maxLevel="404">
+		<layer-list>
+			<item>
+				<selector android:enterFadeDuration="200" android:exitFadeDuration="200">
+					<item android:state_focused="true">
+						<miuix.smooth.SmoothContainerDrawable android:radius="579010unknown unit:0x21">
+							<child>
+								<shape android:shape="0">
+									<solid android:color="fff22424" />
+								</shape>
+							</child>
+						</miuix.smooth.SmoothContainerDrawable>
+					</item>
+					<item>
+						<miuix.smooth.SmoothContainerDrawable android:radius="579010unknown unit:0x21">
+							<child>
+								<shape android:shape="0">
+									<solid android:color="0000" />
+								</shape>
+							</child>
+						</miuix.smooth.SmoothContainerDrawable>
+					</item>
+				</selector>
+			</item>
+			<item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+				<miuix.smooth.SmoothContainerDrawable android:radius="513474unknown unit:0x21">
+					<child>
+						<shape android:shape="0">
+							<solid android:color="ff262626" />
+							<padding android:left="514457unknown unit:0x21" android:top="514457unknown unit:0x21" android:right="514457unknown unit:0x21" android:bottom="514457unknown unit:0x21" />
+						</shape>
+					</child>
+				</miuix.smooth.SmoothContainerDrawable>
+			</item>
+		</layer-list>
+	</item>
+</level-list>

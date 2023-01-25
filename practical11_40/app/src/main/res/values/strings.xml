@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">practical11_40</string>
+    <string name="question">Select your branch</string>
+    <string name="answer1">Computer Engineering</string>
+    <string name="answer2">Information technology</string>
+    <string name="answer3">Civil Engineering</string>
+    <string name="answer4">Electronic Engineering</string>
+    <string name="answer5">Mechanical Engineering</string>
+
+
+</resources>

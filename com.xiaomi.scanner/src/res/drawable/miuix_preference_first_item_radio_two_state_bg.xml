@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_enabled="false" android:drawable="res/drawable/miuix_preference_first_item_radio_two_state_bg_normal.xml" />
+	<item android:state_pressed="true" android:drawable="res/drawable/miuix_preference_first_item_radio_two_state_bg_pressed.xml" />
+	<item android:drawable="res/drawable/miuix_preference_first_item_radio_two_state_bg_normal.xml" />
+</selector>

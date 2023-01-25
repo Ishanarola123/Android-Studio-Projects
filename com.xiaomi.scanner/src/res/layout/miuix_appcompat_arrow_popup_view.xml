@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.popupwidget.internal.widget.ArrowPopupView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="0x11" android:layout_width="-2" android:layout_height="-2">
+	<miuix.popupwidget.internal.widget.ArrowPopupContentWrapper android:gravity="0x11" android:orientation="1" android:id="false" android:layout_width="-2" android:layout_height="-2">
+		<LinearLayout android:gravity="0x11" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-2">
+			<androidx.appcompat.widget.AppCompatButton android:id="resourceId:0x1020019" android:visibility="2" android:layout_width="-2" android:layout_height="-2" />
+			<androidx.appcompat.widget.AppCompatTextView android:ellipsize="3" android:gravity="0x11" android:id="resourceId:0x1020016" android:layout_width="0dp" android:layout_height="-2" android:layout_weight="{4:1065353216}" />
+			<androidx.appcompat.widget.AppCompatButton android:id="resourceId:0x102001a" android:visibility="2" android:layout_width="-2" android:layout_height="-2" />
+		</LinearLayout>
+		<FrameLayout android:gravity="0x11" android:layout_gravity="0x11" android:id="resourceId:0x1020002" android:layout_width="-2" android:layout_height="-2" />
+	</miuix.popupwidget.internal.widget.ArrowPopupContentWrapper>
+	<androidx.appcompat.widget.AppCompatImageView android:id="false" android:layout_width="-2" android:layout_height="-2" android:scaleType="3" />
+</miuix.popupwidget.internal.widget.ArrowPopupView>

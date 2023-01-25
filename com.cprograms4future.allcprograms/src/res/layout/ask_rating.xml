@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="0dp" android:layout_marginBottom="0dp">
+	<TextView android:textColor="ffffff" android:id="false" android:background="68cb9" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="-1" android:layout_height="-2" android:text="Please Rate App" android:layout_alignParentTop="true" />
+	<TextView android:id="false" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="30dp" android:layout_width="-1" android:layout_height="-2" android:text="Enjoying Programs in this app.Please take a moment to rate it 5 star.
+Thanks for Supporting!" android:layout_below="false" />
+	<Button android:textColor="ffffff" android:id="false" android:background="68cb9" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="5dp" android:text="Rate 5 Star" android:layout_below="false" />
+	<Button android:textColor="ffffff" android:id="false" android:background="68cb9" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="5dp" android:text="Remind me Later" android:layout_below="false" />
+	<Button android:textColor="ffffff" android:id="false" android:background="68cb9" android:layout_width="-1" android:layout_height="-2" android:text="No Thanks" android:layout_below="false" />
+</RelativeLayout>

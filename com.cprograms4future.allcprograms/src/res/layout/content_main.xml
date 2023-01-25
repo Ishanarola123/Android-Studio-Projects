@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fab="http://schemas.android.com/apk/res-auto" android:orientation="1" android:id="false" android:background="ffffff" android:layout_width="-1" android:layout_height="-1" app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+	<ExpandableListView android:id="false" android:layout_width="-1" android:layout_height="0dp" android:groupIndicator="res/drawable/group_indicator.xml" android:layout_weight="{4:1091567616}" />
+	<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto" android:id="false" android:layout_width="-1" android:layout_height="0dp" android:layout_weight="{4:1065353216}" app:adSize="SMART_BANNER" app:adUnitId="ca-app-pub-3470881500949309/9907622071" />
+</LinearLayout>

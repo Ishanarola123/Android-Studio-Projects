@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is conio.h and getch() and clrscr()?</p>
+        <span class="headings">Answer:</span><br/>
+        "conio" means console input and output and "getch()" is defined in "conio.h".<br />
+        getch() is used to freeze the console screen for user input.It will read a character as input.<br />
+        <br />
+        Now a days we are getting compilers which will show output after running a program without closing the console after displaying output so no need to use getch().<br />
+        If you check in all the programs in this App doesn't have clrscr() at starting of the programs and getch() at the end of the program.<br />
+        Since when you run the program again previous output will be cleared automatically so there is no need of using clrscr().<br />
+        <br />
+        But in TURBO-C compiler this is not the case.As soon as output is displayed it will close the console.<br />
+        So just to avoid it we write getch() at the end of program which makes console waits for user inputing any character.<br />
+        And it won't clear the previous output on console without clrscr() at the starting of program.<br>
+    </div>
+</div>
+</body>
+
+</html>
+

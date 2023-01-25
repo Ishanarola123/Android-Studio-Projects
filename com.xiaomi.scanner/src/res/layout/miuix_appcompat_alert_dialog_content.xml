@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	<FrameLayout android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="546242unknown unit:0x21" android:layout_marginStart="40dp" android:layout_marginEnd="40dp">
+		<TextView android:ellipsize="3" android:layout_gravity="0x11" android:id="false" android:layout_width="-2" android:layout_height="-2" android:singleLine="true" android:drawablePadding="10dp" style="{2:16842843}" />
+	</FrameLayout>
+	<LinearLayout android:orientation="1" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_weight="{4:1065353216}">
+		<LinearLayout android:orientation="1" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="436797unknown unit:0x21" android:layout_marginStart="40dp" android:layout_marginEnd="40dp">
+			<androidx.core.widget.NestedScrollView android:id="false" android:layout_width="-1" android:layout_height="0dp" android:layout_weight="{4:1065353216}" android:overScrollMode="1">
+				<miuix.androidbasewidget.widget.SingleCenterTextView android:id="false" android:layout_width="-1" android:layout_height="-2" android:textDirection="5" style="{2:16842817}" />
+			</androidx.core.widget.NestedScrollView>
+			<androidx.appcompat.widget.AppCompatCheckBox android:id="resourceId:0x1020001" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="10dp" android:drawablePadding="218562unknown unit:0x21" android:layout_marginEnd="435814unknown unit:0x21" style="{2:2130968899}" />
+		</LinearLayout>
+	</LinearLayout>
+	<FrameLayout android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_weight="{4:1065353216}">
+		<FrameLayout android:id="resourceId:0x102002b" android:layout_width="-1" android:layout_height="-2" />
+	</FrameLayout>
+	<LinearLayout android:orientation="1" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="435814unknown unit:0x21" android:layout_marginStart="873922unknown unit:0x21" android:layout_marginEnd="873922unknown unit:0x21">
+		<miuix.appcompat.internal.widget.DialogButtonPanel android:orientation="0" android:id="false" android:layout_width="-1" android:layout_height="-2" android:baselineAligned="false" android:measureWithLargestChild="true" style="{2:16843566}">
+			<miuix.internal.widget.GroupButton android:gravity="0x11" android:id="resourceId:0x102001a" android:layout_width="0dp" android:layout_height="-2" android:maxLines="2" android:layout_weight="{4:1065353216}" style="{2:16843567}" />
+			<miuix.internal.widget.GroupButton android:gravity="0x11" android:id="resourceId:0x102001b" android:layout_width="0dp" android:layout_height="-2" android:maxLines="2" android:layout_weight="{4:1065353216}" style="{2:16843567}" />
+			<miuix.internal.widget.GroupButton android:gravity="0x11" android:id="resourceId:0x1020019" android:layout_width="0dp" android:layout_height="-2" android:maxLines="2" android:layout_weight="{4:1065353216}" style="{2:2130968740}" />
+		</miuix.appcompat.internal.widget.DialogButtonPanel>
+	</LinearLayout>
+</merge>

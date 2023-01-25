@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="1" android:id="false" android:background="f4f4f4" android:layout_width="-1" android:layout_height="-1">
+	<ExpandableListView android:id="false" android:layout_width="-1" android:layout_height="0dp" android:groupIndicator="res/drawable/group_indicator.xml" android:layout_weight="{4:1091567616}" />
+	<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto" android:id="false" android:layout_width="-1" android:layout_height="0dp" android:layout_weight="{4:1065353216}" ads:adSize="SMART_BANNER" ads:adUnitId="ca-app-pub-3470881500949309/9907622071" />
+</LinearLayout>

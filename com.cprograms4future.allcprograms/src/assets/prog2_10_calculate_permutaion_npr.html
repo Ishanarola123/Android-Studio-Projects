@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+int factorial(int);
+main()
+{
+int n,r;
+float nPr;
+printf("Enter value of n in nPr\n");
+scanf("%d",&n);
+printf("Enter value of r in nPr\n");
+scanf("%d",&r);
+if(n>=r&&n>=0&&r>=0)
+{
+   nPr=(float)factorial(n)/factorial(n-r);
+   printf("Value of %dP%d=%f\n",n,r,nPr);
+}
+else
+{
+ printf("Invalid Entry\n");
+}
+
+}
+
+int factorial(int num)
+{
+ int i,fact=1;
+ for(i=1;i&lt;=num;i++)
+ {
+  fact=fact*i;
+ }
+
+ return(fact);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter value of n in nPr<br>9<br>Enter value of r in nPr<br>9<br>Value of 9P9=362880.000000<br></span><span class=headings>Explanation:</span><br><b>Formula for permutation us nPr=n!/(n-r)! </b>under condition of <b>n>=r,n>=0,r>=0</b><br><br><pre>int factorial(int);<b> </b>→ <b>function Declaration</b></pre><ol style=text-align:left><li>Here we used<br><ul style=list-style-type:square><li><b>n </b>→ To store <b>Value</b><li><b>r</b> → To store <b>Value</b><li><b>nPr</b> → To store <b>output</b></ul><li><pre>printf("Enter value of n in nPr\n");
+scanf("%d",&n);
+printf("Enter value of r in nPr\n");
+scanf("%d",&r);</pre>Takes values of <b>n and r</b><li><b> </b><br><pre>if(n>=r&&n>=0&&r>=0)
+{
+   nPr=(float)factorial(n)/factorial(n-r);
+   printf("Value of %dP%d=%f\n",n,r,nPr);
+}
+else
+{
+ printf("Invalid Entry\n");
+}</pre>Checks the required condition as mentioned in the above formula.If the condition is satisfied then <b>if part</b> is executed otherwise the <b>else part.</b><li><pre>nPr=(float)factorial(n)/factorial(n-r);
+   printf("Value of %dP%d=%f\n",n,r,nPr);</pre>As per formula we need to get factorial of <b>'n' and 'n-r'.factorial (n)</b> gets the <b>factorial of n same as factorial(n-r).</b>As the<b> factorial(n) </b>send the value of<b> n </b>to factorial function <b>.</b><pre>int factorial(int num)
+{
+ int i,fact=1;
+ for(i=1;i&lt;=num;i++)
+ {
+  fact=fact*i;
+ }
+
+ return(fact);
+}</pre>After getting the value from factorial it calculates formula and store in <b>nPr.</b><li><b>To understand factorial in detail <a href=prog1_5_factorial.html target=_blank title="Factorial Program">CLICK HERE to Open in same window</a>.</b></ol><br></div>

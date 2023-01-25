@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+int i;
+char str[100],c;
+printf("Enter a string\n");
+gets(str);
+
+for(i=0;i&lt;strlen(str);i++)
+{
+    if(str[i]&gt;='A'&amp;&amp;str[i]&lt;='Z')
+    {
+        c=str[i];
+        break;
+    }
+    else
+    {
+        continue;
+    }
+}
+printf("First capital letter of string %s is %c\n",str,c);
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter a string<br>
+hello wOrld<br>
+First capital letter of string hello wOrld is O<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+
+    <ol style="text-align: left;">
+        <li>This program starts with initializing :
+            <ul style="list-style-type: square;">
+                <li><b>str</b>→ To store <b>input from user</b></li>
+                <li><b>i</b> →Used as<b> helping variable</b></li>
+                <li><b>c</b>→ To store <b>output first capital letter</b></li>
+            </ul>
+        </li>
+        <li><pre>printf("Enter a string\n");
+gets(str);</pre>
+            To store string from user.For example <b>str=hEllo&nbsp;</b></li>
+        <li><b>&nbsp;Main logic of program</b><pre>for(i=0;i&lt;strlen(str);i++)
+{
+    if(str[i]&gt;='A'&amp;&amp;str[i]&lt;='Z')
+    {
+        c=str[i];
+        break;
+    }
+    else
+    {
+        continue;
+    }
+}</pre>
+            <ul style="list-style-type: square;">
+                <li><b>Iteration 1</b>: <b>i=0 and 0&lt;5</b> which is true so loop is executed
+                    <ul style="list-style-type: disc;">
+                        <li>str[0]=h which doesn't lie in between capital A to Z so the <b>if part</b> won't execute</li>
+                        <li><b>else part</b> will be executed and the loop will continue to next iteration</li>
+                        <li><b>i</b> is incremented by 1 ,<b>i=1</b></li>
+                    </ul>
+                </li>
+                <li><b>Iteration 2</b>: <b>i=1 and 1&lt;5</b> which is true so loop is executed
+                    <ul style="list-style-type: disc;">
+                        <li>str[1]=E which lie in between capital A to Z so the <b>if part</b> is executed</li>
+                        <li>this letter E is stored in c,so<b> c='E'</b></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><pre>printf("First capital letter of string %s is %c\n",str,c);</pre>
+            Finally First capital letter is printed which is E
+        </li>
+    </ol>
+</div>
+</body>
+
+</html>
+

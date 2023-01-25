@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="0x10" android:layout_width="-2" android:layout_height="-2">
+	<Button android:id="false" android:background="{2:2130969044}" android:layout_width="-2" android:layout_height="-2" android:contentDescription="More" android:layout_marginEnd="0dp" />
+</FrameLayout>

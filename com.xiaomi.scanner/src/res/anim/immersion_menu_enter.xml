@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:interpolator="res/anim/decelerate_sextic.xml">
+	<scale android:duration="150" android:pivotX="2.24E-44%" android:pivotY="0.0%" android:fromXScale="{4:1061997773}" android:toXScale="{4:1065353216}" android:fromYScale="{4:1061997773}" android:toYScale="{4:1065353216}" />
+	<alpha android:duration="150" android:fromAlpha="{4:0}" android:toAlpha="{4:1065353216}" />
+</set>

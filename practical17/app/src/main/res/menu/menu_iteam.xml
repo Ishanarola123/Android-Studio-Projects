@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Item"
+        android:id="@+id/menuiteam1"
+        />
+    <item android:title="red"
+        android:id="@+id/menuiteam2"
+        />
+
+    <item android:title="yellow"
+        android:id="@+id/menuiteam3"
+        tools:ignore="DuplicateIds" />
+</menu>

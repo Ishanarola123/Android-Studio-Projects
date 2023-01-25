@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="0">
+	<corners android:radius="763494unknown unit:0x21" />
+	<solid android:color="res/color/miuix_appcompat_btn_bg_primary_color_dark.xml" />
+	<size android:height="1530265unknown unit:0x21" />
+</shape>

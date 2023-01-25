@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+  float p,r,t,simpleInterest;
+  int choice;
+  printf("Enter\n1 to find out Simple Interest\n2 to find out Principal\n3 to find out rate in % \n4 to find out Time\n");
+  scanf("%d",&choice);
+  switch(choice)
+  {
+   case 1:
+   {
+   printf("Enter Pricipal\n");
+    scanf("%f",&p);
+    printf("Enter Rate in percentage \n");
+    scanf("%f",&r);
+    printf("Enter Time in years(decimals)\n");
+    scanf("%f",&t);
+
+    simpleInterest=(float)(p*r*t)/100.0;
+    printf("Simple Interest is %f\n",simpleInterest);
+    break;
+   }
+   case 2:
+   {
+   printf("Enter Simple Interest\n");
+    scanf("%f",&simpleInterest);
+    printf("Enter Rate in percentage\n");
+    scanf("%f",&r);
+    printf("Enter Time in years(decimals)\n");
+    scanf("%f",&t);
+    p=(float)(100.0*simpleInterest)/(r*t);
+    printf("Principal is %f\n",p);
+    break;
+
+     }
+     case 3:
+     {
+   printf("Enter Simple Interest\n");
+    scanf("%f",&simpleInterest);
+    printf("Enter Principal\n");
+    scanf("%f",&p);
+    printf("Enter Time in years(decimals)\n");
+    scanf("%f",&t);
+    r=(float)(100.0*simpleInterest)/(p*t);
+    printf("Rate is %f%\n",r);
+    break;
+     }
+     case 4:
+     {
+   printf("Enter Simple Interest\n");
+    scanf("%f",&simpleInterest);
+    printf("Enter Principal\n");
+    scanf("%f",&p);
+    printf("Enter Rate in percentage\n");
+    scanf("%f",&r);
+    t=(float)((100.0*simpleInterest)/(p*r));
+    printf("Time is %f years\n",t);
+      break;
+     }
+  }
+}
+
+</pre></div><span class=headings>Output:</span><br><span>Enter<br>1 to find out Simple Interest<br>2 to find out Principal<br>3 to find out rate in<br>4 to find out Time<br>2<br>Enter Simple Interest<br>37.500<br>Enter Rate in percentage<br>5<br>Enter Time in years(decimals)<br>0.25<br>Principal is 3000.000000<br></span><span class=headings>Explanation:</span><br>Formulae used in Program:<br><pre><b>1.Simple Interest=(Principal*Rate in %* Time in Years)/100</b>
+
+<b>2.Principal=(100*Simple Interest)/(</b><b><b>Rate in %* Time in Years)</b></b>
+
+<b><b>3.Rate(%)=</b></b><b>(100*Simple Interest)/(</b><b><b>Principal* Time in Years)</b></b>
+
+<b><b>4.Time(Yrs)=</b></b><b><b><b>(100*Simple Interest)/(</b><b><b>Principal* Rate(%))</b></b> </b></b></pre><br><ol style=text-align:left><li>This program starts with initializing :<ul style=list-style-type:square><li><b>p </b>→ To store <b>principal in Rupees</b><li><b>r</b> → To store <b>rate in %</b><li><b>t</b> → To store <b>time in years</b><li><b>simpleInterest</b> → To store <b>output</b></ul><li><pre>printf("Enter\n1 to find out Simple Interest\n2 to find out Principal\n
+3 to find out rate in % \n4 to find out Time\n");
+  scanf("%d",&choice);</pre>To <b>prompt </b>user to <b>choose one </b>of the following as shown in the <b>output.</b><li>Lets run by giving <b>choice </b>as <b>2</b> which is <b>to find out Principal.</b><li>As the<b> choice </b>is<b> 2. Case 2:</b> will be<b> executed. </b><b><span style=color:teal><span>Learn Switch case in detail:"https://beginnerlanguage.blogspot.in/p/switch-case-statement.html"</span></span></b><ul style=list-style-type:square><li>As per case formula 2 is used for execution<li><pre> printf("Enter Simple Interest\n");
+    scanf("%f",&simpleInterest);</pre>Taking Simple Interest from user<br><pre>    printf("Enter Rate in percentage\n");
+    scanf("%f",&r);</pre>Taking Rate from user<pre>    printf("Enter Time in years(decimals)\n");
+    scanf("%f",&t);</pre>Taking Time from user<pre>    p=(float)(100.0*simpleInterest)/(r*t);
+    printf("Principal is %f\n",p);
+    break;</pre>From <b>formula 2</b> the above will <b>calculate </b>and stores result in <b>p</b> which is then <b>printed.</b></ul></ol><br></div>

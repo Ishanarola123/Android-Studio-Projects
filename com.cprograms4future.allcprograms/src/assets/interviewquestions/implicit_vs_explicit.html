@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is implicit and explicit conversion?</p>
+        <span class="headings">Answer:</span><br/>
+        Implicit:<br />
+        Suppose we are adding two numbers. The first number is of type int and the second number is of type float.<br />
+        Since we cannot add an int and a float, so both the numbers have to be of the same data type i.e., either both are int or both are float.<br />
+        Since float is a larger data type than int, therefore int variable gets converted into float automatically and then both the float variables add up.<br />
+        This automatic conversion is called implicit conversion.<br />
+        <br />
+        Explicit:<br />
+        This is nothing but typecasting which is manual conversion of data type.<br />
+        As int x=1;<br />
+        float y=1.1;<br />
+        then float j=(float)x+y;<br />
+        here we are converting to float<br>
+    </div>
+</div>
+</body>
+
+</html>
+

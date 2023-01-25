@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ float a1,a2,b1,b2,c1,c2,d[4],x,y;
+ printf("Enter a1,b1 and c1 of a1x+b1y=c1\n");
+ scanf("%f%f%f",&a1,&b1,&c1);
+ printf("Enter a2,b2 and c2 of a2x+b2y=c2\n");
+ scanf("%f%f%f",&a2,&b2,&c2);
+ if(((a1*b2)-(a2*b1))!=0)
+ {
+    d[0]=(c1/a1);
+    d[1]=(-1)*(b1/a1);
+    d[2]=(c2/a2);
+    d[3]=(-1)*(b2/a2);
+    y=((d[2]-d[0])/(d[1]-d[3]));
+    x=d[0]+(d[1]*y);
+    printf("X=%f\nY=%f\n",x,y);
+ }
+ if(((a1*b2)-(a2*b1))==0&&((b1*c2)-(b2*c1))==0 && ((a2*c1)-(a1*c2))==0)
+ {
+  if(c1/a1>=0)
+  printf("Infinite number of solutions\nX=%fY+%f\n",(-1*b1)/a1,c1/a1);
+  else
+   printf("Infinite number of solutions\nX=%fY%f\n",(-1*b1)/a1,c1/a1);
+
+ }
+ if(((a1*b2)-(a2*b1))==0&&((b1*c2)-(b2*c1))!=0 && ((a2*c1)-(a1*c2))!=0)
+ {
+  printf("No Solutions\n");
+ }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a1,b1 and c1 of a1x+b1y=c1<br>-2<br>1<br>1<br>Enter a2,b2 and c2 of a2x+b2y=c2<br>-3<br>2<br>5<br>X=3.000000<br>Y=7.000000<br></span><span class=headings>Explanation:</span><br><img class=img-responsive src=file:///android_asset/prog2_17_display_x_y.jpg><br>//Coming Soon<br><span style=color:teal><b>Reference:<span>http://www.math-only-math.com/solvability-of-linear-simultaneous-equations.html</span></b></span><br></div>

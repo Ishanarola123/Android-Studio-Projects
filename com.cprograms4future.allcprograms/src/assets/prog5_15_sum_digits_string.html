@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;stdlib.h&gt;
+main()
+{
+int i,j=0,temp,sum=0,n;
+char str1[100],str2[100]={0};
+printf("Enter a string\n");
+gets(str1);
+
+for(i=0;i&lt;strlen(str1);i++)
+{
+    if(str1[i]&gt;='0'&amp;&amp;str1[i]&lt;='9')
+    {
+        str2[j]=str1[i];
+        j++;
+    }
+
+}
+temp=atoi(str2);//To convert string to integer
+printf("The digits present in string is %d\n",temp);
+while(temp&gt;0)
+{
+    n=temp%10;
+    sum+=n;
+    temp=temp/10;
+}
+printf("The sum of digits is %d\n",sum);
+
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter a string<br>
+hello1 world23 its a pr5ogr4m6<br>
+The digits present in string is 123546<br>
+The sum of digits is 21<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+
+    <ol>
+        <li>This program starts with initializing :
+            <ul style="list-style-type: square;">
+                <li><b>temp </b>→ To store only <b>digits from string temporarily as a number integer format</b></li>
+                <li><b>i,j</b><b>,n</b>→Used as<b> helping variable</b></li>
+                <li><b>sum </b>→ To store <b>output sum</b></li>
+                <li><b>str</b><b><b>1 </b>→To store input string</b></li>
+                <li><b>str2&nbsp;</b><b><b> </b>→To store digits in string format </b></li>
+            </ul>
+        </li>
+        <li><pre>printf("Enter a string\n");
+gets(str1);
+</pre>
+            Taking input from user.Let it be "he123"</li>
+        <li><pre>for(i=0;i&lt;strlen(str1);i++)
+{
+    if(str1[i]&gt;='0'&amp;&amp;str1[i]&lt;='9')
+    {
+        str2[j]=str1[i];
+        j++;
+    }
+
+}</pre>
+            The above for loop traverse from 0 to length of string which here is 5(he123).<br />
+            Each time it iterates from 0 it checks whether the character lies in between 0 and 9 and if it is ,then that character which lies in between 0 and 9 is stored in <b>str2</b> one by one</li>
+        <li>Finally all the digits are stored in <b>str2</b> in string format&nbsp;</li>
+        <li><pre>temp=atoi(str2);</pre>
+            <b>atoi</b> will convert string to integer and that is stored in <b>temp=123</b></li>
+        <li><pre>while(temp&gt;0)
+{
+    n=temp%10;
+    sum+=n;
+    temp=temp/10;
+}
+printf("The sum of digits is %d\n",sum);</pre>
+            Now temp will have<b> 123</b> in<b>("he123").</b>The above<b> forloop will get us sum of the digits.</b>If you would like to understand how that works see this <b><a href="prog1_1_sum_all_digits.html" target="_blank">Sum of all Digits(open in same window)</a></b></li>
+        <li><b>Finally sum of 123 is 6 </b></li>
+    </ol>
+    <br />
+</div>
+</body>
+
+</html>
+

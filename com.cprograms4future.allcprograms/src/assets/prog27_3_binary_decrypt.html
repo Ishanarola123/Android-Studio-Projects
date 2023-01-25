@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+#include&lt;math.h&gt;
+main()
+{
+//Converts ascii value to binary including space and everything
+int i,j,temp,num,decimal,inc;
+ printf("Enter number of binary sets\n");
+ scanf("%d",&amp;num);
+ int binary[num];
+ printf("Enter a binary Code separated with Space\n");
+ for(i=0;i&lt;num;i++)
+ {
+  scanf("%d",&amp;binary[i]);
+ }
+
+ printf("Decrypted Binary code\n");
+  for(j=0;j&lt;num;j++)
+  {
+    temp=binary[j];
+    inc=0;
+    decimal=0;
+     while(temp!=0)
+     {
+       i=temp%10;
+       decimal=decimal+(i*pow(2,inc));
+       temp=temp/10;
+        inc++;
+      }
+        printf("%c",decimal);
+  }
+  printf("\n");
+}
+
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter number of binary sets<br>
+19<br>
+Enter a binary Code separated with Space<br>
+1000011 100000 1010000 1110010 1101111 1100111 1110010 1100001 1101101 1110011 100000 110100 100000 1000110 1110101 1110100 1110101 1110010 1100101<br>
+Decrypted Binary code<br>
+C Programs 4 Future<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

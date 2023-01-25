@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What are the types of parameter passing?</p>
+        <span class="headings">Answer:</span><br/>
+        <pre class="program prettyprint" >In functions parameters can be passed in two ways:-
+
+1.Pass by value or Call by Value.
+
+#include&lt;stdio.h&gt;
+float sum(float,int);
+void main()
+{
+float num1,result;
+int num2;
+printf("Enter float value:");
+scanf("%f",&amp;num1);
+printf("Enter integer value:");
+scanf("%d",&amp;num2);
+result=sum(num1,num2);
+printf("The sum of %f and %d is %f",num1,num2,result);
+}
+
+float sum(float x,int y)
+{
+float z=(float)(x+y);
+return z;
+}
+
+2.Pass by reference or Call by Reference.
+
+#include&lt;stdio.h&gt;
+void swap(int *,int *);   //declaration
+void main()
+{
+int a=5,b=6;
+printf(“Values before swapping a=%d,b=%d\n”,a,b);
+swap(&amp;a,&amp;b);  //calling function
+printf(“Values after swapping a=%d,b=%d\n”,a,b);
+}
+void swap(int *c,int *d) //called function
+{
+int r;
+r=*c;
+*c=*d;
+*d=r;
+}
+</pre><br>
+    </div>
+</div>
+</body>
+
+</html>
+

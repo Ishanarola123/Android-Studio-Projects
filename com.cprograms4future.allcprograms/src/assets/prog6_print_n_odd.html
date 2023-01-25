@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+  int i,n;
+  printf("Enter a Number\n");
+  scanf("%d",&n);
+  for(i=0;i&lt;=n;i++)
+  {
+    if(i%2==1)
+      printf("%d\n",i);
+    else
+      continue;
+   }
+   printf("\n");
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a Number<br>10<br>1<br>3<br>5<br>7<br>9<br></span><span class=headings>Explanation:</span><br><ol><li><span style=color:#000>Here we intialized 'i' and 'n'</span><li><span style=color:#000>Then we prompted user to enter a number.</span><li><span style=color:#000>After taking the number 'n' a for loop iis used to traverse from 'zero' to that number which is 'n'(say 10 or 20).</span><li><span style=color:#000>In if we used i%2 which is used to identify whether the given number is odd or even</span><ul><li><span style=color:#000>0%2=0(even)</span><li><span style=color:#000>1%2=1(odd)</span><li><span style=color:#000>2%2=0(even)</span><li><span style=color:#000>3%2=1(odd)</span><li><span style=color:#000>and so on...</span></ul><li><span style=color:#000>So by using modulus operator if the result is 1 then it gets printed other wise the loop continues for next iteration.</span><li><span style=color:#000>So the output here is to print all odd numbers from zero to 'n'.</span></ol></div>

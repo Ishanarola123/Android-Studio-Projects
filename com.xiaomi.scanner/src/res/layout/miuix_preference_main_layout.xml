@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="0x10" android:layout_gravity="0x10" android:clipChildren="false" android:layout_width="-1" android:layout_height="-2" android:paddingStart="633405unknown unit:0x21" android:paddingEnd="873922unknown unit:0x21">
+	<LinearLayout android:gravity="0x11" android:orientation="0" android:layout_width="-2" android:layout_height="-2" android:minWidth="1157693unknown unit:0x21" android:layout_marginEnd="436797unknown unit:0x21">
+		<ImageView android:gravity="0x11" android:layout_gravity="0x11" android:id="resourceId:0x1020006" android:layout_width="-2" android:layout_height="-2" android:scaleType="3" android:adjustViewBounds="true" style="resourceId:0x7f110346" />
+	</LinearLayout>
+	<RelativeLayout android:gravity="0x10" android:layout_gravity="0x10" android:layout_width="-2" android:layout_height="-2" android:layout_weight="{4:1065353216}" style="resourceId:0x7f110347">
+		<TextView android:textAppearance="resourceId:0x7f1100f1" android:ellipsize="3" android:id="resourceId:0x1020016" android:fadingEdge="0x1000" android:layout_width="-2" android:layout_height="-2" android:maxLines="2" android:textAlignment="5" />
+		<TextView android:textAppearance="resourceId:0x7f1100ea" android:id="resourceId:0x1020010" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="43581unknown unit:0x21" android:layout_below="resourceId:0x1020016" android:textAlignment="5" android:layout_alignStart="resourceId:0x1020016" />
+	</RelativeLayout>
+	<LinearLayout android:gravity="0x11" android:orientation="1" android:id="resourceId:0x1020018" android:clipChildren="false" android:layout_width="-2" android:layout_height="-2" android:minWidth="10dp" />
+	<androidx.appcompat.widget.AppCompatImageView android:gravity="0x11" android:layout_gravity="0x800015" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginStart="219545unknown unit:0x21" app:srcCompat="res/drawable/miuix_appcompat_arrow_right.xml" />
+</LinearLayout>

@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ int a,b,c;
+ printf("Enter a\n");
+ scanf("%d",&a);
+ printf("Enter b\n");
+ scanf("%d",&b);
+ printf("The values of a is %d <br>     and b is %d before swaping\n",a,b);
+ c=a;
+ a=b;
+ b=c;
+ printf("The values of a is %d<br>       and b is %d after swaping\n",a,b);
+}
+</pre>
+</div>
+    <span class=headings>Output:</span><br>
+    <span>
+        Enter a<br>
+35<br>
+Enter b<br>
+30<br>
+The values of a is 35 and b is 30 before swaping<br>
+The values of a is 30 and b is 35 after swaping<br>
+    </span>
+
+    <span class=headings>Explanation:</span><br>
+
+    <ol>
+        <li><span style=color:#000>Here we initialized a,b,c</span>
+            <ul style=list-style-type:square>
+                <li>a---> for storing 1st number</li>
+                <li>b--->for storing second number</li>
+                <li>c---->for storing temporary variable</li>
+            </ul>
+        </li>
+        <li><span style=color:#000>Now here goes the logic(let us take a=1 and b=3)</span>
+            <ul style=list-style-type:square>
+                <li>c=a,   Therefore, c=1</li>
+                <li>a=b,   Therefore a=3</li>
+                <li>b=c, Therefore  b=1</li>
+                <li>Now the values of a and b are 3 and 1</li>
+            </ul>
+        </li>
+        <li>The values of a and are printed.</li></ol></div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">Difference between printf,fprintf and sprintf</p>
+        <span class="headings">Answer:</span><br/>
+        1.printf:-Used to print the characters on console<br>
+        Ex: printf("Hello World");<br><br>
+        2.sprintf:-Used to store the characters on a character buffer specified inside function<br>
+        Ex:
+        <pre class="prettyprint">
+#include&lt;stdio.h&gt;
+main(){
+char hello[100];
+int totalPrograms=350;
+sprintf(hello,"Hey this is C Programs app with %d + programs\n",totalPrograms);
+printf("%s",hello);
+}
+        </pre>
+        Output: Hey this is C Programs app with 350 + programs<br><br>
+        3.fprintf: Used to print the character in file instead on console<br>
+        Ex:<br>
+       <pre class="program prettyprint">
+#include&lt;stdio.h&gt;
+main(){
+  char language[100];
+  FILE *file;
+  file=fopen("fprintfExplanation.txt","w");
+  if(file == NULL)
+  {
+  	printf("File Not Found\n");
+  }
+  else
+  {
+  	printf("Enter a language you like\n");
+  	gets(language);
+  	fprintf(file,"I like %s",language);
+  }
+  fclose(file);
+
+}
+
+</pre>
+        Output:<br>
+        Enter a language you like<br>
+        C Language<br>
+        Now open text file you could see<br>
+
+        I like C Language<br>
+    </div>
+</div>
+</body>
+
+</html>
+

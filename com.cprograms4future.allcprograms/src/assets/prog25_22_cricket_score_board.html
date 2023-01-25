@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;stdlib.h&gt;
+//void GetNewScoreSheet();
+//void ViewScoreSheet();
+main()
+{
+ char competition[100],venue[100],matchParticipant1[100],matchParticipant2[100],Date[10],batsmenNames[10][100],bowlerNames[10][100],tossWonBy[100],electedTo[100];
+ int i,p,inningsNumber,totalRuns[11],fours[11],sixers[11],overs[8],maidens[8],ballsByBowlers[8],runsByBowlers[8],choice,continueChoice;
+ printf("Enter Competition Name\n");
+ fflush(stdin);
+ gets(competition);
+ printf("Enter Venue Name\n");
+ fflush(stdin);
+ gets(venue);
+ printf("Enter Country 1 Name\n");
+ fflush(stdin);
+ gets(matchParticipant1);
+ printf("Enter Country 2 Name\n");
+ fflush(stdin);
+ gets(matchParticipant2);
+ printf("Enter Date\n");
+ fflush(stdin);
+ scanf("%s",Date);
+ printf("Enter Innings Number\n");
+ scanf("%d",&amp;inningsNumber);
+ printf("Enter Toss Won By\n");
+ fflush(stdin);
+ gets(tossWonBy);
+ printf("Enter Elected To\n");
+ fflush(stdin);
+ gets(electedTo);
+ printf("Enter 11 Batsmen names\n");
+ for(i=0;i&lt;11;i++)
+ {
+  printf("Enter %d Batsman Name\n",i+1);
+  fflush(stdin);
+  gets(batsmenNames[i]);
+  if(strlen(batsmenNames[i])&lt;16)
+  {
+   //If name is lesser than 16 characters then the name will be appended with spaces
+   //Because to make the table look good for viewing sore sheet
+   for(p=strlen(batsmenNames[i]);p&lt;=16;p++)
+   batsmenNames[i][p]=' ';
+  }
+  else
+  {
+   //To Limit the name like if the name extends more than 16 then the name will be appended with 3 dots
+   int q=0;
+      for(p=15;p&lt;strlen(batsmenNames[i])&amp;&amp;q&lt;=2;p++,q++)
+       batsmenNames[i][p]='.';
+  }
+  batsmenNames[i][p]='\0';
+  totalRuns[i]=0;
+  fours[i]=0;
+  sixers[i]=0;
+
+ }
+ printf("Enter 8 Bowler names\n");
+ for(i=0;i&lt;8;i++)
+ {
+  printf("Enter %d Bowler Name\n",i+1);
+  fflush(stdin);
+  gets(bowlerNames[i]);
+  if(strlen(bowlerNames[i])&lt;15)
+  {
+
+   for(p=strlen(bowlerNames[i]);p&lt;=15;p++)
+   bowlerNames[i][p]=' ';
+  }
+  else
+  {
+   int q=0;
+      for(p=15;p&lt;strlen(bowlerNames[i])&amp;&amp;q&lt;=2;p++,q++)
+       bowlerNames[i][p]='.';
+  }
+   bowlerNames[i][p]='\0';
+  overs[i]=0;
+  maidens[i]=0;
+  ballsByBowlers[i]=0;
+  runsByBowlers[i]=0;
+ }
+
+ do{
+  printf("Enter\n1.New ScoreSheet\n2.View ScoreSheet\n3.Exit from Program\n");
+     scanf("%d",&amp;choice);
+  switch(choice)
+  {
+   case 1:
+   {
+    //GetNewScoreSheet();
+    int subChoice;
+    printf("Enter\n1.To Update Batsmen Details\n2.To Update Bowler Details\n");
+    scanf("%d",&amp;subChoice);
+    if(subChoice==1)
+    {
+     int batsmanId,runsToAdd,fourToAdd,sixersToAdd,runsChoice;
+     printf("Enter 1 for 1st batsman or 2 or 3 till 11 etc to update corresponding Batsmen Details\n");
+     scanf("%d",&amp;batsmanId);
+     batsmanId-=1;//Since arrays starts from 0
+     if(batsmanId&lt;=10 &amp;&amp; batsmanId&gt;=0)
+     {
+      printf("Enter\n1. To Add Normal Runs\n2.To Add Fours\n3.To Add Sixers\n");
+      scanf("%d",&amp;runsChoice);
+      if(runsChoice==1)
+      {
+       printf("Enter number of runs to be added for %s \n",batsmenNames[batsmanId]);
+          scanf("%d",&amp;runsToAdd);
+          totalRuns[batsmanId]+=runsToAdd;
+      }
+      else if(runsChoice==2)
+      {
+       printf("Enter number of Fours to be added for %s \n",batsmenNames[batsmanId]);
+          scanf("%d",&amp;fourToAdd);
+          totalRuns[batsmanId]+=fourToAdd*4;
+          fours[batsmanId]+=fourToAdd;
+      }
+      else if(runsChoice==3)
+      {
+       printf("Enter number of Sixers to be added for %s \n",batsmenNames[batsmanId]);
+          scanf("%d",&amp;sixersToAdd);
+          totalRuns[batsmanId]+=sixersToAdd*6;
+          sixers[batsmanId]+=sixersToAdd;
+      }
+      else
+      {
+       printf("Enter Valid Choice\n");
+      }
+
+     }
+     else
+     {
+      printf("Enter Batsman Id from 1 to 11\n");
+     }
+    }
+    else if(subChoice==2)
+    {
+     int bowlerId,numOfOversToAdd,maidensToAdd,ballsToAdd,runsGiven;
+     printf("Enter 1 for 1st Bowler or 2 or 3 till 8 etc to update corresponding Bowler Details\n");
+     scanf("%d",&amp;bowlerId);
+     bowlerId-=1;//Since Array starts from 0
+     if(bowlerId&gt;=0 &amp;&amp; bowlerId&lt;=7)
+     {
+      printf("Enter Number of Overs to be added for %s\n",bowlerNames[bowlerId]);
+      scanf("%d",&amp;numOfOversToAdd);
+      overs[bowlerId]+=numOfOversToAdd;
+
+      printf("Enter Number of Maidens to be added for %s.Zero for not to add\n",bowlerNames[bowlerId]);
+      scanf("%d",&amp;maidensToAdd);
+      maidens[bowlerId]+=maidensToAdd;
+
+      printf("Enter Number of balls to be added for %s.Zero for not to add\n",bowlerNames[bowlerId]);
+      scanf("%d",&amp;ballsToAdd);
+      ballsByBowlers[bowlerId]+=ballsToAdd;
+
+      printf("Enter Number of runs given by %s.Zero for not to add\n",bowlerNames[bowlerId]);
+      scanf("%d",&amp;runsGiven);
+      runsByBowlers[bowlerId]+=runsGiven;
+     }
+     else
+     {
+      printf("Please Enter Bowler Id from 1 to 8\n");
+     }
+
+
+    }
+    else
+    {
+     printf("Enter Valid Choice\n");
+    }
+
+    break;
+   }
+   case 2:
+   {
+    //ViewScoreSheet();
+    printf("Competition Name : %s\n",competition);
+       printf("Venue : %s\n",venue);
+       printf("Match Between : %s\n",matchParticipant1);
+       printf("Versus : %s\n",matchParticipant2);
+       printf("Toss Won By : %s\n",tossWonBy);
+       printf("Elected To : %s\n",electedTo);
+       printf("Innings Of : %d\n",inningsNumber);
+       printf("Date : %s\n",Date);
+
+       printf("----BatsmanName----||--Total Runs--||--4s--||--6s--\n");
+       for(i=0;i&lt;11;i++)
+       {
+        printf("%s\t    %d \t       %d\t%d\n",batsmenNames[i],totalRuns[i],fours[i],sixers[i]);
+       }
+       printf("----BowlerName-----||--Overs--||--Maidens--||--Balls--||--RunsGiven--\n");
+       for(i=0;i&lt;8;i++)
+       {
+        printf("%s\t%d \t     %d     \t%d \t     %d\n",bowlerNames[i],overs[i],maidens[i],ballsByBowlers[i],runsByBowlers[i]);
+       }
+
+
+
+    break;
+   }
+   case 3:
+   {
+    exit(0);
+    break;
+   }
+   default:
+   {
+    printf("Enter valid Choice\n");
+    break;
+   }
+  }
+  printf("Press 1 if match is not yet over to Add scores else any other number to Exit\n");
+  scanf("%d",&amp;continueChoice);
+ }while(continueChoice==1);
+
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        <img class="img-responsive" src="Prog405CricketScoreSheet1.JPG"><br/>
+         <img class="img-responsive" src="Prog405CricketScoreSheet2.JPG"><br/>
+         <img class="img-responsive" src="Prog405CricketScoreSheet3.JPG"><br/>
+         <img class="img-responsive" src="Prog405CricketScoreSheet4.JPG"><br/>
+         <img class="img-responsive" src="Prog405CricketScoreSheet5.JPG"><br/>
+         <img class="img-responsive" src="Prog405CricketScoreSheet6.JPG"><br/><br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

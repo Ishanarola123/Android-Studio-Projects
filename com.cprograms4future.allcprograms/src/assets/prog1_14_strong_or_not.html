@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+int GetFactorial(int number);
+main()
+{
+  int num,i,j,temp,sum=0;;
+  printf("Enter a number to know whether it is armstrong or not\n");
+  scanf("%d",&amp;num);
+  temp=num;
+  while(num&gt;0)
+  {
+    i=num%10;
+    sum+=GetFactorial(i);
+    num=num/10;
+  }
+  if(sum==temp)
+  {
+    printf("Giveb number %d is an Strong number\n",temp);
+  }
+  else
+  {
+    printf("Giveb number %d is not an Strong number since the sum of factorials of individual digits is %d\n",temp,sum);
+  }
+}
+
+int GetFactorial(int number)
+{
+  int factorial=1,i;
+  for(i=1;i&lt;=number;i++)
+  {
+   factorial=factorial*i;
+  }
+  return factorial;
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Output I:-<br>
+       Enter a number to know whether it is armstrong or not<br>
+145<br>
+Giveb number 145 is an Strong number<br><br>
+        Output II:-<br>
+        Enter a number to know whether it is armstrong or not<br>
+354<br>
+Giveb number 354 is not an Strong number since the sum of factorials of individual digits is 150<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

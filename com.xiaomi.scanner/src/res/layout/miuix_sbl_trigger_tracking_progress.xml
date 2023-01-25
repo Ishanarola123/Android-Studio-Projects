@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:background="res/drawable-v21/miuix_sbl_tracking_progress_ellipse_bg.xml" android:visibility="2" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="416153unknown unit:0x21" android:layout_marginTop="435814unknown unit:0x21" android:layout_marginRight="416153unknown unit:0x21" android:layout_centerHorizontal="true" />

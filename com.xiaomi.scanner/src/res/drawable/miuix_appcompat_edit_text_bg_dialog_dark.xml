@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<selector android:enterFadeDuration="200" android:exitFadeDuration="200">
+			<item android:state_focused="true">
+				<shape android:shape="0">
+					<corners android:radius="452198unknown unit:0x21" />
+					<solid android:color="ffd84ff" />
+				</shape>
+			</item>
+			<item>
+				<shape android:shape="0">
+					<corners android:radius="452198unknown unit:0x21" />
+					<solid android:color="0000" />
+				</shape>
+			</item>
+		</selector>
+	</item>
+	<item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+		<shape android:shape="0">
+			<corners android:radius="12dp" />
+			<solid android:color="ff363636" />
+			<padding android:left="546242unknown unit:0x21" android:right="546242unknown unit:0x21" />
+			<size android:height="1530265unknown unit:0x21" />
+		</shape>
+	</item>
+</layer-list>

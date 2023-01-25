@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="0x10" android:layout_gravity="0x10" android:background="{2:2130969301}" android:layout_width="-1" android:layout_height="-2">
+	<androidx.appcompat.widget.AppCompatRadioButton android:gravity="0x10" android:id="resourceId:0x1020001" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="-2" android:layout_height="-1" android:button="{2:2130969267}" android:layout_marginEnd="272957unknown unit:0x21" />
+	<LinearLayout android:gravity="0x11" android:orientation="0" android:layout_width="-2" android:layout_height="-2" android:minWidth="0dp">
+		<ImageView android:gravity="0x11" android:layout_gravity="0x11" android:id="resourceId:0x1020006" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="219545unknown unit:0x21" android:layout_marginBottom="219545unknown unit:0x21" android:scaleType="3" android:adjustViewBounds="true" android:paddingEnd="501350unknown unit:0x21" style="resourceId:0x7f110346" />
+	</LinearLayout>
+	<RelativeLayout android:gravity="0x10" android:layout_gravity="0x10" android:layout_width="-2" android:layout_height="-2" android:layout_weight="{4:1065353216}" style="resourceId:0x7f110347">
+		<androidx.appcompat.widget.AppCompatCheckedTextView android:textAppearance="resourceId:0x7f1100f1" android:ellipsize="3" android:id="resourceId:0x1020016" android:fadingEdge="0x1000" android:layout_width="-2" android:layout_height="-2" android:maxLines="2" android:textAlignment="5" />
+		<androidx.appcompat.widget.AppCompatCheckedTextView android:textAppearance="resourceId:0x7f1100ea" android:id="resourceId:0x1020010" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="43581unknown unit:0x21" android:maxLines="10" android:layout_below="resourceId:0x1020016" android:textAlignment="5" android:layout_alignStart="resourceId:0x1020016" />
+	</RelativeLayout>
+	<LinearLayout android:gravity="0x11" android:orientation="1" android:id="resourceId:0x1020018" android:layout_width="-2" android:layout_height="-1" android:minWidth="10dp" />
+</LinearLayout>

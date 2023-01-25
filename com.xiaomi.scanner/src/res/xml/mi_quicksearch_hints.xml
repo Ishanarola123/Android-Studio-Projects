@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<misearch>
+	<items>
+		<item>
+			<id />
+			<title />
+			<intent_action />
+			<intent_data />
+			<keywords />
+		</item>
+		<item>
+			<id />
+			<title />
+			<intent_action />
+			<intent_data />
+			<keywords />
+		</item>
+		<item>
+			<id />
+			<title />
+			<intent_action />
+			<intent_data />
+			<keywords />
+		</item>
+		<item>
+			<id />
+			<title />
+			<intent_action />
+			<intent_data />
+			<keywords />
+		</item>
+		<item>
+			<id />
+			<title />
+			<intent_action />
+			<intent_data />
+			<keywords />
+		</item>
+	</items>
+</misearch>

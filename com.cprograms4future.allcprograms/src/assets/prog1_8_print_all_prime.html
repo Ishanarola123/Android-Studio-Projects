@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+  int num,i,count=0,j;
+  printf("Enter a number \n");
+  scanf("%d",&num);
+  printf("The Prime numbers upto %d are\n",num);
+  for(i=1;i&lt;=num;i++)
+  {
+    count=0;
+    for(j=1;j&lt;=i;j++)
+    {
+      if(i%j==0)
+      {
+        count++;
+      }
+    }
+    if(count==2)
+    {
+      printf("%d\n",i);
+    }
+  }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a number<br>30<br>The Prime numbers upto 30 are<br>2<br>3<br>5<br>7<br>11<br>13<br>17<br>19<br>23<br>29<br></span><span class=headings>Explanation:</span><br><ol><li>The Program starts with initializing<ul style=list-style-type:square><li><b>num</b> → For storing the <b>number</b> to get all prime numbers between 1 and num<li><b>i,j</b> → <b>temporary</b> variables<li><b>count </b>→ To count the number of <b>divisors</b></ul><li><blockquote><pre>printf("Enter a number \n");
+scanf("%d",&num);</pre></blockquote>To take <b>value</b> from <b>user</b>.Let us assume it be 8(<b>num=8</b>)<li>The loop iterates from<b> i=1 to 8</b> one by one.Then <b>count</b> is made <b>zero</b> for every iteration.<li>Now <b>j</b> will iterate from <b>1 to i </b>and checks if any prime number is there between 1 and i. For example: if it is<b> 5th iteration</b> then <b>i =5</b><ul><li><b>Iteration 1</b>: Then the for loop <b>j</b> starts as<b> j=1,j<i strong=""> → <b>true</b> then loop <b>continues</b><ul><li>if i%j → <b>5%1==0</b> which is <b>true</b>,<li>then <b>count=1</b></ul></i></b><li><b>Iteration 2</b>: Then the for loop <b>j</b> starts as<b> j=2,j<i strong=""> → <b>true</b> then loop <b>continues</b><ul><li>if i%j →<b> 5%2==0</b> which is <b>false</b>,<li>then count <b>remains</b> same i.e.<b> count=1;</b></ul></i></b><li><b>Iteration 3</b>: Then the for loop <b>j</b> starts as<b> j=3,j<i strong=""> → <b>true</b> then loop <b>continues</b><ul><li>if i%j → <b>5%3==0</b> which is <b>false</b>,<li>then count <b>remains</b> same i.e. <b>count=1</b>;</ul></i></b><li><b>Iteration 4</b>: Then the for loop <b>j</b> starts as<b> j=4,j<i strong=""> → <b>true</b> then loop <b>continues</b><ul><li>if i%j →<b> 5%4==0</b> which is <b>false</b>,<li>then count <b>remains</b> same i.e.<b> count=1;</b></ul></i></b><li><b>Iteration 5</b>: Then the for loop <b>j</b> starts as<b> j=5,j<i strong=""> → <b>true</b> then loop <b>continues</b><ul><li>if i%j → <b>5%5==0</b> which is <b>true</b>,<li>then <b>count=2</b></ul></i></b><li><b>Iteration 6</b>: Then the for loop <b>j</b> starts as<b> j=6,j<i strong=""> → <b>false </b>then loop <b>terminates</b></i></b><li>Now if <b>count==2 → true</b> then this will be the <b>prime number</b> so this number is printed i.e <b>i=5</b> is <b>printed</b>.</ul><li>Like the above iteration it checks each and <b>every value</b> of<b> i</b> <b>whether it is prime or not</b> and if it is<b> prime it will print else not.</b></ol></div>

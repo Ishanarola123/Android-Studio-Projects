@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="2" android:layout_width="-1" android:layout_height="-1">
+	<ProgressBar android:id="false" android:background="res/drawable/miuix_sbl_loading_progress_bg_light.xml" android:visibility="2" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="435814unknown unit:0x21" android:indeterminateDrawable="res/drawable/miuix_sbl_loading_progress_circle_light.xml" android:indeterminateDuration="800" android:layout_centerHorizontal="true" />
+	<ImageView android:id="false" android:background="res/drawable-v21/miuix_sbl_tracking_progress_ellipse_bg.xml" android:visibility="2" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="416153unknown unit:0x21" android:layout_marginTop="435814unknown unit:0x21" android:layout_marginRight="416153unknown unit:0x21" android:layout_centerHorizontal="true" />
+	<TextView android:textAppearance="resourceId:0x7f110122" android:id="false" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="38dp" android:layout_centerHorizontal="true" />
+	<FrameLayout android:id="false" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What are storage classes in C?</p>
+        <span class="headings">Answer:</span><br/>
+        1.Automatic Storage Class--Whenever a variable is declared this storage class is added by default whose scope is only inside a function or block<br>
+        They have a <u>garbage</u> value by default<br><br>
+        2.Static Storage Class---Their default value is zero and they have ability to store value even though they are out of scope as they are not redeclared when ever they appear<br>
+                                  Check the example of Voting system under storage classes in this App<br><br>
+        3.External Storage Class--When we declare a variable as extern then it is available globally through out the program.<br>Simply to tell it is also a global variable but can be declared inside a function also<br>
+        <br>
+        4.Register Storage Class--These are used when we are using a variable more number of times to reduce execution time.<br>
+        Usually these varibles are stored in the register of a processor which makes it to be accessible faster then normal variables.<br>
+        <br>
+    </div>
+</div>
+</body>
+
+</html>
+

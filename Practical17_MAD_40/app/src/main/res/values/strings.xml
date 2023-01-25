@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Practical17_MAD_40</string>
+    <string-array name="colors">
+       <item>black</item>
+        <item>purpule</item>
+        <item>white</item>
+        <item>green</item>
+
+    </string-array>
+</resources>

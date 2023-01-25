@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:start="382402unknown unit:0x21" android:end="382402unknown unit:0x21">
+		<miuix.smooth.SmoothContainerDrawable android:radius="16dp">
+			<child>
+				<shape android:shape="0">
+					<solid android:color="ffffffff" />
+				</shape>
+			</child>
+		</miuix.smooth.SmoothContainerDrawable>
+	</item>
+</layer-list>

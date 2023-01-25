@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;math.h>
+main()
+{
+int dec=0,temp,i,inc=0,binary;
+printf("Enter a numer to convert to binary number\n");
+scanf("%d",&binary);
+temp=binary;
+while(temp!=0)
+{
+i=temp%10;
+dec=dec+(i*pow(2,inc));
+temp=temp/10;
+inc++;
+}
+printf("Decimal number of %d is %d\n",binary,dec);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a numer to convert to binary number<br>1010<br>Decimal number of 1010 is 10<br></span><img class=img-responsive src=prog7_1_bin_dec.png><br><span class=headings>Explanation:</span><br><ol><li>The program starts with initializing :<ul style=list-style-type:square><li><b>dec</b> → To store resulting <b>decimal</b> number<li><b>temp</b> → To store binary <b>temporarily</b><li><b>i</b> →used as <b>helping</b> variable<li><b>binary</b> → To store <b>binary </b>value given by user<li>inc → Used to <b>increment</b> by 1</ul><li><pre>printf("Enter a numer to convert to binary number\n");
+scanf("%d",&binary);</pre>Takes <b>input</b> from <b>user</b> and stores in <b>binary </b>which is in <b>turn</b> <b>stored</b> in <b>temp</b> for future reference.Lets take <b>binary</b>=<b>110</b>,so <b>temp</b>=<b>110</b>.<li><pre>while(temp!=0)
+{
+i=temp%10;
+dec=dec+(i*pow(2,inc));
+temp=temp/10;
+inc++;
+}</pre>This is the main logic of this program.Lets take <b>binary</b>=<b>110 and took dec=0,inc=0</b><ul style=list-style-type:square><li><b>Iteration</b> <b>1</b>: <b>temp=110</b> and <b>110!=0</b> which is <b>true</b> so the <b>while</b> loop <b>executes</b><ul style=list-style-type:disc><li><b>i=temp%10 </b>→ 110%10 → <b>i=0</b><li><b>dec=dec+(i*pow(2,inc))</b> → 0+(0*2^0)→ <b>dec=0</b><li><b>temp</b>=<b>temp/10</b> → 110/10 → <b>temp=11</b><li>inc++ → inc=1<li><b>Final</b> values are:<b>i=0,dec=0,temp=11,inc=1.</b></ul><li><b>Iteration</b> <b>2</b>: <b>temp=11</b> and <b>11!=0</b> which is <b>true</b> so the <b>while</b> loop <b>executes</b><ul style=list-style-type:disc><li><b>i=temp%10 </b>→ 11%10 → <b>i=1</b><li><b>dec=dec+(i*pow(2,inc))</b> → 0+(1*2^1)→ <b>dec=2</b><li><b>temp</b>=<b>temp/10</b> → 11/10 → <b>temp=1</b><li>inc++ → inc=2<li><b>Final</b> values are:<b>i=1,dec=2,temp=1,inc=2.</b></ul><li><b>Iteration</b> <b>3</b>: <b>temp=1</b> and <b>1!=0</b> which is <b>true</b> so the <b>while</b> loop <b>executes</b><ul style=list-style-type:disc><li><b>i=temp%10 </b>→ 1%10 → <b>i=1</b><li><b>dec=dec+(i*pow(2,inc))</b> → 2+(1*2^2)→ <b>dec=6</b><li><b>temp</b>=<b>temp/10</b> → 1/10 → <b>temp=0</b><li>inc++ → inc=3<li><b>Final</b> values are:<b>i=1,dec=6,temp=0,inc=3.</b></ul><li><b>Iteration</b> <b>4</b>: <b>temp=0</b> and 0<b>!=0</b> which is <b>flase </b>so the <b>while</b> loop <b>terminates</b><li>Final value after execution is <b>dec=6</b></ul><li><pre>printf("Decimal number of %d is %d\n",binary,dec);</pre><b>Finally</b> we are printing the result of <b>Decimal</b> which is <b>6</b></ol></div>

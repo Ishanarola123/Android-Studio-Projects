@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;math.h>
+main()
+{
+int choice;
+printf("Enter\n1 for Triangle\n2 for Square\n3 for Circle\n4 for Rectangle\n5 for Parallelogram\n");
+scanf("%d",&choice);
+switch(choice)
+{
+ case 1:
+ {
+  int a,b,c;
+        float s,area;
+        printf("Enter sides of triangle\n");
+        scanf("%d %d %d",&a,&b,&c);
+
+        s=(float)(a+b+c)/2;
+        area=(float)(sqrt(s*(s-a)*(s-b)*(s-c)));
+
+        printf("Area of Triangle with sides %d,%d,%d is %f\n",a,b,c,area);
+  break;
+ }
+ case 2:
+ {
+  float side,area;
+  printf("Enter Sides of Square\n");
+  scanf("%f",&side);
+  area=(float)side*side;
+  printf("Area of Square is %f\n",area);
+  break;
+ }
+ case 3:
+ {
+  float radius,area;
+  printf("Enter Radius of Circle\n");
+  scanf("%f",&radius);
+  area=(float)3.14159*radius*radius;
+  printf("Area of Circle with radius %f is %f\n",radius,area);
+  break;
+ }
+ case 4:
+ {
+  float len,breadth,area;
+  printf("Enter Length and Breadth of Rectangle\n");
+  scanf("%f %f",&len,&breadth);
+  area=(float)len*breadth;
+  printf("Area of Rectangle is %f\n",area);
+  break;
+ }
+ case 5:
+ {
+  float base,height,area;
+  printf("Enter base and height of Parallelogram\n");
+  scanf("%f %f",&base,&height);
+  area=(float)base*height;
+  printf("Enter area of Parallelogram is %f\n",area);
+  break;
+ }
+ default:
+ {
+  printf("Invalid Choice\n");
+  break;
+ }
+}
+}
+
+</pre></div><span class=headings>Output:</span><br><span>Enter<br>1 for Triangle<br>2 for Square<br>3 for Circle<br>4 for Rectangle<br>5 for Parallelogram<br>1<br>Enter sides of triangle<br>1<br>1<br>1<br>Area of Triangle with sides 1,1,1 is 0.433013<br></span><span class=headings>Explanation:</span><br><ol style=text-align:left><li>The Program starts with initializing:<ul style=list-style-type:square><li><b>choice</b> → To store <b>users </b>choice<li><b>a,b,c</b> → used for <b>triangle sides </b>which are taken from <b>user(local variables </b>which work only inside that particular<b> case i.e. "case 1")</b><li><b>side,area</b>→ used for calculations of <b>Square(local variables </b>which work only inside that particular<b> case </b><b><b>i.e. "case 2"</b>)</b><li><b>radius,area</b>→ used for calculations of <b>Circle(local variables </b>which work only inside that particular<b> case </b><b><b>i.e. "case 3"</b>)</b><li><b>length,breadth,area</b>→ used for calculations of <b>Rectangle(local variables </b>which work only inside that particular<b> case </b><b><b>i.e. "case 4"</b>)</b><li><b>base,height,area</b>→ used for calculations of <b>Parallelogram(local variables </b>which work only inside that particular<b> case </b><b><b>i.e. "case 5"</b>).</b></ul><li><pre>printf("Enter\n1 for Triangle\n2 for Square\n3 for Circle\n4 for Rectangle\n5 for Parallelogram\n");
+scanf("%d",&choice);</pre>Taking users' choice.Lets say 1.So choice=1<li><pre>switch(choice)
+{</pre>Which means the <b>choice </b>taken from <b>user </b>is passed to <b>switch </b>which then compares with all the case numbers and <b>if </b>it <b>finds </b>a <b>match </b>then that <b>particular case </b>is <b>executed</b>.<li>Learn <b>Switch case</b> in detail <b>https://beginnerslanguage.wordpress.com/software-used-to-implement-programs-in-c/if-else/switch-case-statement/</b><li>After execution of that case it wont check with remaining case which are under that case.</li><pre>For Example:Here we have 5 cases and if the <b>users</b>' input is <b>3</b> then the <b>compiler checks </b>with
+<ul style=list-style-type:square>
+    <li>case 1: as it doesnot match</li>
+    <li> Then it will check case 2:,which is also not a match.</li>
+    <li>Then it will go and check case 3:. Now it finds a match,so the case 3: statements are executed.</li>
+    <li>After execution we have a break; statement at last which causes the termination of switch case and comes out of switch case. So it doesnot check with case 4: and case 5:</li>
+    <li>If the choice doesnot match with anyone of the cases then it executes default statement.</li>
+</ul>
+</pre><li>As from our we took choice as 1 and case 1: is executed<pre>case 1:
+ {
+  int a,b,c;
+        float s,area;
+        printf("Enter sides of triangle\n");
+        scanf("%d %d %d",&a,&b,&c);
+
+        s=(float)(a+b+c)/2;
+        area=(float)(sqrt(s*(s-a)*(s-b)*(s-c)));
+
+        printf("Area of Triangle with sides %d,%d,%d is %f\n",a,b,c,area);
+  break;
+ }</pre>The case has a few variable which are local variables.Compiler takes a,b,c values from user to calculate area with formula as you are seeing in the code.Final output is stored in <b>area </b>variable.<li>Area is printed and switch case is <b>terminated</b>.<li>In this way it happens to every run as given below.</ol></div>

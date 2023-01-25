@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:paddingStart="873922unknown unit:0x21" android:paddingEnd="873922unknown unit:0x21">
+	<miuix.pickerwidget.widget.DatePicker android:layout_gravity="0x1" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="0dp" android:spinnersShown="true" android:calendarViewShown="false" android:layout_marginStart="1060372unknown unit:0x21" android:layout_marginEnd="1060372unknown unit:0x21" />
+	<FrameLayout android:id="false" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="-1" android:layout_height="-2" android:paddingStart="873922unknown unit:0x21" android:paddingEnd="873922unknown unit:0x21">
+		<TextView android:textSize="16sp" android:textColor="{2:16842806}" android:layout_gravity="0x800013" android:layout_width="-2" android:layout_height="-2" android:text="Chinese Traditional Calendar" android:fontFamily="sans-serif-medium" />
+		<miuix.slidingwidget.widget.SlidingButton android:layout_gravity="0x800015" android:id="false" android:layout_width="-2" android:layout_height="-2" android:contentDescription="Chinese Traditional Calendar" />
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is the difference between local and global variables?</p>
+        <span class="headings">Answer:</span><br/>
+        Global variables are those which are available through out the program<br>
+        But Local variables are only available between the block of the functions i.e between braces<br>
+        Ex:<br>
+        <pre class="program prettyprint">
+ #include&lt;stdio.h&gt;
+int x=5;
+void hello();
+main()
+{
+    int y=35;
+    printf("Global in Main x=%d\nLocal in Main y=%d\n",x,y);
+    hello();
+}
+
+void hello(){
+	int y=55;
+	printf("Global in Hello function x=%d\nLocal in Hello function y=%d\n",x,y);
+}
+</pre>
+        Output:<br>
+        Global in Main x=5<br>
+        Local in Main y=35<br>
+        Global in Hello function x=5<br>
+        Local in Hello function y=55<br>
+    </div>
+</div>
+</body>
+
+</html>
+

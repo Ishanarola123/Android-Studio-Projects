@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+main()
+{
+  int num,i,sum,j;
+  printf("Enter a number to know all perfect numbers till n\n");
+  scanf("%d",&amp;num);
+  printf("The perfect numbers between 1 and %d are:",num);
+  for(i=1;i&lt;=num;i++)
+  {
+    sum=0;
+    for(j=1;j&lt;i;j++)
+    {
+      if(i%j==0)
+      {
+        sum+=j;
+      }
+    }
+    if(sum==i)
+    {
+      printf("%d\n",i);
+    }
+  }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter a number to know all perfect numbers till n<br>
+1000<br>
+The perfect numbers between 1 and 1000 are:6<br>
+28<br>
+496<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    This Program is same as the "Check Whether number is Perfect or Not" where we <b>found</b> whether the <b>given</b> <b>number</b> is <b>Perfect</b> or <b>not</b>.
+
+    The only <b>change</b> <b>here</b> is we use <b>forloop</b> from <b>1</b> to the <b>given number(say 1000 in our case)</b> and <b>check</b> each <b>number</b> whether it is <b>perfect</b> or <b>not</b>.
+
+    So it <b>checks</b> from <b>1,2,3,...1000</b> and if <b>any</b> <b>number</b> is having the <b>sum</b> of it's <b>divisors</b> <b>equal</b> to the <b>number</b> then it is <b>printed</b> <b>else</b> <b>not</b>.<br />
+    <br />
+</div>
+</body>
+
+</html>
+

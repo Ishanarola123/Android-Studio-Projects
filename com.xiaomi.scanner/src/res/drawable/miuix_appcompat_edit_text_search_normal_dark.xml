@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:paddingStart="1189478unknown unit:0x21">
+	<item>
+		<shape>
+			<size android:height="40dp" />
+			<corners android:radius="20dp" />
+			<solid android:color="ff363636" />
+		</shape>
+	</item>
+	<item android:gravity="0x10" android:drawable="{2:2130969199}" />
+</layer-list>

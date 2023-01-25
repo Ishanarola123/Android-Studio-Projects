@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">Is C weakly typed language or strongly typed language and why?</p>
+        <span class="headings">Answer:</span><br/>
+        In C char data can be used in place of integers in case of arithmetic operations. <br>These kinds of features should not be permitted in strongly typed languages. <br>Hence, C is called as weakly typed by some. <br>For example, below program is valid in C
+<br>
+        <pre class="program prettyprint">
+#include
+#include
+main()
+{
+clrscr();
+int a = 10;
+char b = 'c';
+printf("\n%d", a + b);
+printf("\n%d", b);
+getch();
+return 0;
+}
+
+The output will be
+109
+99
+
+</pre><br>
+    </div>
+</div>
+</body>
+
+</html>
+

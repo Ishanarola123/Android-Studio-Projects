@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+    int i,k=0,count[26]={0},x;
+    char str1[100];
+    printf("Enter a sentence\n");
+    gets(str1);
+
+    while(str1[k]!='\0')
+    {
+        if(str1[k]>='a'&&str1[k]&lt;='z')
+        {
+            x=str1[k]-'a';
+            count[x]++;
+        }
+        if(str1[k]>='A'&&str1[k]&lt;='Z')
+        {
+           x=str1[k]-'A';
+            count[x]++;
+        }
+        k++;
+    }
+    for(i=0;i&lt;26;i++)
+    {
+        if(count[i]!=0)
+        {
+            printf("%c occured %d times\n",i+'a',count[i]);
+        }
+
+    }
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a sentence<br>hello world is the basic program every one do while learning c language<br>a occured 5 times<br>b occured 1 times<br>c occured 2 times<br>d occured 2 times<br>e occured 8 times<br>g occured 4 times<br>h occured 3 times<br>i occured 4 times<br>l occured 6 times<br>m occured 1 times<br>n occured 4 times<br>o occured 5 times<br>p occured 1 times<br>r occured 5 times<br>s occured 2 times<br>t occured 1 times<br>u occured 1 times<br>v occured 1 times<br>w occured 2 times<br>y occured 1 times<br></span><span class=headings>Explanation:</span><br><ol><li>This program starts with initializing :<ul style=list-style-type:square><li><b>str1[100] </b>→ To store <b>string with length of 100 </b>which means it can store<b> 100 letters</b><li><b>i</b> ,<b>k,x</b>→Used as<b> helping variable</b><li><b>count[26]</b>→ To <b>count </b>number of times each letter is <b>repeated </b>from <b>a-z</b></ul><li><pre> printf("Enter a sentence\n");
+    gets(str1);</pre>Taking string from the user. <li> <pre>while(str1[k]!='\0')
+    {
+        if(str1[k]>='a'&&str1[k]&lt;='z')//1st if part
+        {
+            x=str1[k]-'a';
+            count[x]++;
+        }
+        if(str1[k]>='A'&&str1[k]&lt;='Z')//second if part
+        {
+           x=str1[k]-'A';
+            count[x]++;
+        }
+        k++;
+    }</pre>Lets take a small example<b> str1="Hello".count[26] </b>means each one from <b>count[0] to count[26] </b>are initialized to<b> zero.</b><ul style=list-style-type:square><li><b>Iteration 1</b>:<b>k=0,str1[0]=H</b> which is not '\0'(i.e. not end of string) so the loop is executed<ul style=list-style-type:disc><li>'H' lies between 'A' and 'Z' so the <b>second if part</b> is executed.(<a href="asciitable.html"target=_blank>refer ascii sheet</a>)<li><b>x=str1[k]-'A'</b> →str1[0]-'A'→'H'-'A'→<b>x=72-65=7.</b><li><b>'H'-'A'</b> will give integer value as output as the output of the result is stored in integer variable.Where 'H' ascii value is 72 and that of 'A' is 65 so 72-65 is 7<li>Therefore,x=7<li><b>count[7]++</b>→count[7]=1 as it is previously initilized to 0.<li>now k++ so k is incemented by 1,then k=1.To move to the next character/letter.</ul><li><b>Iteration 2</b>:<b>k=1,str1[1]=e</b> which is not '\0'(i.e. not end of string) so the loop is executed<ul style=list-style-type:disc><li>'e' lies between 'a' and 'z' so the <b>first if part</b> is executed.<li><b>x=str1[k]-'a'</b> →str1[1]-'a'→'e'-'a'→<b>x=101-97=4.</b><li><b>'e'-'a'</b> ('e' ascii value is 101 and that of 'a' is 97 so 101-97 is 4)<li>Therefore,x=4<li><b>count[4]++</b>→count[4]=1 as it is previously initilized to 0.<li>now k++ so k is incemented by 1,then k=2.To move to the next character/letter.</ul><li><b>Iteration 3</b>:<b>k=2,str1[2]=l</b> which is not '\0'(i.e. not end of string) so the loop is executed<ul style=list-style-type:disc><li>'l' lies between 'a' and 'z' so the <b>first if part</b> is executed.<li><b>x=str1[k]-'a'</b> →str1[2]-'a'→'l'-'a'→<b>x=108-97=11.</b><li><b>'l'-'a'</b> ('l' ascii value is 108 and that of 'a' is 97 so 108-97 is 11)<li>Therefore,x=11<li><b>count[11]++</b>→count[11]=1.<li>now k++ so k is incemented by 1,then k=3.</ul><li><b>Iteration 4</b>:<b>k=3,str1[3]=l</b> (again) which is not '\0'(i.e. not end of string) so the loop is executed<ul style=list-style-type:disc><li>'l' lies between 'a' and 'z' so the <b>first if part</b> is executed.<li><b>x=str1[k]-'a'</b> →str1[3]-'a'→'l'-'a'→<b>x=108-97=11.</b><li><b>'l'-'a'</b> ('l' ascii value is 108 and that of 'a' is 97 so 108-97 is 11)<li>Therefore,x=11<li><b>count[11]++</b>→count[11]=1+1=2.<li>now k++ so k is incemented by 1,then k=4.</ul><li><b>Iteration 5</b>:<b>k=4,str1[4]=o</b> which is not '\0'(i.e. not end of string) so the loop is executed<ul style=list-style-type:disc><li>'o' lies between 'a' and 'z' so the <b>first if part</b> is executed.<li><b>x=str1[k]-'a'</b> →str1[4]-'a'→'o'-'a'→<b>x=111-97=14.</b><li><b>'o'-'a'</b> ('o' ascii value is 111 and that of 'a' is 97 so 111-97 is 14)<li>Therefore,x=14<li><b>count[14]++</b>→count[14]=1.<li>now k++ so k is incemented by 1,then k=5.</ul><li><b>Iteration 6</b>:<b>k=5,str1[5]is the end of string</b> '\0'(i.e. not end of string) so the loop is terminated.<li>Finally values are <br><ul style=list-style-type:disc><li>count[0], count[1].....count[3]=0<li> count[4]=1<li> count[5]...count[6]=0<li> count[7]=1<li> count[8]....count[10]=0<li>count[11]=2 <li>count[12]..count[13]=0<li> count[14]=1<li> count[15]..count[25]=0<li><span style=color:red>*-</span>Remember either the letter is <b>'H' or 'h'</b> both their count is recorded in same array i.e if <b>'h'</b> or <b>'H' </b>both their total count occurs 4 times then <b>count[7]=4 </b>as in (hHhH) where h-2 times and H-2 times so a total of 4 times</ul></ul><li><pre> for(i=0;i&lt;26;i++)
+    {
+        if(count[i]!=0)
+        {
+            printf("%c occured %d times\n",i+'a',count[i]);
+        }
+
+    }</pre><b>count</b> array whose values are not zero is printed by comparing one by one from 0 to 25<li>For example count[7]=1 then<br><pre>"%c occured %d times\n",i+'a',count[i]</pre>i+'a' means 7+'a'=7+97=104 whose value in ascii is 'h'.So h occured count[7] times.Which means <b>h occured 1 times.</b> In this way it will check from count[0] to count[25] and if they are not zero then that value is printed</ol></div>

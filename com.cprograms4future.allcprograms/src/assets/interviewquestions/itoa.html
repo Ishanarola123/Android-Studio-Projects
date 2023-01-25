@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">What is itoa?</p>
+        <span class="headings">Answer:</span><br/>
+        itoa is used to convert integer to string datatype<br>
+        Syntax:<br>
+        itoa(integer,char,base_value);<br>
+        <br>
+        Ex:<br>
+       <pre class="program prettyprint">
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+main()
+{
+	int i=65;
+	char c[2];
+	itoa(i,c,10); //10 indicates decimal value
+	printf("%s",c);
+}
+
+
+</pre>
+output:65<br>
+        which is a string<br>
+    </div>
+</div>
+</body>
+
+</html>
+

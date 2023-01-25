@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:visibility="0" android:layout_width="-1" android:layout_height="-1">
+	<ScrollView android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-1" android:layout_above="false">
+		<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-1" android:layout_below="false">
+			<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+				<LinearLayout android:orientation="1" android:background="res/drawable/layout_shap_radius.xml" android:padding="10dp" android:layout_width="-1" android:layout_height="-2" android:layout_margin="10dp">
+					<LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="10dp">
+						<TextView android:textSize="16sp" android:textColor="000" android:layout_width="-2" android:layout_height="-2" android:text="Order: " />
+						<TextView android:textSize="16sp" android:textColor="000" android:id="false" android:layout_width="-2" android:layout_height="-2" />
+					</LinearLayout>
+					<LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="20dp">
+						<LinearLayout android:gravity="0x5" android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:layout_marginRight="5dp">
+							<TextView android:textSize="14sp" android:textColor="000" android:id="false" android:layout_width="-2" android:layout_height="-2" android:text="" />
+							<TextView android:textSize="12sp" android:textColor="7f7f7f" android:id="false" android:layout_width="-2" android:layout_height="-2" android:text="" />
+						</LinearLayout>
+						<LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-2" android:layout_marginRight="10dp">
+							<ImageView android:id="false" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginTop="5dp" android:src="res/drawable-xxhdpi-v4/icon_default.png" />
+						</LinearLayout>
+						<LinearLayout android:orientation="1" android:layout_width="-2" android:layout_height="-2">
+							<TextView android:textSize="15sp" android:textColor="000" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginBottom="5dp" android:text="" />
+							<TextView android:textSize="13sp" android:textColor="000" android:id="false" android:layout_width="-2" android:layout_height="-2" android:text="" />
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout android:gravity="0x11" android:id="false" android:layout_width="-1" android:layout_height="40dp">
+						<TextView android:textSize="14sp" android:textColor="097ff" android:layout_width="-2" android:layout_height="-2" android:layout_marginRight="2dp" android:text="Tap to view details" />
+						<ImageView android:layout_width="10dp" android:layout_height="10dp" android:src="res/drawable-xhdpi-v4/icon_more2.png" />
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout android:orientation="1" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-1">
+		<LinearLayout android:gravity="0x10" android:orientation="0" android:id="false" android:layout_width="-1" android:layout_height="40dp" android:layout_margin="10dp">
+			<TextView android:textSize="16sp" android:textColor="000" android:layout_width="-2" android:layout_height="-2" android:text="Order: " />
+			<TextView android:textSize="16sp" android:textColor="000" android:id="false" android:layout_width="-2" android:layout_height="-2" />
+		</LinearLayout>
+		<LinearLayout android:orientation="1" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="20dp">
+			<Button android:textSize="16sp" android:gravity="0x10" android:id="false" android:background="{2:2130968733}" android:paddingLeft="10dp" android:layout_width="-1" android:layout_height="50dp" android:text="Taobao" />
+			<Button android:textSize="16sp" android:gravity="0x10" android:id="false" android:background="{2:2130968733}" android:paddingLeft="10dp" android:layout_width="-1" android:layout_height="50dp" android:text="JD" />
+			<Button android:textSize="16sp" android:gravity="0x10" android:id="false" android:background="{2:2130968733}" android:paddingLeft="10dp" android:layout_width="-1" android:layout_height="50dp" android:text="Mi Store" />
+			<Button android:textSize="16sp" android:gravity="0x10" android:id="false" android:background="{2:2130968733}" android:paddingLeft="10dp" android:layout_width="-1" android:layout_height="50dp" android:text="Check order" />
+		</LinearLayout>
+		<TextView android:textSize="16sp" android:textColor="000" android:gravity="0x11" android:layout_width="-1" android:layout_height="-2" android:layout_margin="10dp" android:text="Order status and details haven&apos;t been synced yet. Check your order manually." />
+		<Button android:gravity="0x11" android:layout_gravity="0x11" android:id="false" android:background="{2:2130968733}" android:visibility="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="20dp" android:layout_marginBottom="14dp" android:text="Check order" android:maxLines="1" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" style="resourceId:0x7f1102c3" />
+	</LinearLayout>
+	<LinearLayout android:orientation="1" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_alignParentBottom="true">
+		<LinearLayout android:gravity="0x11" android:layout_gravity="0x11" android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:layout_above="false">
+			<ImageView android:id="false" android:background="res/drawable-xxhdpi-v4/kuaidi100_logo.png" android:layout_width="13dp" android:layout_height="13dp" android:contentDescription="resourceId:0x0" />
+			<TextView android:textSize="12sp" android:textColor="9b9b9b" android:layout_width="-2" android:layout_height="-2" android:layout_marginLeft="5dp" android:text="Powered by Kuaidi 100" />
+		</LinearLayout>
+		<Button android:textColor="ffffffff" android:gravity="0x11" android:id="false" android:background="{2:2130968734}" android:visibility="0" android:layout_width="-1" android:layout_height="50dp" android:layout_marginBottom="14dp" android:text="More info" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" />
+	</LinearLayout>
+</RelativeLayout>

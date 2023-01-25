@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+ int a,b,c;
+ char choice[2];
+ printf("Enter your Choice\n&amp; for AND\n| for OR\n^ for XOR\n~ for Compliment\n&lt;&lt; for Left Shift\n&gt;&gt; for Right Shift\n");
+ scanf("%s",choice);
+ printf("Enter a and b\n");
+ scanf("%d%d",&amp;a,&amp;b);
+ if(strcmp(choice,"&amp;")==0)
+ {
+  c=a&amp;b;
+  printf("%d &amp; %d=%d\n",a,b,c);
+ }
+ else if(strcmp(choice,"|")==0)
+ {
+  c=a|b;
+  printf("%d | %d=%d\n",a,b,c);
+ }
+ else if(strcmp(choice,"^")==0)
+ {
+  c=a^b;
+  printf("%d ^ %d=%d\n",a,b,c);
+ }
+ else if(strcmp(choice,"~")==0)
+ {
+  printf("~ %d=%d\n",a,~a);
+  printf("~ %d=%d\n",b,~b);
+ }
+ else if(strcmp(choice,"&lt;&lt;")==0)
+ {
+  c=a&lt;&lt;b;
+  printf("%d &lt;&lt; %d=%d\n",a,b,c);
+ }
+ else if(strcmp(choice,"&gt;&gt;")==0)
+ {
+  c=a&gt;&gt;b;
+  printf("%d &gt;&gt; %d=%d\n",a,b,c);
+ }
+ else
+ {
+  printf("Invalid Choice\n");
+ }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        <pre>
+Enter your Choice
+& for AND
+| for OR
+^ for XOR
+~ for Compliment
+<< for Left Shift
+>> for Right Shift
+^
+Enter a and b
+35
+67
+35 ^ 67=96
+        </pre><br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

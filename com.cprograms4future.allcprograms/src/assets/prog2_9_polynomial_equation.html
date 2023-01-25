@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;math.h>
+main()
+{
+float x,sum=0;
+int order,i;
+printf("Value of x\n");
+scanf("%f",&x);
+printf("Enter order of polynomial\n");
+scanf("%d",&order);
+float coefficient[order];
+
+
+for(i=0;i&lt;=order;i++)
+{
+ printf("Enter coefficients of polynomial at x^%d\n",i);
+  scanf("%f",&coefficient[i]);
+}
+  for(i=0;i&lt;=order;i++)
+  {
+   sum+=coefficient[i]*pow(x,i);
+  }
+
+  for(i=order;i>=0;i--)
+  {
+   if(i>0)
+   printf("%.2fx^%d+",coefficient[i],i);
+   else
+   printf("%.2fx^%d=",coefficient[i],i);
+  }
+  printf("%.2f\n",sum);
+}
+</pre></div><span class=headings>Output:</span><br><span>Value of x<br>3<br>Enter order of polynomial<br>4<br>Enter coefficients of polynomial at x^0<br>1<br>Enter coefficients of polynomial at x^1<br>2<br>Enter coefficients of polynomial at x^2<br>5<br>Enter coefficients of polynomial at x^3<br>3.5<br>Enter coefficients of polynomial at x^4<br>3<br>3.00x^4+3.50x^3+5.00x^2+2.00x^1+1.00x^0=389.50<br></span><span class=headings>Explanation:</span><br>Polynomial equation depends on order.For Ex. Order is 4.<br>Formula is: a4*x^4+a3*x^3+a2*x^2+a1*x^1+ a0*x^0<br><ol style=text-align:left><li>Variables used<ul style=list-style-type:square><li><b>x</b> → To store <b>input </b>from user<li><b>order</b> →To store the <b>order </b>of polynomial<li><b>sum</b> → To store <b>output</b><li><b>coefficient </b><b>→ </b>To store <b>coefficients </b>like <b>a1,a2...</b></ul><li><pre>printf("Value of x\n");
+scanf("%f",&x);
+printf("Enter order of polynomial\n");
+scanf("%d",&order);
+float coefficient[order];
+</pre>Taking input from user<li><pre>for(i=0;i&lt;=order;i++)
+{
+ printf("Enter coefficients of polynomial at x^%d\n",i);
+  scanf("%f",&coefficient[i]);
+}</pre>This loop is used to take <b>coeffiecients </b>one by one.As it iterates from <b>0 to order(say 4)</b>.So it takes coefficients of <b>coefficients[0](i.e. a0)....to a4</b><li><pre>for(i=0;i&lt;=order;i++)
+  {
+   sum+=coefficient[i]*pow(x,i);
+  }
+ </pre>Now the loop iterates from 0 to 4 and sum=sum+coefficient[i]*x^i. which is equal to <b>sum=sum+coefficient[0]*x^0+coefficient[1]*x^1+coefficient[2]*x^2+coefficient[3]*x^3+ coefficient[4]*x^4</b>.<b>As i traverse from 0 to 4</b><li><pre>for(i=order;i>=0;i--)
+  {
+   if(i>0)
+   printf("%.2fx^%d+",coefficient[i],i);
+   else
+   printf("%.2fx^%d=",coefficient[i],i);
+  }
+  printf("%.2f\n",sum);</pre>Here <b>i</b> will traverse from <b>order to 0 which means 4 to 0. </b>If i>0 then <b>+</b> symbol is added at the end of the <b>coefficient </b>i.e.<b> coefficient*x^i+</b>.<br><b>Else </b>it won't add <b>+ </b>at the end.<li>And finally <b>sum </b>will be printed after <b>= </b>symbol</ol><br></div>

@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+  float p,r,t,simpleInterest;
+  printf("Enter Pricipal\n");
+  scanf("%f",&p);
+  printf("Enter Rate in percentage \n");
+  scanf("%f",&r);
+  printf("Enter Time in years(decimals)\n");
+  scanf("%f",&t);
+  simpleInterest=(float)(p*r*t)/100.0;
+  printf("Simple Interest is %f\n",simpleInterest);
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter Pricipal<br>3000<br>Enter Rate in percentage<br>5<br>Enter Time in years(decimals)<br>3<br>Simple Interest is 450.000000<br></span><span class=headings>Explanation:</span><br>Same as the previous program.<a href=prog2_6_simple_interest.html target=_blank title="Calculate Simple Interest in all Ways">click here to open in same window</a><span style=color:teal><b></b></span><br><br></div>

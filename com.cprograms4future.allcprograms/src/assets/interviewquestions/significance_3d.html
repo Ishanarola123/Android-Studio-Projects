@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <span class="headings">Question:</span><br/>
+        <p style="font-weight:bold;">Significance of %2d or %3d and %-3d etc</p>
+        <span class="headings">Answer:</span><br/>
+        1.If we want to take only 3 digits out of given 6 digits as input at run time<br>
+        <br>
+        Ex: int x;<br>
+        scanf("x value is %3d",&x);<br>
+        <br>
+        Output:<br>
+        If we enter 345678<br>
+        then output is<br>
+        x value is 345<br>
+        <br>
+        2. %6d means the output will be filed in 6 columns and if the output contains 6 characters or digits then it won't have any affect<br>
+        but if the output is having less than 6 characters or digits then the value is right justified and is padded with blanks
+        on the left. <br>
+        Ex:<br>
+        #include&lt;stdio.h&gt;<br>
+        main()<br>
+        {<br>
+        int i=30,j=35;<br>
+        printf("%d,%6d\n",i,j);<br>
+        }<br>
+        output:<br>
+        30,    35<br>
+        <br>
+        So if we use in scanf it will take those number of digits as input<br>
+        if we use it in printf it will add spaces beside  the first digit<br>
+        3.)%-6d is same as %6d but the difference is left justification is desired and the value will
+        be padded with blanks on the right
+    </div>
+</div>
+</body>
+
+</html>
+

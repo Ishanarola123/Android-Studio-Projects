@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+  int i;
+  printf("Enter a Number\n");
+  scanf("%d",&i);
+  if(i%2==0)
+  {
+    printf("The number %d is Even",i);
+  }
+  else
+  {
+    printf("The number %d is Odd",i);
+  }
+  printf("\n");
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a Number<br>5<br>The number 5 is Odd<br></span><span class=headings>Explanation:</span><br><ol><li>Here we declared an integer 'i'.<li>Then we took the input from user using scanf  statement.<li>As we know modulus operator is used to return the reminder of two values as(10%3=1, 12%2=0).<li>So if you do modulus with 2 then the reminder would be 'zero' for Even numbers and '1' for Odd numbers.<li>If we divide 'i' with '2' using mod operator then depending upon condition the respective 'printf' will be executed.</ol></div>

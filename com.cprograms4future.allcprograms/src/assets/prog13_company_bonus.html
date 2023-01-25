@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+        <div class="row">
+            <div class="col-xs-12">
+                <span style="font-weight:bold;font-size:18px;">Question:</span><br>
+                <span style="background-color: white; color: #222222; display: inline; float: none; font-family: &quot;arial&quot; , sans-serif; font-size: 19.2px; font-style: normal; font-weight: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px;">A company&nbsp; decides to give bonus to all its employees on new year. A 5% bonus on salary is given to male workers and 10% bonus on salary is given to female workers.&nbsp; write a C program to enter the salary and gender of the employees.&nbsp; If the salary of the employee is less than 10000, then the employee gets an extra 2% bonus on salary.&nbsp; Calculate the bonus that has to be given to the employee and display the salary that the employee will get?</span>
+            </div>
+        </div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+ int i,j;
+ float salary,bonus;
+ char gender;
+ printf("Enter M for Male and F for Female\n");
+ scanf("%c",&amp;gender);
+ printf("Enter Salary\n");
+ scanf("%f",&amp;salary);
+ if(gender=='M' || gender=='m')
+ {
+  if(salary&gt;10000)
+  bonus=(float)(salary*0.05);//0.05--5%
+  else
+  bonus=(float)(salary*0.07);
+ }
+ if(gender=='F' || gender=='f')
+ {
+  if(salary&gt;10000)
+  bonus=(float)(salary*0.1);//0.1--10%
+  else
+  bonus=(float)(salary*0.12);
+ }
+ salary+=bonus;
+ printf("Bonus=%.2f\nSalary=%.2f\n",bonus,salary);
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter M for Male and F for Female<br>
+M<br>
+Enter Salary<br>
+11555<br>
+Bonus=577.75<br>
+Salary=12132.75<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+//Coming Soon<br><br>
+</div>
+</body>
+
+</html>
+

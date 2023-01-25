@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include &lt;stdio.h>
+ #include&lt;math.h>
+ main()
+ {
+  //1^2-2^2+3^2-......+n^2
+   int i,num,sum=0;
+   printf("Enter number \n");
+   scanf("%d",&num);
+   for(i=1;i&lt;=num;i++)
+   {
+    if(i%2==0)
+    {
+     sum-=pow(i,2);
+     }
+     if(i%2==1)
+     {
+      sum+=pow(i,2);
+     }
+
+   }
+   printf("Sum of series\n");
+   for(i=1;i&lt;=num;i++)
+   {
+    if(i!=num)
+    {
+     if(i%2==0)
+     {
+         printf("%d^2+ ",i);
+      }
+      else
+      {
+       printf("%d^2- ",i);
+      }
+
+     }
+     else
+     {
+      printf("%d^2 = %d\n",i,sum);
+     }
+
+   }
+ }
+</pre></div><span class=headings>Output:</span><br><span>Enter number<br>6<br>Sum of series<br>1^2- 2^2+ 3^2- 4^2+ 5^2- 6^2 = -22<br></span><span class=headings>Explanation:</span><br>//Coming Soon...<br><br></div>

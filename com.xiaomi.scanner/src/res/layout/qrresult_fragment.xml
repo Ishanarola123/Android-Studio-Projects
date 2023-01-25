@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-1">
+	<ScrollView android:layout_width="-1" android:layout_height="-1" android:layout_above="false">
+		<LinearLayout android:orientation="1" android:descendantFocusability="2" android:layout_width="-1" android:layout_height="-1" android:layout_marginTop="50dp">
+			<ImageView android:layout_gravity="0x1" android:id="false" android:background="res/drawable-xxhdpi-v4/ic_qrcode_web_symbol.png" android:layout_width="-2" android:layout_height="-2" android:contentDescription="resourceId:0x0" />
+			<TextView android:textSize="13sp" android:textColor="000" android:id="false" android:clickable="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="50dp" android:alpha="{4:1050253722}" android:layout_marginStart="30dp" />
+			<com.xiaomi.scanner.ui.ScrollsList android:id="resourceId:0x102000a" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="50dp" />
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout android:layout_gravity="0x50" android:orientation="1" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_alignParentBottom="true">
+		<TextView android:textSize="12sp" android:textColor="ff000" android:gravity="0x11" android:id="false" android:paddingTop="15dp" android:paddingBottom="15dp" android:visibility="2" android:clickable="false" android:layout_width="-1" android:layout_height="-2" android:maxLines="3" android:alpha="{4:1056964608}" android:paddingStart="15dp" android:paddingEnd="15dp" />
+		<Button android:textColor="cc000" android:gravity="0x11" android:id="false" android:background="{2:2130968733}" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="14dp" android:text="Check express delivery order" android:maxLines="1" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" style="resourceId:0x7f1102c3" />
+		<Button android:textColor="cc000" android:gravity="0x11" android:id="false" android:background="{2:2130968733}" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="14dp" android:maxLines="1" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" style="resourceId:0x7f1102c3" />
+		<Button android:textColor="cc000" android:gravity="0x11" android:id="false" android:background="{2:2130968733}" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="14dp" android:maxLines="1" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" style="resourceId:0x7f1102c3" />
+	</LinearLayout>
+</RelativeLayout>

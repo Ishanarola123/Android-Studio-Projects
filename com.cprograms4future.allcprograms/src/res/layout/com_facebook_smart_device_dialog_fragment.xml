@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="-2" android:layout_height="-2" app:cardBackgroundColor="resourceId:0x106000d" app:cardElevation="10dp">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="0x1" android:orientation="1" android:background="res/drawable/com_facebook_auth_dialog_background.xml" android:layout_width="600dp" android:layout_height="405dp">
+		<RelativeLayout android:orientation="0" android:background="res/drawable/com_facebook_auth_dialog_header_background.xml" android:layout_width="-1" android:layout_height="110dp">
+			<FrameLayout android:layout_width="-1" android:layout_height="-2">
+				<android.support.v7.widget.AppCompatImageView android:layout_width="18dp" android:layout_height="18dp" android:layout_marginLeft="12dp" android:layout_marginTop="11dp" android:layout_marginBottom="11dp" android:scaleType="1" android:adjustViewBounds="false" app:srcCompat="res/drawable/com_facebook_favicon_blue.xml" />
+			</FrameLayout>
+			<TextView android:textSize="52sp" android:typeface="1" android:textColor="3c6499" android:gravity="0x11" android:id="false" android:visibility="1" android:layout_width="-2" android:layout_height="-2" android:layout_centerInParent="true" android:fontFamily="sans-serif-light" />
+			<ProgressBar android:id="false" android:layout_width="-2" android:layout_height="0dp" android:layout_alignTop="false" android:layout_alignBottom="false" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+		</RelativeLayout>
+		<TextView android:id="false" android:layout_marginTop="18dp" android:text="Confirm your code on Facebook." style="resourceId:0x7f120238" />
+		<TextView android:id="false" android:layout_marginTop="7dp" android:text="1.	Go to the Menu" android:drawablePadding="10dp" style="resourceId:0x7f120238" />
+		<TextView android:id="false" android:layout_marginTop="7dp" android:text="2.	Select Device Requests" android:drawablePadding="10dp" style="resourceId:0x7f120238" />
+		<TextView android:id="false" android:layout_marginTop="7dp" android:text="3.	Confirm code." style="resourceId:0x7f120238" />
+		<TextView android:textStyle="0x1" android:gravity="0x1" android:id="false" android:layout_width="-1" android:layout_marginTop="12dp" android:text="- OR -" style="resourceId:0x7f120238" />
+		<TextView android:id="false" android:layout_marginTop="12dp" style="resourceId:0x7f120238" />
+		<FrameLayout android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="28dp" android:layout_marginBottom="17dp">
+			<Button android:textSize="18sp" android:typeface="1" android:textStyle="0x1" android:textColor="90949c" android:layout_gravity="0x1" android:id="false" android:background="res/drawable/com_facebook_auth_dialog_cancel_background.xml" android:focusable="true" android:clickable="true" android:layout_width="-2" android:layout_height="-2" android:minWidth="200dp" android:text="resourceId:0x1040000" android:textAllCaps="true" android:fontFamily="sans-serif-medium" />
+		</FrameLayout>
+	</LinearLayout>
+</android.support.v7.widget.CardView>

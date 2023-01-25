@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container" style="padding:0px">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left;margin-left:4px">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right;margin-right:16px">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none;">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;white-space:pre-wrap;">
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+#include&lt;string.h&gt;
+#include&lt;ctype.h&gt;
+int GetValidContactOrNot(char contact[]);
+main()
+{
+ int choice,i,flag,j=1;
+ char contact[10],name[20],storeContact[100];
+
+ do{
+  if(choice==1)
+  {
+      printf("Enter Name\n");
+      fflush(stdin);
+      gets(name);
+      printf("Enter Mobile Number\n");
+      fflush(stdin);
+      gets(contact);
+      flag=GetValidContactOrNot(contact);
+      if(flag==1)
+      {
+       FILE *contactFile;
+       contactFile=fopen("contactlist.txt","a");
+       char c;
+       if(contactFile==NULL)
+                {
+                   printf("Contact File Not Found\n");
+                   exit(0);
+                }
+                else
+                {
+                 strcpy(storeContact,"Name    : ");
+                 strcat(storeContact,name);
+                 strcat(storeContact,"\n");
+                 strcat(storeContact,"Contact : ");
+                 strcat(storeContact,contact);
+                 strcat(storeContact,"\n");
+                 fputs(storeContact,contactFile);
+                  fputs("----------------------------------------------------\n",contactFile);
+                 printf("Contact has been added Successfully\n");
+                }
+                fclose(contactFile);
+       }
+      else
+      {
+       printf("Invalid Contact Number.It should contain only numbers and should have 10 digits\n");
+      }
+     }
+     if(choice==2)
+     {
+      FILE *contactFile;
+      contactFile=fopen("contactlist.txt","r");
+      char c;
+      while(1)
+      {
+       if(contactFile==NULL)
+       {
+        printf("Contact File Not Found\n");
+       }
+       else
+       {
+        c=fgetc(contactFile);
+        if(c==EOF)
+        break;
+        printf("%c",c);
+       }
+      }
+      fclose(contactFile);
+        }
+  printf("Press\n1 - Add Contact\n2 - View Contact List\nany other number to exit\n");
+  scanf("%d",&amp;choice);
+
+ }while(choice==1 || choice==2);
+}
+
+int GetValidContactOrNot(char contact[])
+{
+ int i,flag;
+ if(strlen(contact)==10)
+  {
+   flag=1;
+   for(i=0;i&lt;strlen(contact);i++)
+   {
+    if(!isdigit(contact[i]))
+       flag=0;
+   }
+  }
+  else
+  {
+   return(0);
+  }
+  return(flag);
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        <img class="img-responsive" src="Store_Contacts_files.gif"><br/>
+         <img class="img-responsive" src="Store_Contacts_files2gif.gif"><br/>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

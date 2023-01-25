@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+        <img class="img-responsive" src="prog25_3_wallclock.jpg"><br/>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+main()
+{
+ char *temp[]={"Half","Ten","Quarter","Twenty","Five","Minutes","To","Past","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","O' Clock"};
+ char time[5],substr[3][3];
+ int i=0,j=0,k=0,hour,min,s[21]={0};
+ printf("Enter time in HH:MM format like 01:15 in 12 hour format\n");
+    gets(time);
+
+    while(time[k]!='\0')//for splitting time
+    {
+        j=0;
+        while(time[k]!=':'&amp;&amp;time[k]!='\0')
+        {
+            substr[i][j]=time[k];
+            k++;
+            j++;
+        }
+        substr[i][j]='\0';
+        i++;
+        if(time[k]!='\0')
+        {
+            k++;
+        }
+    }
+    int len=i;
+  hour=atoi(substr[0]);
+  min=atoi(substr[1]);
+  if(hour&lt;1||hour&gt;12||min&lt;0||min&gt;59)//Validating Time
+  {
+   printf("Enter Valid Time\n");
+   exit(0);
+  }
+  else
+  {
+   if((min&gt;=5&amp;&amp;min&lt;10)||(min&gt;=55&amp;&amp;min&lt;=59))
+   {
+    s[4]=1;
+   }
+   if((min&gt;=10&amp;&amp;min&lt;15)||(min&gt;=50&amp;&amp;min&lt;55))
+   {
+    s[1]=1;
+   }
+   if((min&gt;=15&amp;&amp;min&lt;20)||(min&gt;=45&amp;&amp;min&lt;50))
+   {
+    s[2]=1;
+   }
+   if((min&gt;=20&amp;&amp;min&lt;25)||(min&gt;=40&amp;&amp;min&lt;45))
+   {
+    s[3]=1;
+   }
+   if(min&gt;=25&amp;&amp;min&lt;40)
+   {
+    s[0]=1;
+   }
+   if(min&gt;=1&amp;&amp;min&lt;=30)
+   {
+    if(min&gt;=5)
+    {
+     s[7]=1;
+    }
+    s[hour+7]=1;//For getting Hours
+   }
+  if(min&gt;30&amp;&amp;min&lt;=59)
+   {
+    s[6]=1;
+    if(s[2]!=1)
+    {
+          s[5]=1;
+    }
+    if(hour!=12)
+    s[hour+8]=1;
+    else
+    s[8]=1;
+   }
+   if(min&gt;=0&amp;&amp;min&lt;5)
+   {
+    s[hour+7]=1;//For getting Hours
+    s[20]=1;
+   }
+
+  }
+  for(i=0;i&lt;21;i++)
+  {
+   if(s[i]==1)
+   {
+    printf("%s ",temp[i]);
+   }
+  }
+  printf("\n");
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter time in HH:MM format like 01:15 in 12 hour format<br>
+04:10<br>
+Ten Past Four<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

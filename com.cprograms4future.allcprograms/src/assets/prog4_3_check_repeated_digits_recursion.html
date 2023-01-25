@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+void GetRpeatedDigit(int num,int frequency[]);
+int CheckRpeatedDigit(int frequency[],int totalDigits,int flag);
+main()
+{
+ int num,k,temp,frequency[9],flag=0,i;
+ printf("Enter number to find which digits are repeated\n");
+ scanf("%d",&amp;num);
+ temp=num;
+ //By default setting frequency of digits as zero
+ for(i=0;i&lt;10;i++)
+    {
+     frequency[i]=0;
+    }
+ GetRpeatedDigit(num,frequency);
+ flag=CheckRpeatedDigit(frequency,9,0);//Only 10 digits will be there from 0-9 and we will count from 0-9
+ if(flag==0)
+ {
+  printf("No Repeated Digits\n");
+ }
+ else
+ {
+  printf("Repeated digits are there\n");
+ }
+}
+
+void GetRpeatedDigit(int num,int frequency[])
+{
+ int k;
+ if(num&gt;0)
+    {
+      k=num%10;
+      frequency[k]+=1;
+      num/=10;
+   GetRpeatedDigit(num,frequency);
+    }
+    else
+    {
+     return;
+    }
+
+}
+
+int CheckRpeatedDigit(int frequency[],int totalDigits,int flag)
+{
+    if(totalDigits&gt;=0)
+    {
+      if(frequency[totalDigits]&gt;1)
+      {
+        flag=1;
+        printf("%d --&gt; repeated %d times\n",totalDigits,frequency[totalDigits]);
+      }
+      totalDigits--;
+      CheckRpeatedDigit(frequency,totalDigits,flag);
+    }
+    else
+    {
+     return(flag);
+    }
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter number to find which digits are repeated<br>
+566458908<br>
+8 --> repeated 2 times<br>
+6 --> repeated 2 times<br>
+5 --> repeated 2 times<br>
+Repeated digits are there<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+
+   //Coming Soon...<br><br>
+</div>
+</body>
+
+</html>
+

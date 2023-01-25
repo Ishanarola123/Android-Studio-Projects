@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+main()
+{
+ int i,j,row1,row2,column1,column2,flag;
+ printf("Enter row1\n");
+ scanf("%d",&amp;row1);
+ printf("Enter column 1\n");
+ scanf("%d",&amp;column1);
+ printf("Enter row2\n");
+ scanf("%d",&amp;row2);
+ printf("Enter column 2\n");
+ scanf("%d",&amp;column2);
+  int a[row1][column1],b[row2][column2];
+  if(row1==row2 &amp;&amp; column1==column2)
+  {
+   flag=1;
+   printf("Enter Matrix A\n");
+      for(i=0;i&lt;row1;i++)
+       {
+      for(j=0;j&lt;column1;j++)
+        scanf("%d",&amp;a[i][j]);
+      }
+      printf("Enter Matrix B\n");
+      for(i=0;i&lt;row2;i++)
+       {
+      for(j=0;j&lt;column2;j++)
+        scanf("%d",&amp;b[i][j]);
+      }
+
+      for(i=0;i&lt;row1;i++)
+      {
+       for(j=0;j&lt;column1;j++)
+       {
+        if(a[i][j]!=b[i][j])
+        {
+         flag=0;
+         break;
+        }
+       }
+      }
+      if(flag==1)
+     {
+      printf("Both Matrices are equal\n");
+     }
+     else
+     {
+      printf("Matrices are not Equal\n");
+     }
+  }
+  else
+  {
+   printf("Not Possible to Compare as Rows and Columns are Not equal\n");
+  }
+
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        Enter row1<br>
+2<br>
+Enter column 1<br>
+3<br>
+Enter row2<br>
+2<br>
+Enter column 2<br>
+3<br>
+Enter Matrix A<br>
+1<br>
+2<br>
+30<br>
+35<br>
+6<br>
+7<br>
+Enter Matrix B<br>
+1<br>
+9<br>
+4<br>
+7<br>
+0<br>
+2<br>
+Matrices are not Equal<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    //Coming Soon..<br><br>
+</div>
+</body>
+
+</html>
+

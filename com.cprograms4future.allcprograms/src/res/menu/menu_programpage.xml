@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_rate.png" android:id="false" android:orderInCategory="100" android:title="Rate my App" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_sun.png" android:id="false" android:title="NightMode" android:checkable="true" app:showAsAction="0x2" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_book.png" android:id="false" android:title="Add to Bookmark" android:checkable="true" app:showAsAction="0x2" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_wrap_text.png" android:id="false" android:title="Wrap Code ON" android:checkable="true" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_zoom.png" android:id="false" android:title="Zoom ON" android:checkable="true" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_home.png" android:id="false" android:title="Go to Home" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_ascii.png" android:id="false" android:title="ASCII Table" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_menu_share.png" android:id="false" android:visible="false" android:title="Share Code" android:actionProviderClass="android.widget.ShareActionProvider" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_bookmark_icon.png" android:id="false" android:title="Go to Bookmarks" android:actionProviderClass="android.widget.ShareActionProvider" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_menu_share.png" android:id="false" android:title="Share App" android:actionProviderClass="android.widget.ShareActionProvider" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_bug_report.png" android:id="false" android:title="Report Bug" app:showAsAction="0x0" />
+</menu>

@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+main()
+{
+ int i,j,n,searchno,temp,low,mid,high,flag=0;
+ printf("Enter size of array\n");
+ scanf("%d",&n);
+ int a[n-1];
+    printf("Enter the numbers in any order\n");
+    for(i=0;i&lt;n;i++)
+    {
+     scanf("%d",&a[i]);
+    }
+
+    printf("Enter the element to be searched\n");
+    scanf("%d",&searchno);
+    for(i=0;i&lt;n;i++)//for sorting in ascending order
+    {
+     for(j=i+1;j&lt;n;j++)
+ {
+  if(a[i]>a[j])
+  {
+   temp=a[i];
+   a[i]=a[j];
+   a[j]=temp;
+  }
+ }
+    }
+
+    printf("Sorted array is\n");
+     for(i=0;i&lt;n;i++)
+    {
+     printf("%d\n",a[i]);
+    }
+    low=1;
+    high=n;
+
+ do
+    {
+     mid=(high+low)/2;
+     if(searchno&lt;a[mid])
+     {
+      high=mid-1;
+      flag=0;
+     }
+    else if(searchno>a[mid])
+     {
+      low=mid+1;
+      flag=0;
+     }
+     else
+     {
+      flag=1;
+      break;
+     }
+      }while(searchno!=a[mid]&&low&lt;=high);
+
+    if(flag==1)
+    {
+     printf("Search Successful\n");
+    }
+    else
+    {
+     printf("Search is not Successful\n");
+    }
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter size of array<br>5<br>Enter the numbers in any order<br>90<br>23<br>35<br>30<br>-123<br>Enter the element to be searched<br>35<br>Sorted array is<br>-123<br>23<br>30<br>35<br>90<br>Search Successful<br></span><span class=headings>Explanation:</span><br>//Coming Soon..<br><br></div>

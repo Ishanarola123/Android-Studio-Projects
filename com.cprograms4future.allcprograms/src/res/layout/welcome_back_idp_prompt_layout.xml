@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="1" android:layout_width="-1" android:layout_height="-1" style="resourceId:0x7f1200f1">
+	<TextView android:layout_width="-1" android:layout_height="-2" android:text="You already have an account" style="resourceId:0x7f1200e0" />
+	<TextView android:id="false" android:layout_width="-1" android:layout_height="-2" style="resourceId:0x7f1200dd" />
+	<Button android:layout_gravity="0x800005" android:id="false" android:layout_width="-2" android:layout_height="-2" android:text="Sign in" />
+</LinearLayout>

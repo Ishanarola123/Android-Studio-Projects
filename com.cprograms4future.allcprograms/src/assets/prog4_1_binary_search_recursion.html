@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><div>Method I:Passing Array to function as Pointer</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+void sort(int ,int *);
+void binarysearch(int ,int ,int *,int);
+main()
+{
+ int i,n,searchno;
+ printf("Enter size of array\n");
+ scanf("%d",&n);
+ int a[n];
+    printf("Enter the numbers in sorted order\n");
+    for(i=0;i&lt;n;i++)
+    {
+     scanf("%d",&a[i]);
+    }
+
+     sort(n,&a[0]);
+
+     printf("Sorted array is\n");
+
+
+     for(i=0;i&lt;n;i++)
+    {
+     printf("%d\n",a[i]);
+    }
+    printf("Enter element to be searched\n");
+    scanf("%d",&searchno);
+ binarysearch(1,n,&a[0],searchno);
+
+}
+
+void sort(int n,int *a)
+{
+ int i,j,temp;
+ for(i=0;i&lt;n;i++)//for sorting in ascending order
+    {
+     for(j=i+1;j&lt;n;j++)
+ {
+  if(a[i]>a[j])
+  {
+   temp=a[i];
+   a[i]=a[j];
+   a[j]=temp;
+  }
+ }
+    }
+}
+
+void binarysearch(int low,int high,int *a,int searchno)
+{
+ int mid;
+ if(low>high)
+ {
+     printf("Search is not successful\n");
+  return;
+ }
+ mid=(low+high)/2;
+ if(a[mid]==searchno)
+ {
+  printf("Search successful\n");
+  return;
+ }
+
+ else if(searchno&lt;a[mid])
+ {
+  binarysearch(low,mid-1,a,searchno);
+ }
+ else if(searchno>a[mid])
+ {
+  binarysearch(mid+1,high,a,searchno);
+ }
+
+}
+</pre><div>Method II:Passing array to function</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+void sort(int n,int a[]);
+void binarysearch(int low,int high,int a[],int searchno);
+main()
+{
+ int i,n,searchno;
+ printf("Enter size of array\n");
+ scanf("%d",&n);
+ int a[n-1];
+    printf("Enter the numbers in sorted order\n");
+    for(i=0;i&lt;n;i++)
+    {
+     scanf("%d",&a[i]);
+    }
+
+     sort(n,a);
+
+     printf("Sorted array is\n");
+
+
+     for(i=0;i&lt;n;i++)
+    {
+     printf("%d\n",a[i]);
+    }
+    printf("Enter element to be searched\n");
+    scanf("%d",&searchno);
+ binarysearch(1,n,a,searchno);
+
+}
+
+void sort(int n,int a[])
+{
+ int i,j,temp;
+ for(i=0;i&lt;n;i++)//for sorting in ascending order
+    {
+     for(j=i+1;j&lt;n;j++)
+ {
+  if(a[i]>a[j])
+  {
+   temp=a[i];
+   a[i]=a[j];
+   a[j]=temp;
+  }
+ }
+    }
+}
+
+void binarysearch(int low,int high,int a[],int searchno)
+{
+ int mid;
+ if(low>high)
+ {
+     printf("Search is not successful\n");
+  return;
+ }
+ mid=(low+high)/2;
+ if(a[mid]==searchno)
+ {
+  printf("Search successful\n");
+  return;
+ }
+
+ else if(searchno&lt;a[mid])
+ {
+  binarysearch(low,mid-1,a,searchno);
+ }
+ else if(searchno>a[mid])
+ {
+  binarysearch(mid+1,high,a,searchno);
+ }
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter size of array<br>6<br>Enter the numbers in sorted order<br>3<br>4<br>2<br>78<br>30<br>35<br>Sorted array is<br>2<br>3<br>4<br>30<br>35<br>78<br>Enter element to be searched<br>54<br>Search is not successful<br></span><span class=headings>Explanation:</span><br>//Coming Soon<br><br></div>

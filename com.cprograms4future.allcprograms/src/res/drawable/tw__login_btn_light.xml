@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_focused="true" android:state_pressed="true" android:drawable="res/drawable/tw__login_btn_pressed_light.xml" />
+	<item android:state_focused="false" android:state_pressed="true" android:drawable="res/drawable/tw__login_btn_pressed_light.xml" />
+	<item android:state_focused="true" android:drawable="res/drawable/tw__login_btn_pressed_light.xml" />
+	<item android:drawable="res/drawable/tw__login_btn_default_light.xml" />
+</selector>

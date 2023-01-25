@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+{
+//A-X,B-Y,C-Z,D-A,E-B,F-C... if number=1
+//A-W,B-X,C-Y,D-Z,E-A,F-B... if number=2 and so on
+
+ int i,number;
+ char str[1000],str1[1000];
+ printf("Enter a sentence\n");
+ gets(str);
+ printf("Enter the number to change alphabetical order\n");
+ scanf("%d",&amp;number);
+ i=0;
+ printf("Encrypted Caesar code\n\n");
+  while(str[i]!='\0')
+  {
+ if(!((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+ {
+  if((str[i]&gt;'a'+number+1)&amp;&amp;(str[i]&lt;='z'))
+     printf("%c",str[i]-number-2);
+  else if((str[i]&gt;'A'+number+1)&amp;&amp;(str[i]&lt;='Z'))
+  printf("%c",str[i]-number-2);
+     else
+     printf("%c",str[i]+24-number);
+ }
+
+    if(((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+    {
+      printf("%c",str[i]);
+    }
+
+   i++;
+  }
+  printf("\n");
+
+}
+</pre>
+    </div>
+    <span class="headings">Output I:</span><br/>
+    <span>
+        Enter a sentence<br>
+abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+Enter the number to change alphabetical order<br>
+3<br>
+Encrypted Caesar code<br>
+<br>
+vwxyzabcdefghijklmnopqrstu VWXYZABCDEFGHIJKLMNOPQRSTU<br>
+    </span>
+    <span class="headings">Output II:</span><br/>
+    <span>
+Enter a sentence<br>
+cprograms4future has 300+ cprograms<br>
+Enter the number to change alphabetical order<br>
+1<br>
+Encrypted Caesar code<br>
+<br>
+zmoldoxjp4crqrob exp 300+ zmoldoxjp<br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    <br />
+    Before Going into Explanation remember that<br />
+<pre class="program prettyprint prettyprinted" style="background: rgb(241, 240, 240); border-radius: 4px; border: 1px solid rgb(136, 136, 136); box-sizing: border-box; color: #242424; font-family: &quot;Droid Sans Mono&quot;, monospace; font-size: 17.6px; margin-bottom: 24px; max-width: 100%; outline: 0px; overflow: auto; padding: 2px; position: relative; vertical-align: baseline; word-wrap: normal;"><span class="com" style="border: 0px; box-sizing: border-box; color: #880000; font-family: inherit; font-size: 17.6px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">A-X,B-Y,C-Z,D-A,E-B,F-C... if number=1</span><span class="pln" style="border: 0px; box-sizing: border-box; color: black; font-family: inherit; font-size: 17.6px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">
+</span><span class="com" style="border: 0px; box-sizing: border-box; color: #880000; font-family: inherit; font-size: 17.6px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">A-W,B-X,C-Y,D-Z,E-A,F-B... if number=2 and so on</span></pre>
+    We are interpreting <b>A as X,and B as Y</b> and so on when we given <b>number as 1</b>.The same will be different when <b>number is 2 i.e A will be W </b>which is the <b>letter that comes before X</b> so it will be like <b>rotation </b>when ever you change the number.<b>If number is 3 then A=V</b> and so on<br />
+    <br />
+    Then <b>What if number is 27 </b>which went <b>out of 26 </b>but <b>Alphabets are 26 only</b> which is not possible to map alphabets.<b>At this point we will do 27%6</b> which will give us <b>remainder as output</b>.So output of <b>27%6 is 1</b>.So <b>what ever the number (such as 2900 ,1080 etc) </b>you give output will be in between <b>1 and 26 only </b>so that it is <b>easier to map Alphabets</b>.<br />
+    <br />
+    Since <b>A is mapped to X</b> and <b>D is mapped to A </b>when <b>number is 1.</b>Whenever user enter <b>D</b>&nbsp;we have to <b>decrease it by 3 times</b> to get A i.e <b>D-3→ 68-3=65 </b>which is <b>A</b>&nbsp;so for this we are doing <b>D-number-2.</b><br />
+    <b>For Example if number=2</b><br />
+    <b>E is mapped to A.</b>&nbsp;So to get A we are doing <b>E-number-2</b>→&nbsp;<b>69-2-2=65 which is A.</b><br />
+    <b>This is how we are mapping.</b><br />
+    <b>Lets take A-X as left hand side alphabet as A and right hand side Alphabet as X</b><br />
+    But before printing or mapping like above we have to check whether the lefthand side Alphabet<br />
+    <b><br /></b>
+    Now<b> how to map A to X or A to W etc??</b><br />
+    <b>str[i]+24-number.lets take number=1</b><br />
+    <b>For Example.say str[i]=A</b>→<b>A+24-number→65+24-1</b>→<b>88 which is X</b><br />
+    <br />
+    So this is the main thing you need to read before going into explanation of program.<br />
+    <br />
+    Now lets go into Program Explanation:<br />
+    <br />
+    <br />
+    <ol>
+        <li>The program starts with initializing
+            <ul style="list-style-type: square;">
+                <li><b>number</b> → To store <b>number to decide mapping of Alphabets</b></li>
+                <li><b>i </b>→ <b>Temporary</b> variable</li>
+                <li><b>str[1000]</b>→ To store <b>sentence entered by user which has to be encrypted</b></li>
+            </ul>
+        </li>
+        <li>
+            <blockquote>
+<pre class="program prettyprint">printf("Enter a sentence\n");
+gets(str);
+printf("Enter the number to change alphabetical order\n");
+scanf("%d",&amp;number);
+</pre>
+            </blockquote>
+            To take <b>sentence and number&nbsp;</b>from <b>user.Lets take str="Abd1"</b></li>
+        <li>
+            <blockquote>
+<pre class="program prettyprint">i=0;
+number%=26;</pre>
+
+            </blockquote>
+            <b>i=0 </b>to start traversing from 1st alphabet to last one from the enetered sentence(say Hello World to traverse from H to d).And<b> number%=26</b> as discussed above before starting program explanation.</li>
+        <li><pre class="program prettyprint">while(str[i]!='\0')
+  {
+     if(!((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+     {
+       if((str[i]&gt;'a'+number+1)&amp;&amp;(str[i]&lt;='z'))
+       printf("%c",str[i]-number-2);
+       else if((str[i]&gt;'A'+number+1)&amp;&amp;(str[i]&lt;='Z'))
+       printf("%c",str[i]-number-2);
+       else
+       printf("%c",str[i]+24-number);
+     }
+
+    if(((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+    {
+      printf("%c",str[i]);
+    }
+
+   i++;
+  }</pre>
+            <span style="font-family: &quot;times new roman&quot;; white-space: normal;">Let us assume&nbsp;</span><b style="font-family: &quot;Times New Roman&quot;; white-space: normal;">str</b><span style="font-family: &quot;times new roman&quot;; white-space: normal;">=</span><b style="font-family: &quot;Times New Roman&quot;; white-space: normal;">"Abd1" nad number=1</b><span style="font-family: &quot;times new roman&quot;; white-space: normal;">. The loop will&nbsp;</span><b style="font-family: &quot;Times New Roman&quot;; white-space: normal;">traverse</b><span style="font-family: &quot;times new roman&quot;; white-space: normal;">&nbsp;from</span><b style="font-family: &quot;Times New Roman&quot;; white-space: normal;">&nbsp;str[i]=A to 1.Since every String is appended by '\0' by default at the end which is not shown outside to users</b><ul style="font-family: &quot;Times New Roman&quot;; list-style-type: square; white-space: normal;">
+                <li><b>Iteration 1</b>:<b>i=0,str[i]</b><b>→&nbsp;str[0]='A'</b><ul style="list-style-type: disc;">
+                    <li><pre class="program prettyprint">if(!((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+     {</pre>
+                        Checking if the Alphabet i.e str[0] belongs to numbers or special characters etc other than alphabet.And if it is only Alphabet we are going to encrypt the alphabet other wise not.For this refer ASCII Chart as alphabets will lie in between <b>65-90(A-Z) and 97-122(a-z)</b></li>
+                    <li>Since '<b>A'</b>&nbsp;is alphabet <b>if part </b>will execute</li>
+                    <li><pre class="program prettyprint">if((str[i]&gt;'a'+number+1)&amp;&amp;(str[i]&lt;='z'))
+ printf("%c",str[i]-number-2);
+else if((str[i]&gt;'A'+number+1)&amp;&amp;(str[i]&lt;='Z'))
+  printf("%c",str[i]-number-2);
+else
+  printf("%c",str[i]+24-number);</pre>
+                        <b>
+                            str[i]&gt;'a'+number+1 means what??</b></li>
+                    <li>since we took<b> number=1.</b>&nbsp;'a'+1+1='c' in characters or 99 in integers wise.</li>
+                    <li>str[0]='A' we are checking<b> 'A'&gt;'a'+1+1→&nbsp;'A'&gt;'c' i.e 65&gt;99(in integer wise)</b>. Since <b>its not true 1st if part won't execute</b></li>
+                    <li><pre class="program prettyprint" style="font-weight: 400;">else if((str[i]&gt;'A'+number+1)&amp;&amp;(str[i]&lt;='Z')) </pre>
+                        Now 'A'&gt;'A'+1+1→'A'&gt;65+1+1→65&gt;67 which is false and 'A'&lt;'Z' ehich is true but due to &amp;&amp; operator both conditions should be true but one of the condistions is false here so <b>2nd if part also wont execute</b></li>
+                    <li>So finally else part will execute and it will print <b>str[i]+24-number</b>→'A'+24-number→<b>65+24-1</b>→88<b>&nbsp;which is 'X' from ASCII sheet.</b></li>
+                    <li><b>X </b>will be printed first for the<b> given character 'A'</b></li>
+                </ul>
+                </li>
+                <li><b>Iteration 2:i=1</b><b>,str[i]</b><b>→&nbsp;str[1]='b'</b><ul style="list-style-type: disc;">
+                    <li><pre class="program prettyprint">if(!((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+     {</pre>
+                        Checking if the Alphabet i.e str[1] belongs to alphabet or not</li>
+                    <li>Since 'b<b>'</b>&nbsp;is alphabet&nbsp;<b>if part&nbsp;</b>will execute</li>
+                    <li><pre class="program prettyprint">if((str[i]&gt;'a'+number+1)&amp;&amp;(str[i]&lt;='z'))
+ printf("%c",str[i]-number-2);
+else if((str[i]&gt;'A'+number+1)&amp;&amp;(str[i]&lt;='Z'))
+  printf("%c",str[i]-number-2);
+else
+  printf("%c",str[i]+24-number);</pre>
+                    </li>
+                    <li>since we took<b>&nbsp;number=1.</b>&nbsp;'a'+1+1='c' in characters or&nbsp; 99 in integers wise.</li>
+                    <li>str[1]='b' we are checking<b>&nbsp;'b'&gt;'a'+1+1→&nbsp;'b'&gt;'c' i.e 98&gt;99(in integer wise)</b>. Since&nbsp;<b>its not true 1st if part won't execute</b></li>
+                    <li><pre class="program prettyprint" style="font-weight: 400;">else if((str[i]&gt;'A'+number+1)&amp;&amp;(str[i]&lt;='Z')) </pre>
+                        Now 'b'&gt;'A'+1+1→'b'&gt;65+1+1→98&gt;67 is true but 'b'&lt;'Z' i.e 98&lt;90 which is false so&nbsp;<b>2nd if part also wont execute</b></li>
+                    <li>So finally else part will execute and it will print&nbsp;<b>str[i]+24-number</b>→'b'+24-number→<b>98+24-1</b>→121<b>&nbsp;which is 'y'.</b></li>
+                    <li><b>y&nbsp;</b>will be printed first for the<b>&nbsp;given character 'b'</b></li>
+                    <li><b>Till now Xy is printed</b></li>
+                </ul>
+                </li>
+                <li><b>Iteration 3:i=2</b><b>,str[i]</b><b>→&nbsp;str[2]='b'</b><ul style="list-style-type: disc;">
+                    <li><pre class="program prettyprint">if(!((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+     {</pre>
+                        Checking if the Alphabet i.e str[2] belongs to alphabet or not</li>
+                    <li>Since 'd<b>'</b>&nbsp;is alphabet&nbsp;<b>if part&nbsp;</b>will execute</li>
+                    <li><pre class="program prettyprint">if((str[i]&gt;'a'+number+1)&amp;&amp;(str[i]&lt;='z'))
+ printf("%c",str[i]-number-2);
+else if((str[i]&gt;'A'+number+1)&amp;&amp;(str[i]&lt;='Z'))
+  printf("%c",str[i]-number-2);
+else
+  printf("%c",str[i]+24-number);</pre>
+                    </li>
+                    <li>since we took<b>&nbsp;number=1.</b>&nbsp;'a'+1+1='c' in characters or&nbsp; 99 in integers wise.</li>
+                    <li>str[2]='d' we are checking<b>&nbsp;'d'&gt;'a'+1+1→&nbsp;'d'&gt;'c' i.e 100&gt;99(in integer wise)</b>. Since&nbsp;<b>it is true and 'd'&lt;='z' which is also true so 1st if part will execute and 2nd if part and else part won't execute</b></li>
+                    <li><pre class="program prettyprint"><b>str[2]-number-2</b><span style="font-weight: 400;"> will be printed </span>→<b> d-1-2=100-1-2=97 which is 'a'</b></pre>
+                    </li>
+                    <li><b>a&nbsp;</b>will be printed for the<b>&nbsp;given character 'd'</b></li>
+                    <li><b>Till now Xya is printed</b></li>
+                </ul>
+                </li>
+                <li><b>Iteration 4:i=3,</b><b>str[3]='1'</b><ul style="list-style-type: disc;">
+                    <li><pre class="program prettyprint"> if(!((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+ {</pre>
+                        Since '1' is a number the above <b>if part </b>won't execute the 2nd <b>if part</b> in loop will be executed</li>
+                    <li><pre class="program prettyprint"> if(((str[i]&gt;=0&amp;&amp;str[i]&lt;65)||(str[i]&gt;90&amp;&amp;str[i]&lt;97)||(str[i]&gt;122&amp;&amp;str[i]&lt;=127)))
+  {
+      printf("%c",str[i]);
+   }</pre>
+                        This <b>if part </b>has been used to print the character which is other than alphabet so <b>'1'</b> is printed as it is</li>
+                    <li>Finally Output console will have '<b>Xya1</b>' as encrypted text</li>
+                </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Finally Encrypted text for 'Abd1'-----&gt; 'Xya1'</li>
+    </ol><br><br>
+</div>
+</body>
+
+</html>
+

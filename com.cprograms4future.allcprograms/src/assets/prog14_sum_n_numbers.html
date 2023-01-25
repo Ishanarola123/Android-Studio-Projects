@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+<span style=color:#000>#include</span>&lt;stdio.h>
+<span style=color:#000>main()</span>
+<span style=color:#000>{</span>
+<span style=color:#000>  int i,n,sum=0;</span>
+<span style=color:#000>  printf("Enter a number\n");</span>
+<span style=color:#000>  scanf("%d",&n);</span>
+<span style=color:#000>  for(i=0;i&lt;=n;i++)</span>
+<span style=color:#000>  {</span>
+<span style=color:#000>    sum=sum+i;</span>
+<span style=color:#000>  }</span>
+<span style=color:#000>  printf("%d\n",sum);</span>
+<span style=color:#000>}</span>
+</pre></div><span class=headings>Output:</span><br><span>Enter a number<br>10<br>55<br></span><span class=headings>Explanation:</span><br><ol><li><span style=color:#000>First we initialized<b> i,n, and sum</b> which is declared as <b>zero.</b></span><li><span style=color:#000>A number is given by user (say 5).</span><li><span style=color:#000>Now the logic is:<b>sum=sum+i</b></span><ul><li><b><span style=color:#000>sum=0+0=0</span></b><li><span style=color:#000>for next iteration <b>i</b> becomes <b>'1' </b>so<b> sum=0+1=1</b></span><li><span style=color:#000>for next iteration <b>i</b> becomes <b>'2' </b>so<b> sum=2+1=3</b></span><li><span style=color:#000>for next iteration <b>i</b> becomes <b>'3' </b>so<b> sum=3+3=6</b></span><li><span style=color:#000>for next iteration <b>i</b> becomes <b>'4' </b>so<b> sum=4+6=10</b></span><li><span style=color:#000>for next iteration <b>i</b> becomes <b>'5' </b>so<b> sum=10+5=15</b></span><li><span style=color:#000>for next iteration <b>i</b> becomes <b>'6'</b> which is not less than or equal to 'n'(i.e 5 as we took a value for explanation) then the loop terminates and goes to the next line.</span></ul><li><span style=color:#000>Then the value of <b>sum</b> which is <b>'15'</b> will be printed.</span></ol></div>

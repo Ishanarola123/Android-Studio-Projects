@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="0x1" android:orientation="1" android:background="res/drawable/bg_chooseopen_dialog.xml" android:layout_width="-1" android:layout_height="-1">
+	<TextView android:textSize="17sp" android:textStyle="0x1" android:textColor="ff000" android:gravity="0x11" android:layout_width="-1" android:layout_height="-2" android:layout_marginTop="27dp" android:layout_marginBottom="15dp" android:text="Select payment method" />
+	<LinearLayout android:gravity="0x10" android:id="false" android:layout_width="-1" android:layout_height="53dp">
+		<ImageView android:layout_gravity="0x10" android:id="false" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/select_pay_type_status.png" />
+		<ImageView android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="5dp" android:layout_marginRight="12dp" android:src="res/drawable-xxhdpi-v4/alipay_logo.png" />
+		<TextView android:textSize="15sp" android:textColor="ff000" android:ellipsize="4" android:id="false" android:layout_width="-2" android:layout_height="-2" android:text="Alipay" />
+	</LinearLayout>
+	<LinearLayout android:gravity="0x10" android:id="false" android:layout_width="-1" android:layout_height="53dp">
+		<ImageView android:layout_gravity="0x10" android:id="false" android:visibility="2" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/select_pay_type_status.png" />
+		<ImageView android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="5dp" android:layout_marginRight="12dp" android:src="res/drawable-xxhdpi-v4/wechat_logo.png" />
+		<TextView android:textSize="15sp" android:textColor="ff000" android:ellipsize="4" android:id="false" android:layout_width="-2" android:layout_height="-2" android:text="WeChat" />
+	</LinearLayout>
+	<LinearLayout android:gravity="0x10" android:orientation="0" android:id="false" android:layout_width="-1" android:layout_height="60dp">
+		<ImageView android:layout_gravity="0x10" android:visibility="1" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable-xxhdpi-v4/select_pay_type_status.png" />
+		<CheckBox android:textColor="ff000" android:gravity="0x10" android:id="false" android:layout_width="-2" android:layout_height="-2" android:layout_marginLeft="10dp" android:button="res/drawable/choosepay_checkbox.xml" />
+		<TextView android:textSize="14sp" android:textColor="ff000" android:layout_width="-2" android:layout_height="-2" android:layout_marginLeft="5dp" android:text="Remember my choice" />
+	</LinearLayout>
+	<LinearLayout android:orientation="0" android:layout_width="-1" android:layout_height="-2" android:layout_marginLeft="27dp" android:layout_marginRight="27dp" android:layout_marginBottom="23dp">
+		<TextView android:textSize="15sp" android:textColor="ff000" android:gravity="0x11" android:id="false" android:background="res/drawable/dialog_toinstall_button.xml" android:layout_width="-1" android:layout_height="47dp" android:layout_marginRight="6dp" android:text="Cancel" android:layout_weight="{4:1065353216}" />
+		<TextView android:textSize="15sp" android:textColor="ff097ff" android:gravity="0x11" android:id="false" android:background="res/drawable/dialog_toinstall_button.xml" android:layout_width="-1" android:layout_height="47dp" android:layout_marginLeft="6dp" android:text="Complete payment" android:layout_weight="{4:1065353216}" />
+	</LinearLayout>
+</LinearLayout>

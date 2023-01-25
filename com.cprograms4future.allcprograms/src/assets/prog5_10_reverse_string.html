@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+#include&lt;string.h>
+main()
+{
+int i,j=0;
+char str1[100],str2[100]={0};
+printf("Enter a string to get reverse of string\n");
+gets(str1);
+for(i=strlen(str1)-1;i>=0;i--)
+{
+str2[j]=str1[i];
+j++;
+}
+str2[j]='\0';
+printf("The reverse of the given string is---> %s\n",str2);
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter a string to get reverse of string<br>hello world<br>The reverse of the given string is---> dlrow olleh<br></span><span class=headings>Explanation:</span><br>Refer to the Previous Program<a href=prog5_9_string_palindrome.html target=_blank>To know whether the given string is Palindrome or not(open in same window)</a><br><br></div>

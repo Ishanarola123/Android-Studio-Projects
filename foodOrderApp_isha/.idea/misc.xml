@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/sunny/foodOrderApp_isha/app/src/main/res/drawable/orange_lightbanner.xml" value="0.3505" />
+        <entry key="..\:/sunny/foodOrderApp_isha/app/src/main/res/drawable/orangebutton.xml" value="0.269" />
+        <entry key="..\:/sunny/foodOrderApp_isha/app/src/main/res/drawable/search_background.xml" value="0.269" />
+        <entry key="..\:/sunny/foodOrderApp_isha/app/src/main/res/layout/activity_main.xml" value="0.2864471996579735" />
+        <entry key="..\:/sunny/foodOrderApp_isha/app/src/main/res/layout/activity_main2.xml" value="0.2864471996579735" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

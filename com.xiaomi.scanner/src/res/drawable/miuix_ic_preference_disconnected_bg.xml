@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="0">
+	<solid android:color="res/color/miuix_preference_connect_bg_disconnected_color.xml" />
+	<corners android:radius="16dp" />
+</shape>

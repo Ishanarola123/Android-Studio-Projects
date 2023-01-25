@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="file:///android_asset/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="file:///android_asset/prettify.css" type="text/css">
+    <script src="file:///android_asset/jquery.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/bootstrap.min.js" type="text/javascript"></script>
+    <script src="file:///android_asset/run_prettify.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div style="margin-top:10px;">
+        <div class="row">
+            <div class="col-xs-4 pull-left" style="text-align:left">
+                <span class="headings">PROGRAM:</span></div>
+            <div class="col-xs-4 pull-right" style="text-align:right">
+                <span class="btn btn-success" onclick="copyToClipboard('.prettyprint')">Copy</span></div>
+        </div>
+        <div id="toast" style="display:none">Program Copied</div>
+    <pre class="prettyprint" style="font-size:15px;">
+#include&lt;stdio.h&gt;
+main()
+{
+ int i,choice;
+ float cash=0;
+ char c;
+
+ do{
+  printf("Enter\n1-Withdraw\n2-Deposit\n3-Check Balance\n");
+ scanf("%d",&amp;choice);
+ switch(choice)
+ {
+  case 1:
+  {
+   int withdraw;
+   printf("Enter Amount to withdraw\n");
+   scanf("%d",&amp;withdraw);
+   if(withdraw%100==0)
+   {
+    if(cash&gt;=withdraw)
+        {
+        cash-=withdraw;
+        printf("Amount After withdrawl of cash is %f\n",cash);
+       }
+       else
+    {
+    printf("You don't have enough Amount to Withdraw.Please Deposit Amount\n");
+        }
+   }
+   else
+   {
+    printf("Enter Withdrawl Amount in 100's\n");
+   }
+   break;
+  }
+  case 2:
+  {
+   int deposit;
+   printf("Enter Amount to deposit\n");
+   scanf("%d",&amp;deposit);
+   if(deposit%100==0)
+   {
+       cash=cash+deposit;
+       printf("Balance After Depositing Amount is %f\n",cash);
+   }
+   else
+   {
+    printf("Please Enter Amount in 100's\n");
+   }
+   break;
+  }
+  case 3:
+  {
+   printf("Balance in the Account is %.2f\n",cash);
+   break;
+  }
+  default :
+  {
+   printf("Enter Valid Choice\n");
+   break;
+  }
+ }
+ printf("To Continue Press 'Y' else any letter\n");
+ fflush(stdin);
+ scanf("%c",&amp;c);
+   }while(c=='y' || c=='Y');
+   printf("Thanks for using our ATM\n");
+}
+</pre>
+    </div>
+    <span class="headings">Output:</span><br/>
+    <span>
+        <pre>
+Enter
+1-Withdraw
+2-Deposit
+3-Check Balance
+1
+Enter Amount to withdraw
+120
+Enter Withdrawl Amount in 100's
+To Continue Press 'Y' else any letter
+Y
+Enter
+1-Withdraw
+2-Deposit
+3-Check Balance
+2
+Enter Amount to deposit
+1200
+Balance After Depositing Amount is 1200.000000
+To Continue Press 'Y' else any letter
+Y
+Enter
+1-Withdraw
+2-Deposit
+3-Check Balance
+1
+Enter Amount to withdraw
+1250
+Enter Withdrawl Amount in 100's
+To Continue Press 'Y' else any letter
+Y
+Enter
+1-Withdraw
+2-Deposit
+3-Check Balance
+1
+Enter Amount to withdraw
+300
+Amount After withdrawl of cash is 900.000000
+To Continue Press 'Y' else any letter
+Y
+Enter
+1-Withdraw
+2-Deposit
+3-Check Balance
+3
+Balance in the Account is 900.00
+To Continue Press 'Y' else any letter
+Y
+Enter
+1-Withdraw
+2-Deposit
+3-Check Balance
+5
+Enter Valid Choice
+To Continue Press 'Y' else any letter
+N
+Thanks for using our ATM
+        </pre><br>
+    </span>
+
+    <span class="headings">Explanation:</span><br/>
+    <br />
+    <ol style="text-align: left;">
+        <li>This program starts with initializing :
+            <ul style="list-style-type: square;">
+                <li><b>i,c&nbsp;</b>→ used as helping variable<b><br /></b></li>
+                <li><b>choice</b>→ To choose options</li>
+                <li><b>cash</b><b>→</b>To store<b> final money by default is zero</b></li>
+            </ul>
+        </li>
+        <li>Now Lets us Choose Option 2 to deposit money of 2000 rupees
+<pre>int deposit;
+   printf("Enter Amount to deposit\n");
+   scanf("%d",&amp;deposit);
+   if(deposit%100==0)
+   {
+       cash=cash+deposit;
+       printf("Balance After Depositing Amount is %f\n",cash);
+   }
+   else
+   {
+    printf("Please Enter Amount in 100's\n");
+   }
+</pre>
+            This is the logic for option 2.Now we need to add deposit amount and this is stored in variable "deposit".Now we are checking whether depositing amount is in multiple of 100's or not.Only if the amount that is deposited in &nbsp;multiples of 100's to avoid 50' and 10's etc
+<pre>if(deposit%100==0)
+</pre>
+            To check whether deposited amount is in 100;s we are checking it as given above.Then we are adding "deposit" to "cash".Now <b>cash=2000</b> as we enetered deposit amount as 2000.</li>
+        <li>If the deposit amount is not in 100's it will throw an error to Enter Amount in 100's</li>
+        <br /><br />
+        <li>Now lets choose option 1 to withdraw money of 2300 and now cash is having 2000 rupees
+<pre>if(withdraw%100==0)
+   {
+    if(cash&gt;=withdraw)
+        {
+        cash-=withdraw;
+        printf("Amount After withdrawl of cash is %f\n",cash);
+       }
+       else
+    {
+    printf("You don't have enough Amount to Withdraw.Please Deposit Amount\n");
+        }
+   }
+   else
+   {
+    printf("Enter Withdrawl Amount in 100's\n");
+   }
+</pre>
+            First of all we are checking if withdrwl amount is multiples of 100 or not and as 2300 is multiple of 100 then we are checking if <b>cash&gt;=withdrawl </b>amount .In this case 2000 is not greater than 2000 so it will throw an error saying "Y<b>ou don't have enough Amount to Withdraw.Please Deposit Amount</b>"</li>
+        <li>Now lets withdraw 1800 so <b>withdraw=1800</b>.Now again we are checking 1800 is multiples of 100 or not ans as it is multiple of 100 we are going to check whether <b>2000&gt;1800 (cash&gt;=withdraw)</b> and as it is true we are reducing <b>withdraw </b>amount from <b>cash. </b>So Now <b>cash=2000-1800=200</b></li>
+        <li><b><pre class="program prettyprint" style="font-weight: normal;"> printf("Balance in the Account is %.2f\n",cash);</pre>
+        </b></li>
+        <li><pre class="program prettyprint" style="font-weight: normal;">Finally displaying balance which is option 3</pre>
+        </li>
+        <li>And all this will be in do while loop so that user can continue to do transactions like withdraw and deposit until he stops using&nbsp;
+
+<pre>do{
+...............
+................
+.................
+.................
+.................
+.................
+printf("To Continue Press 'Y' else any letter\n");
+ fflush(stdin);
+ scanf("%c",&amp;c);
+   }while(c=='y' || c=='Y');
+</pre>
+            so if user chooses other than 'y' he will go out of this loop else continues to do transactions&nbsp;</li>
+        <li>Finally after finishing his/her transactions we are greeting with</li>
+        <li><pre class="program prettyprint">   printf("Thanks for using our ATM\n");</pre>
+        </li>
+    </ol>
+    <br /><br>
+</div>
+</body>
+
+</html>
+

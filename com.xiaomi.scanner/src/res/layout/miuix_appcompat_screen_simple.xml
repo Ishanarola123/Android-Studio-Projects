@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.appcompat.internal.app.widget.ActionBarOverlayLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:layout_width="-1" android:layout_height="-1">
+	<FrameLayout android:id="resourceId:0x1020002" android:layout_width="-1" android:layout_height="-1" android:foreground="{2:16842841}" android:foregroundGravity="0x37" />
+</miuix.appcompat.internal.app.widget.ActionBarOverlayLayout>

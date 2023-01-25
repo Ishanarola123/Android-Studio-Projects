@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+<span style=color:#000>#include</span>&lt;stdio.h>
+<span style=color:#000>main()</span>
+<span style=color:#000>{</span>
+<span style=color:#000> int i,sum=0,num1,num2;</span>
+<span style=color:#000> printf("Enter Number1\n");</span>
+<span style=color:#000> scanf("%d",&num1);</span>
+<span style=color:#000> printf("Enter Number2\n");</span>
+<span style=color:#000> scanf("%d",&num2);</span>
+<span style=color:#000> for(i=num1;i&lt;=num2;i++)</span>
+<span style=color:#000> {</span>
+<span style=color:#000>   if(i%2==0)</span>
+<span style=color:#000>   {</span>
+<span style=color:#000>     sum+=i;</span>
+<span style=color:#000>    }</span>
+<span style=color:#000> }</span>
+<span style=color:#000> printf("The sum of all integers divisible by 2<br>       between %d and %d is %d\n",num1,num2,sum);</span>
+<span style=color:#000>}</span>
+</pre>
+</div>
+    <span class=headings>Output:</span><br>
+    <span>
+        Enter Number1<br>
+1<br>
+Enter Number2<br>
+10<br>
+The sum of all integers divisible by 2 between 1 and 10 is 30<br>
+    </span>
+
+    <span class=headings>Explanation:</span><br>
+
+    <ol>
+        <li><span style=color:#000>We initialized</span>
+            <ul>
+                <ul>
+                    <li><span style=color:#000><b>i</b>---->to use in for loop.</span></li>
+                    <li><span style=color:#000><b>num1</b>-->to store 1st number.</span></li>
+                    <li><span style=color:#000><b>num2</b>-->to store 2nd number.</span></li>
+                    <li><span style=color:#000><b>sum</b>---->to store the sum of all integers that are divisible by 2.</span></li>
+                </ul>
+            </ul>
+        </li>
+        <li><span style=color:#000>We took the <b>number 1</b> and <b>2</b> from user.(let us take <b>num1=1</b> and <b>num2 =10</b>)</span></li>
+        <li><span style=color:#000>Now we enter the loop where i=num1-->1 and i&lt;=num2-->10.</span>
+            <ul>
+                <li><b><span style=color:#000>Loop 1:</span></b>
+                    <ul style=list-style-type:square>
+                        <li><span style=color:#000><b>i=1</b> and as<b> i&lt;=10</b> the loop executes</span></li>
+                        <li><span style=color:#000>then as <b>i%2 (i.e. 1%2)</b> is <b>1</b> so the if statement won't execute keeping <b>sum =0</b></span></li>
+                        <li><span style=color:#000>Now the value of i is incremented by 1.Therefore, <b>i=2.</b></span></li>
+                    </ul>
+                </li>
+                <li><b><span style=color:#000>Loop 2 now i = 2</span></b>
+                    <ul style=list-style-type:square>
+                        <li><span style=color:#000><b>i=2</b> and as <b>i&lt;=10</b> the loop executes</span></li>
+                        <li><span style=color:#000>then as <b>i%2</b> (i.e. <b>2%2</b>) is <b>0</b> so the if statement will execute.</span></li>
+                        <li><span style=color:#000>As sum+=i(i.e. same as sum=sum+i). Therefore, <b>sum=0+2=2.</b></span></li>
+                        <li><span style=color:#000>Now the value of i is incremented by 1.Therefore, <b>i=3</b>.</span></li>
+                    </ul>
+                </li>
+                <li><b><span style=color:#000>Loop 3 now i=3</span></b>
+                    <ul style=list-style-type:square>
+                        <li><span style=color:#000><b>i=3</b> and as <b>i&lt;=10</b> the loop executes</span></li>
+                        <li><span style=color:#000>then as i%2 (i.e. <b>1%2</b>) is <b>1</b> so the if statement wont execute keeping <b>sum =2</b></span></li>
+                        <li><span style=color:#000>Now the value of i is incremented by 1.Therefore, <b>i=4.</b></span></li>
+                    </ul>
+                </li>
+                <li><b><span style=color:#000>Loop 4 now i=4</span></b>
+                    <ul style=list-style-type:square>
+                        <li><span style=color:#000><b>i=4</b> and as <b>i&lt;=10</b> the loop executes</span></li>
+                        <li><span style=color:#000>then as <b>i%2 (i.e. 4%2)</b> is 0 so the if statement will execute.</span></li>
+                        <li><span style=color:#000>As sum+=i(i.e. same as sum=sum+i).Therefore, <b>sum=2+4=6.</b></span></li>
+                        <li><span style=color:#000>Now the value of i is incremented by 1.Therefore,<b> i=5.</b></span></li>
+                    </ul>
+                </li>
+                <li><span style=color:#000>This continues till i becomes 10  where </span></li>
+                <li><span style=color:#000>When<b> i=5 ,     i%2=>5%2=1</b> which is not 0 so <b>sum</b> remains same which is <b>6</b>.</span></li>
+                <li><span style=color:#000>When<b> i=6</b>,<b>sum=6+6=12</b></span></li>
+                <li><span style=color:#000>When <b>i=7</b>, if statement will not execute so <b>sum</b> remains <b>10</b>.</span></li>
+                <li><span style=color:#000>When<b> i=8</b>, <b>sum=12+8=20</b></span></li>
+                <li><span style=color:#000>When <b>i=9</b>,<b>sum</b> remains same as <b>20</b>.</span></li>
+                <li><span style=color:#000>When <b>i=10</b> ,<b>sum=20+10=30</b>.</span></li>
+                <li><span style=color:#000>In this way it will execute till i=10 after that as i becomes 11 the loop terminates.</span></li>
+                <li><span style=color:#000>Then the value in <b>sum</b> is printed which is <b>30</b> in this case.</span></li></ul></li></ol></div>

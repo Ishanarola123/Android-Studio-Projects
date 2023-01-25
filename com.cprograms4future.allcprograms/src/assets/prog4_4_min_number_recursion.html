@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+int GetMinimunNumber(int a[],int size,int min);
+main()
+{
+    int i,size,min;
+    printf("Enter size to find smallest of given numbers\n");
+    scanf("%d",&size);
+    int a[size];
+    printf("Enter numbers in array\n");
+    for(i=0;i&lt;size;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    min=GetMinimunNumber(a,size-1,a[0]);
+    printf("The smallest number is %d\n",min);
+}
+int GetMinimunNumber(int a[],int size,int min)
+{
+ if(size>=0)
+ {
+  if(a[size]&lt;min)
+  {
+   min=a[size];
+  }
+  size--;
+  GetMinimunNumber(a,size,min);
+ }
+ else
+ {
+  return(min);
+ }
+
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter size to find smallest of given numbers<br>5<br>Enter numbers in array<br>67<br>-19<br>24<br>-35<br>30<br>The smallest number is -35<br></span><span class=headings>Explanation:</span><br>//Coming Soon..<br><br></div>

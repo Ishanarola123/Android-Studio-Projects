@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:id="false" android:title="Sign out" app:showAsAction="0x0" />
+	<item android:id="false" android:title="Privacy Policy" app:showAsAction="0x0" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_termsandconditions.png" android:id="false" android:title="Terms and Conditions" app:showAsAction="0x2" />
+	<item android:icon="res/drawable-xxxhdpi-v4/ic_home.png" android:id="false" android:title="Goto Home" app:showAsAction="0x2" />
+</menu>

@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=file:///android_asset/bootstrap.css rel=stylesheet><link href=file:///android_asset/prettify.css rel=stylesheet><script src=file:///android_asset/jquery.min.js></script><script src=file:///android_asset/bootstrap.min.js></script><script src=file:///android_asset/run_prettify.js></script><div class=container><div style=margin-top:10px><div class=row><div class="col-xs-4 pull-left"style=text-align:left><span class=headings>PROGRAM:</span></div><div class="col-xs-4 pull-right"style=text-align:right><span class="btn btn-success"onclick='copyToClipboard(".prettyprint")'>Copy</span></div></div><div style=display:none id=toast>Program Copied</div><pre class=prettyprint style=font-size:15px>
+#include&lt;stdio.h>
+void SumOfEven(int a[],int num,int sum);
+main()
+{
+    int i,a[100],num,sum=0;
+    printf("Enter number of Array Elements\n");
+   scanf("%d",&num);
+   printf("Enter Array Elements\n");
+   for(i=0;i&lt;num;i++)
+   {
+    scanf("%d",&a[i]);
+    }
+   SumOfEven(a,num-1,sum);
+}
+
+void SumOfEven(int a[],int num,int sum)
+{
+
+ if(num>=0)
+ {
+  if((a[num])%2==0)
+  {
+   sum+=(a[num]);
+  }
+  SumOfEven(a,num-1,sum);
+ }
+ else
+ {
+    printf("Sum=%d\n",sum);
+  return;
+ }
+}
+</pre></div><span class=headings>Output:</span><br><span>Enter number of Array Elements<br>7<br>Enter Array Elements<br>1<br>30<br>35<br>78<br>56<br>43<br>32<br>Sum=196<br></span><span class=headings>Explanation:</span><br>
+    <ol style="list-style-type: upper-roman;">
+        <li>This program starts with initializing :
+            <ul style="list-style-type: square;">
+                <li><b>i</b>→ Helping variable</li>
+                <li><b>a[100[</b>→To sore numbers entered by user</li>
+                <li><b>num→</b>&nbsp;Total number of elements n array</li>
+                <li><pre class="program prettyprint"><b>void SumOfEven(int a[],int num,int sum);→</b>Declaring function</pre>
+                </li>
+                <li><b>sum→</b>&nbsp;To <b>store sum of the even numbers</b></li>
+            </ul>
+        </li>
+        <li><pre class="program prettyprint"> printf("Enter number of Array Elements\n");
+  scanf("%d",&amp;num);
+   printf("Enter Array Elements\n");
+   for(i=0;i&lt;num;i++)
+   {
+    scanf("%d",&amp;a[i]);
+    }</pre>
+            Taking numbers from user and storing in <b>a
+            </b></li>
+        <li><pre class="program prettyprint">SumOfEven(a,num-1,sum);</pre>
+            Calling <b>SumOfEven&nbsp;</b>Function where we are passing array <b>a </b>,total number of elements as num-1 because we have to calculate from 0 to n-1 as array starts with 0 so if we give 7 elements in array then recursion will execute 7 times i.e from 0-6, and <b>sum </b>which is initialized to zero</li>
+        <li><pre class="program prettyprint">void SumOfEven(int a[],int num,int sum)
+{
+
+ if(num&gt;=0)
+ {
+  if((a[num])%2==0)
+  {
+   sum+=(a[num]);
+  }
+  SumOfEven(a,num-1,sum);
+ }
+ else
+ {
+    printf("Sum=%d\n",sum);
+  return;
+ }
+}</pre>
+            Now lets take 4 elements in array <b>30,35,40,45 </b>so sum should be 30+40=70.We passed this array to SumOfEven so <b>num=(4-1)=3</b>&nbsp;and&nbsp;<b>sum=0 </b>this is our initial data</li>
+        <li>Now<br />
+            <ol>
+                <li><pre class="program prettyprint">if(num&gt;=0)
+ {
+  if((a[num])%2==0)
+  {
+   sum+=(a[num]);
+  }
+  SumOfEven(a,num-1,sum);
+ }</pre>
+                    Since num=3 which is &gt;=0 so <b>if </b>part will execute.
+                    <ul>
+                        <li><b>a[num]=a[3]=45</b></li>
+                        <li><b>a[num]%2=45%2!=0.</b>&nbsp;So sum+=a[num] will not execute</li>
+                        <li>Finally sum=0</li>
+                        <li>Now we are calling <b>SumOfEven(a,num-1,sum)</b> again</li>
+                        <li>So we are passing SumOfEven(a,3-1,0)&nbsp;----&gt;<b>SumOfEven(a,2,0)</b></li>
+                    </ul>
+                </li>
+                <li>The same process in step 1 continue again</li>
+                <li><pre class="program prettyprint">if(num&gt;=0)
+ {
+  if((a[num])%2==0)
+  {
+   sum+=(a[num]);
+  }
+  SumOfEven(a,num-1,sum);
+ }</pre>
+                    Since num=2 which is &gt;=0 so <b>if </b>part will execute.<ul>
+                        <li><b>a[num]=a[2]=40</b></li>
+                        <li><b>a[num]%2=40%2==0.</b>&nbsp;So sum+=a[num] will execute</li>
+                        <li><b>sum=0+40=40</b></li>
+                        <li>Finally <b>sum=40</b> in recursion 2</li>
+                        <li>Now we are calling&nbsp;<b>SumOfEven(a,num-1,sum)</b>&nbsp;again</li>
+                        <li>So we are passing SumOfEven(a,2-1,40)&nbsp;----&gt;<b>SumOfEven(a,1,40)</b></li>
+                    </ul>
+                </li>
+                <li>Since num=1 which is &gt;=0 so <b>if </b>part will execute.<ul>
+                    <li><b>a[num]=a[1]=35</b></li>
+                    <li><b>a[num]%2=35%2!=0.</b>&nbsp;So sum+=a[num] will not execute</li>
+                    <li>Finally&nbsp;<b>sum=40</b>&nbsp;in recursion 3 and no change is there</li>
+                    <li>Now we are calling&nbsp;<b>SumOfEven(a,num-1,sum)</b>&nbsp;again</li>
+                    <li>So we are passing SumOfEven(a,1-1,40)&nbsp;----&gt;<b>SumOfEven(a,0,40)</b></li>
+                </ul>
+                </li>
+                <li>Since num=0 which is &gt;=0 so <b>if </b>part will execute.<ul>
+                    <li><b>a[num]=a[0]=30</b></li>
+                    <li><b>a[num]%2=30%2==0.</b>&nbsp;So sum+=a[num] will execute</li>
+                    <li><b>sum=40+30=70</b></li>
+                    <li>Finally&nbsp;<b>sum=70</b>&nbsp;in recursion 4</li>
+                    <li>Now we are calling&nbsp;<b>SumOfEven(a,num-1,sum)</b>&nbsp;again</li>
+                    <li>So we are passing SumOfEven(a,0-1,70)&nbsp;----&gt;<b>SumOfEven(a,-1,70)</b></li>
+                </ul>
+                </li>
+                <li>Since num=-1 which is &nbsp;not &gt;=0 so <b>else </b>part will execute.</li>
+                <li><pre class="program prettyprint"> else
+ {
+    printf("Sum=%d\n",sum);
+  return;
+ }</pre>
+                    <ul>
+                        <li>So here <b>sum </b>will be printed which is<b> 70</b></li>
+                        <li>And then it returns back to<b> main()</b></li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ol><br><br></div>

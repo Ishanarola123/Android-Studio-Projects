@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	<view android:gravity="0x11" android:id="false" android:background="resourceId:0x0" android:layout_width="-1" android:layout_height="-2" android:singleLine="true" class="miuix.pickerwidget.widget.NumberPicker$CustomEditText" />
+</merge>

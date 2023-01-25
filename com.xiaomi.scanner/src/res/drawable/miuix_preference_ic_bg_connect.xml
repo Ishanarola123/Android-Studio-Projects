@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="false" android:drawable="res/drawable/miuix_ic_preference_disconnected_bg.xml" />
+	<item android:id="false" android:drawable="res/drawable/miuix_ic_preference_connected_bg.xml" />
+</layer-list>

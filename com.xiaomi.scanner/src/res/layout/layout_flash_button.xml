@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-2" android:layout_height="-2">
+	<ImageView android:layout_gravity="0x800003" android:id="false" android:padding="14dp" android:focusable="false" android:layout_width="-2" android:layout_height="-2" android:src="res/drawable/flash_selector.xml" android:scaleType="1" />
+	<ToggleButton android:layout_gravity="0x800003" android:id="false" android:background="0000" android:layout_width="-1" android:layout_height="-1" android:textOn="resourceId:0x0" android:textOff="resourceId:0x0" android:contentDescription="Flash light" />
+</merge>

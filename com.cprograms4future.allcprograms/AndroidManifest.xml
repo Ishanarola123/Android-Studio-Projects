@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="18" android:versionName="2.5.2" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.cprograms4future.allcprograms" platformBuildVersionCode="18" platformBuildVersionName="2.5.2">
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<application android:theme="resourceId:0x7f120006" android:label="All C Programs" android:icon="res/mipmap-xxxhdpi-v4/ic_launcher.png" android:name="android.support.multidex.MultiDexApplication" android:allowBackup="true" android:supportsRtl="true" android:fullBackupContent="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+		<activity android:theme="resourceId:0x7f120008" android:label="All C Programs" android:name="com.cprograms4future.allcprograms.MainActivity" android:configChanges="0x4a0">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:label="All C Programs" android:name="com.cprograms4future.allcprograms.HelloWorld" />
+		<activity android:label="Benefits of PRO" android:name="com.cprograms4future.allcprograms.BenefitsPro" />
+		<service android:name="com.cprograms4future.allcprograms.CheckRecentRun" />
+		<activity android:theme="resourceId:0x7f120008" android:label="Settings" android:name="com.cprograms4future.allcprograms.Main2Activity" android:parentActivityName="com.cprograms4future.allcprograms.MainActivity">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cprograms4future.allcprograms.MainActivity" />
+		</activity>
+		<activity android:name="com.cprograms4future.allcprograms.MainActivity_Interview" />
+		<activity android:name="com.cprograms4future.allcprograms.Main3Activity" />
+		<service android:name="com.cprograms4future.allcprograms.MyFirebaseMessagingService">
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<service android:name="com.cprograms4future.allcprograms.MyFirebaseInstanceServiceId">
+			<intent-filter>
+				<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+			</intent-filter>
+		</service>
+		<activity android:name="com.cprograms4future.allcprograms.MainBookmarkActivity" />
+		<activity android:name="com.cprograms4future.allcprograms.MainProgramSearchActivity" />
+		<activity android:name="com.cprograms4future.allcprograms.PracticeQuestionsActivity" />
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3470881500949309~8430888875" />
+		<meta-data android:name="com.google.android.gms.version" android:value="12451000" />
+		<meta-data android:name="io.fabric.ApiKey" android:value="CHANGE-ME" />
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="CHANGE-ME" />
+		<activity android:theme="resourceId:0x7f1200f0" android:label="" android:name="com.firebase.ui.auth.KickoffActivity" android:exported="false" />
+		<activity android:label="Recover password" android:name="com.firebase.ui.auth.ui.email.RecoverPasswordActivity" android:exported="false" />
+		<activity android:label="Sign in" android:name="com.firebase.ui.auth.ui.email.RegisterEmailActivity" android:exported="false" />
+		<activity android:label="Sign in" android:name="com.firebase.ui.auth.ui.accountlink.WelcomeBackIdpPrompt" android:exported="false" />
+		<activity android:label="Sign in" android:name="com.firebase.ui.auth.ui.accountlink.WelcomeBackPasswordPrompt" android:exported="false" />
+		<activity android:label="All C Programs" android:name="com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity" android:exported="false" />
+		<activity android:theme="resourceId:0x7f120236" android:label="All C Programs" android:name="com.facebook.FacebookActivity" android:configChanges="0x5b0" />
+		<activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="fbYOUR_APP_ID" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.facebook.CustomTabMainActivity" />
+		<activity android:theme="resourceId:0x7f1200f4" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:configChanges="0x4a0" />
+		<activity android:theme="resourceId:0x7f1200f4" android:name="com.twitter.sdk.android.tweetui.GalleryActivity" />
+		<service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
+			<intent-filter android:priority="-500">
+				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+		<receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false" />
+		<receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true" android:exported="true">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+			</intent-filter>
+		</receiver>
+		<service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false" />
+		<service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" />
+		<activity android:theme="@android:style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="0xfb0" />
+		<provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="com.cprograms4future.allcprograms.mobileadsinitprovider" android:initOrder="100" />
+		<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+			</intent-filter>
+		</receiver>
+		<service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+			<intent-filter android:priority="-500">
+				<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+			</intent-filter>
+		</service>
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask" />
+		<provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.cprograms4future.allcprograms.firebaseinitprovider" android:initOrder="100" />
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true" />
+		<service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" />
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" />
+		<activity android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:exported="false" android:windowSoftInputMode="0x14" />
+		<service android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService" android:enabled="true" android:exported="false" />
+		<activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="0x480" />
+		<activity android:label="Twitter" android:icon="res/drawable/tw__transparent.xml" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="0x480" />
+	</application>
+</manifest>

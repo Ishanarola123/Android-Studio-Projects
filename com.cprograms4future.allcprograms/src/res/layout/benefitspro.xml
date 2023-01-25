@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-1" android:layout_height="-2">
+	<TextView android:textColor="000" android:id="false" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="30dp" android:layout_width="-1" android:layout_height="-2" android:text="Hi!" />
+	<Button android:id="false" android:background="68cb9" android:layout_width="-1" android:layout_height="-2" android:text="Unlock PRO" android:drawableTop="res/drawable-xxxhdpi-v4/ic_lock.png" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>
